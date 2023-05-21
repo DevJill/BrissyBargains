@@ -1,0 +1,30 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+};
+
+html, body {
+    height: 100%;
+}
+
+#map{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+#map-container{
+    height:700px;
+
+}
+
+body{
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    background-color: #F4E3B2;
+    color: #212529;
+    margin: 0 10px;
+}
+
+body h1{
+    font-weight: 700;
+}
