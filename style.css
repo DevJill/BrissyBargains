@@ -23,11 +23,13 @@ html, body {
     border-style: solid;
     border-color: #93B4AE;
     border-width: 1px;
+    padding: 15px;
 }
 
 .intro{
-    max-width: 90%;
-    margin: 30px auto auto auto;
+    max-width: 100%;
+    margin: 0;
+    padding-top: 15px;
 }
 
 .intro p{
@@ -35,10 +37,11 @@ html, body {
 }
 
 .search{
-    margin-top: 10px;
-    height: 30px;
+    margin-top: 15px;
+    height: 35px;
     display: grid;
-    grid-template-columns: 70% 30%;
+    max-width: 100%;
+    grid-template-columns: 85% 15%;
 }
 
 .search input, .search button{
@@ -69,9 +72,14 @@ html, body {
     background-color: #E1E6B2;
 }
 
+.search button img{
+    width: 1.5em;
+    margin: auto;
+}
+
 .legend{
-    padding-top: 30px;
-    max-width: 90%;
+    padding-top: 15px;
+    max-width: 100%;
     margin: auto;
 }
 
@@ -83,7 +91,7 @@ html, body {
 }
 
 .legend img{
-    align-self: center;
+    margin: auto;
     max-height: 2.5em;
 }
 
@@ -91,7 +99,7 @@ html, body {
     margin: 5px 0;
     max-height: 3em;
     display: grid;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 10% 90%;
 }
 
 .legend h4{
@@ -104,10 +112,9 @@ html, body {
 }
 
 .checkbox{
-    width: 1.5em;
-    height: 1.5em;
-    align-self: center;
-    margin: auto;
+    width: 1em;
+    height: 1em;
+    margin: auto 0 auto auto;
 }
 
 /* Map Tings */
