@@ -12,8 +12,32 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
-    <h1>Brissy Bargs</h1>
+    <div class="site-container">
+        <div class="info-container">
+        <div class="intro-legend">
+            <div class="intro">
+               <h1>Brissy Bargs</h1>
+               <p>Because who doesn't like saving cash?</p>
+               <div class="search">
+                    <input type="search" id="site-search">
+                    <button>Search</button>
+               </div>
+            </div>
+            <div class="legend">
+                <ul>
+                    <li><input type="checkbox" class="checkbox" name="You"><label for="You"><img src="./images/you-are-here-drop-pin.png"><h4>You</h4></label></li>
+                    <li><input type="checkbox" class="checkbox" name="Grocery"><label for="Grocery"><img src="./images/grocery-drop-pin.png"><h4>Grocery</h4></label></li>
+                    <li><input type="checkbox" class="checkbox" name="Veg"><label for="Veg"><img src="./images/veg-drop-pin.png"><h4>Veg</h4></label></li>
+                    <li><input type="checkbox" class="checkbox" name="Meats"><label for="Meats"><img src="./images/meat-drop-pin.png"><h4>Meats</h4></label></li>
+                    <li><input type="checkbox" class="checkbox" name="Fish"><label for="Fish"><img src="./images/fish-drop-pin.png"><h4>Fish</h4></label></li>
+                    <li><input type="checkbox" class="checkbox" name="Markets"><label for="Markets"><img src="./images/market-drop-pin.png"><h4>Markets</h4></label></li>
+                </ul>
+            </div>
+            <div class="want-to-help"></div>
+        </div>
+        </div>
     <div id="map-container"></div>
+    </div>
 
 
 
