@@ -7,14 +7,14 @@ html, body {
     height: 100%;
 }
 
-/* Site Container Tings */
+                                        /* Site Container Tings */
 
 .site-container{
     display: grid;
     grid-template-columns: 20% 80%;
 }
 
-/* Info Tings */
+                                                 /* Info Tings */
 
 .info-container{
     display: block;
@@ -26,9 +26,37 @@ html, body {
     padding: 15px;
 }
 
+                                         /* Minimize Btn Tings */
+
+.min-btn img{
+    width: 1.5em
+}
+
+.min-btn{
+    display: block;
+    margin: 0 0 0 auto;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    background-color: #B7CDC9;
+    border: solid 1px;
+    border-color: #93B4AE;
+    border-radius: 5px;
+    transition: ease-in .3s;
+}
+
+.min-btn:hover{
+    background-color: #ABC4C0;
+}
+
+                                                 /* Intro Tings */
+
 .intro{
     max-width: 100%;
     margin: 0;
+}
+
+.intro h1{
     padding-top: 15px;
 }
 
@@ -36,9 +64,11 @@ html, body {
     font-size: small;
 }
 
+                                                 /* Search Tings */
+
 .search{
     margin-top: 15px;
-    height: 35px;
+    height: 2em;
     display: grid;
     max-width: 100%;
     grid-template-columns: 85% 15%;
@@ -50,9 +80,8 @@ html, body {
 }
 
 .search input{
-    border-style: none solid none none;
     border-color: #93B4AE;
-    background-color: #F3F5E0;
+    background-color: #f5f8f7;
     border-radius: 5px 0 0 5px;
     border-width: 1px;
     padding-left: 20px;
@@ -64,18 +93,22 @@ html, body {
 
 .search button{
     transition: ease-in .3s;
-    background-color: #E7EBC1;
+    background-color: #B7CDC9;
+    border: solid 1px;
+    border-color: #93B4AE;
     border-radius: 0 5px 5px 0;
 }
 
 .search button:hover{
-    background-color: #E1E6B2;
+    background-color: #ABC4C0;
 }
 
 .search button img{
     width: 1.5em;
     margin: auto;
 }
+
+                                                 /* Legend Tings */
 
 .legend{
     padding-top: 15px;
@@ -117,7 +150,57 @@ html, body {
     margin: auto 0 auto auto;
 }
 
-/* Map Tings */
+                                             /* Fieldset Tings */
+
+.want-to-help{
+    padding-top: 15px;
+}
+
+.want-to-help fieldset{
+    color: #93B4AE;
+    border-radius: 5px;
+    border: solid 1px;
+}
+
+.want-to-help legend{
+    color: #212529;
+    padding: 0 5px;
+    text-align: center;
+}
+
+                                                 /* Donate Tings */
+.donate{
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.donate button img{
+    width: 1.5em;
+}
+
+.donate p{
+    margin: auto 0;
+}
+
+
+.donate button{
+    transition: ease-in .3s;
+    background-color: #B7CDC9;
+    border-radius: 5px;
+    border: solid 1px #93B4AE;
+    width: 32px;
+    height: 32px;
+    padding: none;
+    margin: 0 auto;
+}
+
+.donate button:hover{
+    background-color: #ABC4C0;
+}
+
+
+                                                 /* Map Tings */
 
 #map{
     height: 100%;
@@ -133,7 +216,22 @@ html, body {
 }
 
 
-/* Body Tings */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                 /* Body Tings */
 
 body{
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
