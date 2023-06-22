@@ -14,6 +14,10 @@ html, body {
     grid-template-columns: 20% 80%;
 }
 
+.site-container-hide-info{
+    grid-template-columns: 4% 96%;
+}
+
                                                  /* Info Tings */
 
 .info-container{
@@ -26,13 +30,27 @@ html, body {
     padding: 15px;
 }
 
+.hide-info{
+    display: none;
+}
+
+.max-info-container{
+    display: block;
+    background-color: #B7CDC9;
+    border-radius: 10px 0 0 10px;
+    border-style: solid;
+    border-color: #93B4AE;
+    border-width: 1px;
+    padding: 15px;
+}
+
                                          /* Minimize Btn Tings */
 
-.min-btn img{
+.min-btn-img, .max-btn-img{
     width: 1.5em
 }
 
-.min-btn{
+.min-btn, .max-btn{
     display: block;
     margin: 0 0 0 auto;
     padding: 0;
@@ -45,9 +63,11 @@ html, body {
     transition: ease-in .3s;
 }
 
-.min-btn:hover{
+
+.min-btn:hover, .max-btn:hover{
     background-color: #ABC4C0;
 }
+
 
                                                  /* Intro Tings */
 
@@ -60,8 +80,20 @@ html, body {
     padding-top: 15px;
 }
 
+.intro-p{
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin: auto 0;
+}
+
 .intro p{
-    font-size: small;
+    margin: auto 0;
+}
+
+
+.intro-p img{
+    width: 1.3em;
 }
 
                                                  /* Search Tings */
