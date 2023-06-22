@@ -40,14 +40,11 @@ const youIcon = L.icon({
     shadowAnchor,
 })
 
-//Creating Current Location Marker
-// const youMarker = L.marker([0, 0]).addTo(map);
-                     
+//Creating Current Location Marker                   
 currPos = (pos) => {
     const lat = pos.coords.latitude;
     const lng = pos.coords.longitude;
 
-    // marker.setLatLng([lat, lng]).update();
     L.marker([lat, lng], {icon:youIcon}).update().addTo(map)
 }
 
@@ -62,7 +59,6 @@ const infoContainer = document.querySelector('.info-container');
 function hideInfo(e){
     if(e.target === hideBtn || e.target === hideBtnImg){
         infoContainer.classList.add('hide-info');
-        console.log(infoContainer);
         checkUI();
         createMaxInfo();
     }
@@ -77,6 +73,7 @@ function createMaxInfo(){
     
     maxInfoDiv.classList.add('max-info-container');
     siteContainer.insertBefore(maxInfoDiv, mapContainer);
+
 }
 
 function createMaxBtn(classes){
@@ -93,6 +90,7 @@ function createMaxBtnImg(classes){
     const maxBtnImg = document.createElement('img');
     maxBtnImg.className = classes;
     maxBtnImg.src = './images/icons8-right-arrow-50.png';
+
     return maxBtnImg;
 }
 
@@ -108,8 +106,119 @@ function maxInfo(e){
 
         siteContainer.classList.remove('site-container-hide-info');
     }
-
 }
+
+//Fieldset Submitted
+
+const mainFieldsetDiv = document.querySelector('.want-to-help')
+const fieldset = document.querySelector('.help-fieldset');
+
+function hideFieldsetInputs(e){
+    
+        if(e.target.classList.contains('fieldset-submit-input')){
+
+        const fieldsetDiv = fieldset.querySelector('div');
+        if(fieldsetDiv.classList.contains('fieldset-inputs')){
+            fieldsetDiv.remove();
+        }
+       
+        const fieldsetNewDiv = document.createElement('div');
+        fieldsetNewDiv.classList.add('fieldset-ty-div');
+
+        const fieldsetP1 = document.createElement('p');
+        const fieldsetP2 = document.createElement('p');
+        fieldsetP1.appendChild(document.createTextNode('Thank you!'));
+        fieldsetP2.appendChild(document.createTextNode('Got another suggestion?'));
+       
+        fieldsetNewDiv.appendChild(fieldsetP1);
+        fieldsetNewDiv.appendChild(fieldsetP2);
+
+        const fieldsetBtnDiv = document.createElement('div');
+        fieldsetBtnDiv.classList.add('suggest-more-btn');
+        const suggestMoreBtn = document.createElement('button');
+        suggestMoreBtn.type = 'submit';
+        suggestMoreBtn.classList.add('fieldset-submit-suggestion');
+        suggestMoreBtn.appendChild(document.createTextNode('Suggest More'));
+    
+        fieldsetBtnDiv.appendChild(suggestMoreBtn);
+        fieldsetNewDiv.appendChild(fieldsetBtnDiv);
+        fieldset.appendChild(fieldsetNewDiv);
+
+    }
+}
+
+function showFieldsetInputs(e){  
+
+    if(e.target.classList.contains('fieldset-submit-suggestion')){
+
+        const fieldsetDiv = fieldset.querySelector('div');
+        if(fieldsetDiv.classList.contains('fieldset-ty-div')){
+            fieldsetDiv.remove();
+        }
+
+        const createFieldsetInputs = document.createElement('div');
+        createFieldsetInputs.classList.add('fieldset-inputs')
+
+        const shopLabel = document.createElement('label');
+        // shopLabel.for = "shop-name";
+        shopLabel.classList.add('fieldset-input-title');
+        shopLabel.appendChild(document.createTextNode('Shop name:'));
+        createFieldsetInputs.appendChild(shopLabel);
+
+        const shopLabelInput = document.createElement('input');
+        shopLabelInput.type = 'text';
+        shopLabelInput.name = "shop-name";
+        shopLabelInput.classList.add('fieldset-input');
+        createFieldsetInputs.appendChild(shopLabelInput)
+
+        const shopSuburbLabel = document.createElement('label');
+        // shopSuburbLabel.for = "shop-suburb-name";
+        shopSuburbLabel.classList.add('fieldset-input-title');
+        shopSuburbLabel.appendChild(document.createTextNode('Shop Suburb:'));
+        createFieldsetInputs.appendChild(shopSuburbLabel);
+
+        const shopSuburbInput = document.createElement('input');
+        shopSuburbInput.type = 'text';
+        shopSuburbInput.name = "shop-suburb-name";
+        shopSuburbInput.classList.add('fieldset-input');
+        createFieldsetInputs.appendChild(shopSuburbInput)
+
+        const fieldsetSubmit = document.createElement('input');
+        fieldsetSubmit.type = 'submit';
+        fieldsetSubmit.value = "Submit";
+        fieldsetSubmit.classList.add('fieldset-submit-input');
+        createFieldsetInputs.appendChild(fieldsetSubmit);
+
+        fieldset.appendChild(createFieldsetInputs);
+        
+    }
+}
+
+
+// function hideFieldsetInputs(e){
+//     if(e.target === submitBtn){
+//         fieldsetInputs.innerHTML = 
+//        `<p>Thank you!</p>
+//         <p>Got anymore suggestions?</p>
+//         <div class="suggest-more-btn"><input type="submit" value="Suggest More" class="fieldset-submit-input fieldset-submit-input-suggest-more"><div>`;
+//     }
+// }
+
+// function showFieldsetInputs(e){
+//     if(e.target.classList.contains('fieldset-submit-input-suggest-more')){
+//         fieldsetInputs.innerHTML = '';
+//         fieldsetInputs.innerHTML = 
+//        `<label for="shop-name" class="fieldset-input-title">Shop name:</label>
+//         <input type="text" name="shop-name" class="fieldset-input">
+//         <label for="shop-suburb-name" class="fieldset-input-title">Shop Suburb:</label>
+//         <input type="text" name="shop-suburb-name" class="fieldset-input">
+//         <input type="submit" value="Submit" class="fieldset-submit-input">`;
+//     }
+
+
+// }
+
+
  
 
 
@@ -119,10 +228,15 @@ function checkUI(){
     if(infoContainer.classList.contains('hide-info')){
         siteContainer.classList.add('site-container-hide-info');
     }
-}
+
+
+};
+
 
 document.addEventListener('click', hideInfo);
 document.addEventListener('click', maxInfo);
+document.addEventListener('click', hideFieldsetInputs);
+document.addEventListener('click', showFieldsetInputs);
 
 
 

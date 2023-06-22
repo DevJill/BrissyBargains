@@ -42,13 +42,19 @@ html, body {
     border-color: #93B4AE;
     border-width: 1px;
     padding: 15px;
+    height: 771px;
 }
 
                                          /* Minimize Btn Tings */
 
-.min-btn-img, .max-btn-img{
+.min-btn-img{
     width: 1.5em
 }
+
+.max-btn-img{
+    width: 1.4em
+}
+
 
 .min-btn, .max-btn{
     display: block;
@@ -182,6 +188,63 @@ html, body {
     margin: auto 0 auto auto;
 }
 
+fieldset{
+    height:227px;
+}
+
+.fieldset-input{
+    border-radius: 5px;
+    margin-top: 5px;
+    height: 2em;
+    border-style: solid;
+    border-color: #93B4AE;
+    border-width: 1px;
+    width: 95%;
+}
+
+.fieldset-input:focus{
+    outline-color: #93B4AE;
+} 
+
+.fieldset-input-title{
+    margin-top: 15px;
+    display: block;
+    color: #212529;
+}
+
+
+.fieldset-submit-input, .fieldset-submit-suggestion{
+    padding: 5px;
+    height: 2.5em;
+    margin: 15px 0;
+    outline: #93B4AE;
+    background-color: #B7CDC9;
+    border: solid 1px;
+    border-color: #93B4AE;
+    border-radius: 5px;
+    transition: ease-in .3s;
+}
+
+.fieldset-submit-input:hover, .fieldset-submit-suggestion:hover{
+    background-color: #ABC4C0;
+}
+
+.help-fieldset p{
+    color: #212529;
+    text-align: center;
+}
+
+.help-fieldset p:first-child{
+    padding-top: 52px;
+    color: #212529;
+}
+
+.suggest-more-btn{
+    text-align: center;
+    width: 100%;
+}
+
+
                                              /* Fieldset Tings */
 
 .want-to-help{
@@ -244,7 +307,7 @@ html, body {
 }
 
 #map-container{
-    height:700px;
+    height:100%;
 }
 
 
