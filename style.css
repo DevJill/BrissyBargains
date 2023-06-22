@@ -188,6 +188,8 @@ html, body {
     margin: auto 0 auto auto;
 }
 
+                                                 /* Fieldset Tings */
+
 fieldset{
     height:227px;
 }
@@ -199,7 +201,9 @@ fieldset{
     border-style: solid;
     border-color: #93B4AE;
     border-width: 1px;
-    width: 95%;
+    width: 100%;
+    background-color: #f5f8f7;
+    padding-left: 20px;
 }
 
 .fieldset-input:focus{
@@ -213,7 +217,7 @@ fieldset{
 }
 
 
-.fieldset-submit-input, .fieldset-submit-suggestion{
+.fieldset-submit-suggestion, .fieldset-submit-more-suggestion{
     padding: 5px;
     height: 2.5em;
     margin: 15px 0;
@@ -225,7 +229,7 @@ fieldset{
     transition: ease-in .3s;
 }
 
-.fieldset-submit-input:hover, .fieldset-submit-suggestion:hover{
+.fieldset-submit-suggestion:hover, .fieldset-submit-more-suggestion:hover{
     background-color: #ABC4C0;
 }
 

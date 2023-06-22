@@ -110,12 +110,11 @@ function maxInfo(e){
 
 //Fieldset Submitted
 
-const mainFieldsetDiv = document.querySelector('.want-to-help')
 const fieldset = document.querySelector('.help-fieldset');
 
 function hideFieldsetInputs(e){
     
-        if(e.target.classList.contains('fieldset-submit-input')){
+        if(e.target.classList.contains('fieldset-submit-suggestion')){
 
         const fieldsetDiv = fieldset.querySelector('div');
         if(fieldsetDiv.classList.contains('fieldset-inputs')){
@@ -137,7 +136,7 @@ function hideFieldsetInputs(e){
         fieldsetBtnDiv.classList.add('suggest-more-btn');
         const suggestMoreBtn = document.createElement('button');
         suggestMoreBtn.type = 'submit';
-        suggestMoreBtn.classList.add('fieldset-submit-suggestion');
+        suggestMoreBtn.classList.add('fieldset-submit-more-suggestion');
         suggestMoreBtn.appendChild(document.createTextNode('Suggest More'));
     
         fieldsetBtnDiv.appendChild(suggestMoreBtn);
@@ -149,7 +148,7 @@ function hideFieldsetInputs(e){
 
 function showFieldsetInputs(e){  
 
-    if(e.target.classList.contains('fieldset-submit-suggestion')){
+    if(e.target.classList.contains('fieldset-submit-more-suggestion')){
 
         const fieldsetDiv = fieldset.querySelector('div');
         if(fieldsetDiv.classList.contains('fieldset-ty-div')){
@@ -162,7 +161,7 @@ function showFieldsetInputs(e){
         const shopLabel = document.createElement('label');
         // shopLabel.for = "shop-name";
         shopLabel.classList.add('fieldset-input-title');
-        shopLabel.appendChild(document.createTextNode('Shop name:'));
+        shopLabel.appendChild(document.createTextNode('Shop Name:'));
         createFieldsetInputs.appendChild(shopLabel);
 
         const shopLabelInput = document.createElement('input');
@@ -185,43 +184,14 @@ function showFieldsetInputs(e){
 
         const fieldsetSubmit = document.createElement('input');
         fieldsetSubmit.type = 'submit';
-        fieldsetSubmit.value = "Submit";
-        fieldsetSubmit.classList.add('fieldset-submit-input');
+        fieldsetSubmit.value = "Send Suggestion";
+        fieldsetSubmit.classList.add('fieldset-submit-suggestion');
         createFieldsetInputs.appendChild(fieldsetSubmit);
 
         fieldset.appendChild(createFieldsetInputs);
         
     }
 }
-
-
-// function hideFieldsetInputs(e){
-//     if(e.target === submitBtn){
-//         fieldsetInputs.innerHTML = 
-//        `<p>Thank you!</p>
-//         <p>Got anymore suggestions?</p>
-//         <div class="suggest-more-btn"><input type="submit" value="Suggest More" class="fieldset-submit-input fieldset-submit-input-suggest-more"><div>`;
-//     }
-// }
-
-// function showFieldsetInputs(e){
-//     if(e.target.classList.contains('fieldset-submit-input-suggest-more')){
-//         fieldsetInputs.innerHTML = '';
-//         fieldsetInputs.innerHTML = 
-//        `<label for="shop-name" class="fieldset-input-title">Shop name:</label>
-//         <input type="text" name="shop-name" class="fieldset-input">
-//         <label for="shop-suburb-name" class="fieldset-input-title">Shop Suburb:</label>
-//         <input type="text" name="shop-suburb-name" class="fieldset-input">
-//         <input type="submit" value="Submit" class="fieldset-submit-input">`;
-//     }
-
-
-// }
-
-
- 
-
-
 
 
 function checkUI(){
