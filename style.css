@@ -23,11 +23,12 @@ html, body {
 .info-container{
     display: block;
     background-color: #B7CDC9;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px;
     border-style: solid;
     border-color: #93B4AE;
     border-width: 1px;
     padding: 15px;
+    /* margin-right: 5px; */
 }
 
 .hide-info{
@@ -37,7 +38,8 @@ html, body {
 .max-info-container{
     display: block;
     background-color: #B7CDC9;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px;
+    /* border-radius: 10px 0 0 10px; */
     border-style: solid;
     border-color: #93B4AE;
     border-width: 1px;
@@ -305,9 +307,10 @@ fieldset{
     height: 100%;
     width: 100%;
     border-style: solid;
+    /* border-width: 1px; */
     border-width: 1px 1px 1px 0;
     border-color: #93B4AE;
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px;
 }
 
 #map-container{
@@ -334,7 +337,7 @@ fieldset{
 
 body{
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-    background-color: #a4c3b2;
+    background-color: #789284;
     color: #212529;
     margin: 10px 10px;
 }
@@ -342,3 +345,11 @@ body{
 body h1{
     font-weight: 700;
 }
+
+/* background-color: #a4c3b2; */
+/* background-color: #37423D; */
+/* background-color: #062726; */
+/* background-color: #2F4858; */
+/* background-color: #839788; */
+/* background-color: #555B6E; */
+/* background-color: #789284; */

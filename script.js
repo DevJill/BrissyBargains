@@ -25,10 +25,10 @@ map.setMaxBounds(bounds);
 
 //Custom Icons
 const shadowUrl = './images/drop-pin-shadow.png';
-const iconSize = [42, 41];
-const iconAnchor = [21, 41];
-const shadowSize = [42, 41];
-const shadowAnchor = [21, 41];
+let iconSize = [42, 41];
+let iconAnchor = [21, 41];
+let shadowSize = [42, 41];
+let shadowAnchor = [21, 41];
 
 
 const youIcon = L.icon({
@@ -38,15 +38,22 @@ const youIcon = L.icon({
     iconAnchor,
     shadowSize,
     shadowAnchor,
-})
+    popupAnchor:  [-3, -76],
+});
 
 //Creating Current Location Marker                   
 currPos = (pos) => {
     const lat = pos.coords.latitude;
     const lng = pos.coords.longitude;
 
-    L.marker([lat, lng], {icon:youIcon}).update().addTo(map)
+    const youMarker = L.marker([lat, lng], {riseOnHover: true, icon:youIcon}).update().addTo(map);
+    const youPopup = youMarker.bindPopup('Your Location :)').openPopup();
+    youPopup.addTo(map);
 }
+
+
+
+
 
 navigator.geolocation.getCurrentPosition(currPos);
 
@@ -73,7 +80,6 @@ function createMaxInfo(){
     
     maxInfoDiv.classList.add('max-info-container');
     siteContainer.insertBefore(maxInfoDiv, mapContainer);
-
 }
 
 function createMaxBtn(classes){
@@ -109,11 +115,9 @@ function maxInfo(e){
 }
 
 //Fieldset Submitted
-
 const fieldset = document.querySelector('.help-fieldset');
 
 function hideFieldsetInputs(e){
-    
         if(e.target.classList.contains('fieldset-submit-suggestion')){
 
         const fieldsetDiv = fieldset.querySelector('div');
@@ -142,14 +146,11 @@ function hideFieldsetInputs(e){
         fieldsetBtnDiv.appendChild(suggestMoreBtn);
         fieldsetNewDiv.appendChild(fieldsetBtnDiv);
         fieldset.appendChild(fieldsetNewDiv);
-
     }
 }
 
 function showFieldsetInputs(e){  
-
     if(e.target.classList.contains('fieldset-submit-more-suggestion')){
-
         const fieldsetDiv = fieldset.querySelector('div');
         if(fieldsetDiv.classList.contains('fieldset-ty-div')){
             fieldsetDiv.remove();
@@ -159,7 +160,7 @@ function showFieldsetInputs(e){
         createFieldsetInputs.classList.add('fieldset-inputs')
 
         const shopLabel = document.createElement('label');
-        // shopLabel.for = "shop-name";
+        shopLabel.htmlFor = "shop-name";
         shopLabel.classList.add('fieldset-input-title');
         shopLabel.appendChild(document.createTextNode('Shop Name:'));
         createFieldsetInputs.appendChild(shopLabel);
@@ -171,7 +172,7 @@ function showFieldsetInputs(e){
         createFieldsetInputs.appendChild(shopLabelInput)
 
         const shopSuburbLabel = document.createElement('label');
-        // shopSuburbLabel.for = "shop-suburb-name";
+        shopSuburbLabel.htmlFor = "shop-suburb-name";
         shopSuburbLabel.classList.add('fieldset-input-title');
         shopSuburbLabel.appendChild(document.createTextNode('Shop Suburb:'));
         createFieldsetInputs.appendChild(shopSuburbLabel);
@@ -189,17 +190,44 @@ function showFieldsetInputs(e){
         createFieldsetInputs.appendChild(fieldsetSubmit);
 
         fieldset.appendChild(createFieldsetInputs);
-        
     }
 }
+
+//Checking and Unchecking Boxes
+
+const youCheck = document.getElementById('youCheckbox');
+const groceryCheck = document.querySelector('input[name="Grocery"]');
+const vegCheck = document.querySelector('input[name="Veg"]');
+const meatsCheck = document.querySelector('input[name="Meats"]');
+const fishCheck = document.querySelector('input[name="Fish"]');
+const marketsCheck = document.querySelector('input[name="Markets"]');
+
+
+function checkBoxes(e){
+    const youImg = document.querySelector('.leaflet-marker-icon');
+    const youImgShadow = document.querySelector('.leaflet-marker-shadow');
+
+    if(e.target === youCheck && youCheck.checked === true){
+        if(youImg.src.indexOf('you') != -1){
+            youImgShadow.style.display = "block";
+            youImg.style.display = "block";
+    }}else if(e.target === youCheck && youCheck.checked === false){
+            youImgShadow.style.display = "none";
+            youImg.style.display = "none";
+    }
+}
+
+
+
+
+
+
 
 
 function checkUI(){
     if(infoContainer.classList.contains('hide-info')){
         siteContainer.classList.add('site-container-hide-info');
     }
-
-
 };
 
 
@@ -207,7 +235,45 @@ document.addEventListener('click', hideInfo);
 document.addEventListener('click', maxInfo);
 document.addEventListener('click', hideFieldsetInputs);
 document.addEventListener('click', showFieldsetInputs);
+document.addEventListener('click', checkBoxes);
 
+
+
+// Code Graveyard
+
+    // document.addEventListener('mouseenter', function(e) { 
+    //     // if(e.target.classList.contains('leaflet-marker-icon')){
+    //     //     youIcon.options.iconSize = [45,44];
+    //     //     youIcon.options.iconAnchor = [24,44];
+    //     //     youIcon.options.shadowSize = [45,44];
+    //     //     youIcon.options.shadowAnchor = [24,44];
+    //     //     test.remove();
+    //     //     L.marker([lat, lng], {icon:youIcon}).update().addTo(map);
+    //         console.log(e.target)
+    //     });
+
+    //     // document.addEventListener('mouseout', function(e) { 
+    //     //     if(e.target.classList.contains('leaflet-marker-icon')){
+    //     //         youIcon.options.iconSize = [45,44];
+    //     //         youIcon.options.iconAnchor = [24,44];
+    //     //         youIcon.options.shadowSize = [45,44];
+    //     //         youIcon.options.shadowAnchor = [24,44];
+    //     //         test.remove();
+    //     //         L.marker([lat, lng], {icon:youIcon}).update().addTo(map);
+    //     //         console.log(e.target)
+    //     //     }});
+
+    
+// function checkBoxes(e){
+//     for(let i = 0; i < checkBtns.length; i++){
+//         if(e.target === checkBtns[i]){
+//             console.log(checkBtns[i])
+//         }
+
+//     }
+// }
+
+// const checkBtns = [youCheck,groceryCheck,vegCheck,meatsCheck,fishCheck,marketsCheck]
 
 
 
