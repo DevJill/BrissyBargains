@@ -25,10 +25,11 @@ map.setMaxBounds(bounds);
 
 //Custom Icons
 const shadowUrl = './images/drop-pin-shadow.png';
-let iconSize = [42, 41];
-let iconAnchor = [21, 41];
-let shadowSize = [42, 41];
-let shadowAnchor = [21, 41];
+const iconSize = [42, 41];
+const iconAnchor = [21, 41];
+const shadowSize = [42, 41];
+const shadowAnchor = [21, 41];
+const popupAnchor = [0, -35]
 
 
 const youIcon = L.icon({
@@ -38,7 +39,7 @@ const youIcon = L.icon({
     iconAnchor,
     shadowSize,
     shadowAnchor,
-    popupAnchor:  [-3, -76],
+    popupAnchor,
 });
 
 //Creating Current Location Marker                   
@@ -46,16 +47,14 @@ currPos = (pos) => {
     const lat = pos.coords.latitude;
     const lng = pos.coords.longitude;
 
-    const youMarker = L.marker([lat, lng], {riseOnHover: true, icon:youIcon}).update().addTo(map);
-    const youPopup = youMarker.bindPopup('Your Location :)').openPopup();
+    let youMarker = L.marker([lat, lng], {riseOnHover: true, icon:youIcon}).update().addTo(map);
+    const youPopup = youMarker.bindPopup('Your Location :)');
+
     youPopup.addTo(map);
 }
 
-
-
-
-
 navigator.geolocation.getCurrentPosition(currPos);
+// openPopup()
 
 //Hiding Info Container
 const hideBtn = document.querySelector('.min-btn');
