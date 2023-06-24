@@ -13,7 +13,7 @@
         "phone": "(07) 3245 2477",
         "google-reviews": 4.5,
         "website": "https://www.gcfo.com.au/",
-        "lat&long": [-27.516813491490236, 153.1991478976023]
+        "latNLong": [-27.516813491490236, 153.1991478976023]
     },
     {
         "type": "Meats",
@@ -29,7 +29,7 @@
         "phone": "(07) 3097 2032",
         "google-reviews": 4.5,
         "website": "https://www.facebook.com/InghamsLyttonFactoryOutlet",
-        "lat&long": [-27.426777607591514, 153.1504541102406]
+        "latNLong": [-27.426777607591514, 153.1504541102406]
     },
     {
         "type": "Grocery",
@@ -45,7 +45,7 @@
         "phone": "(07) 5499 0938",
         "google-reviews": 4.5,
         "website": "https://www.gcfo.com.au/",
-        "lat&long": [-27.117677322771932, 152.95574649373154]
+        "latNLong": [-27.117677322771932, 152.95574649373154]
 
     },
     {
@@ -62,7 +62,7 @@
         "phone": "(07) 5432 3555",
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
-        "lat&long": [-27.10070853275601, 152.94587786790046]
+        "latNLong": [-27.10070853275601, 152.94587786790046]
     },
     {
         "type": "Grocery",
@@ -78,7 +78,7 @@
         "phone": "(07) 3269 0387",
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
-        "lat&long": [-27.330376273805786, 153.05726049589373]
+        "latNLong": [-27.330376273805786, 153.05726049589373]
     },
     {
         "type": "Grocery",
@@ -94,7 +94,7 @@
         "phone": "(07) 3879 5906",
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
-        "lat&long": [-27.58941967785702, 152.95153871589764]
+        "latNLong": [-27.58941967785702, 152.95153871589764]
     },
     {
         "type": "Grocery",
@@ -110,7 +110,7 @@
         "phone": "(07) 3287 2444",
         "google-reviews": 4,
         "website": "https://www.freshandsave.com.au/",
-        "lat&long": [-27.693242754620822, 153.21423331159446]
+        "latNLong": [-27.693242754620822, 153.21423331159446]
     },
     {
         "type": "Produce",
@@ -126,7 +126,7 @@
         "phone": "(07) 3891 2292",
         "google-reviews": 4,
         "website": "https://www.samcocotrading.com.au/",
-        "lat&long": [-27.50185519547979, 153.03500336058482]
+        "latNLong": [-27.50185519547979, 153.03500336058482]
     },
     {
         "type": "Produce",
@@ -142,7 +142,7 @@
         "phone": "NA",
         "google-reviews": 4.5,
         "website": "https://www.facebook.com/ClintsFarmFreshProduce/",
-        "lat&long": [-27.59511274263985, 152.76134276976273]
+        "latNLong": [-27.59511274263985, 152.76134276976273]
     },
     {
         "type": "Markets",
@@ -158,7 +158,7 @@
         "phone": "(07) 3915 4277",
         "google-reviews": 4.5,
         "website": "https://saturdayfreshmarket.com.au/",
-        "lat&long": [-27.536524261441887, 153.00216446791453]
+        "latNLong": [-27.536524261441887, 153.00216446791453]
     },
     {
         "type": "Markets",
@@ -174,7 +174,7 @@
         "phone": "0452 098 670",
         "google-reviews": 4.5,
         "website": "https://globalfoodmarkets.com.au/",
-        "lat&long": [-27.63729570588213, 153.1043430967529]
+        "latNLong": [-27.63729570588213, 153.1043430967529]
     },
     {
         "type": "Markets",
@@ -190,7 +190,7 @@
         "phone": "NA",
         "google-reviews": 4.5,
         "website": "https://www.janpowersfarmersmarkets.com.au/",
-        "lat&long": [-27.46854408323546, 153.05397318140663]
+        "latNLong": [-27.46854408323546, 153.05397318140663]
     },
     {
         "type": "Markets",
@@ -206,7 +206,7 @@
         "phone": "0419 739 411",
         "google-reviews": 4.5,
         "website": "https://mtgravattmarkets.com/",
-        "lat&long": [-27.544178221015905, 153.0842187679148]
+        "latNLong": [-27.544178221015905, 153.0842187679148]
     },
     {
         "type": "Grocery",
@@ -222,7 +222,7 @@
         "phone": "(07) 3290 3610",
         "google-reviews": 4.5,
         "website": "https://m.facebook.com/tribecare/",
-        "lat&long": [-27.626874814245603, 153.12760843616334]
+        "latNLong": [-27.626874814245603, 153.12760843616334]
     },
     {
         "type": "Grocery",
@@ -238,7 +238,7 @@
         "phone": "(07) 3714 7000",
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
-        "lat&long": [-27.596777126981348, 153.12490739675158]
+        "latNLong": [-27.596777126981348, 153.12490739675158]
     },
     {
         "type": "Grocery",
@@ -254,7 +254,7 @@
         "phone": "(07) 3550 6000",
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
-        "lat&long": [-27.379938930258227, 152.9901134346201]
+        "latNLong": [-27.379938930258227, 152.9901134346201]
     },
     {
         "type": "Grocery",
@@ -270,7 +270,7 @@
         "phone": "(07) 3386 8500",
         "google-reviews": 4,
         "website": "https://drakes.com.au/",
-        "lat&long": [-27.665499833710754, 153.0345826390836]
+        "latNLong": [-27.665499833710754, 153.0345826390836]
     },
     {
         "type": "Grocery",
@@ -286,7 +286,7 @@
         "phone": "(07) 3490 1000",
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
-        "lat&long": [-27.22141530857835, 153.00146265440983]
+        "latNLong": [-27.22141530857835, 153.00146265440983]
     },
     {
         "type": "Grocery",
@@ -302,7 +302,7 @@
         "phone": "(07) 3711 0000",
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
-        "lat&long": [-27.628592743530778, 153.02766525442306]
+        "latNLong": [-27.628592743530778, 153.02766525442306]
     },
     {
         "type": "Grocery",
@@ -318,7 +318,7 @@
         "phone": "(07) 5585 6000",
         "google-reviews": 4,
         "website": "https://drakes.com.au/",
-        "lat&long": [-27.977614427626374, 153.38070109676406]
+        "latNLong": [-27.977614427626374, 153.38070109676406]
     },
     {
         "type": "Grocery",
@@ -334,7 +334,151 @@
         "phone": "(07) 3436 4900",
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
-        "lat&long": [-27.652402154108593, 152.76467872267395]
+        "latNLong": [-27.652402154108593, 152.76467872267395]
     },
+    {
+        "type": "Produce",
+        "name": "Yuen's Farmers Market",
+        "address": "Shop 11, 11/21 Kingston Rd, Underwood QLD 4119",
+        "saturday_open_hrs": "24 hours",
+        "sunday_open_hrs": "24 hours",
+        "monday_open_hrs": "24 hours",
+        "tuesday_open_hrs": "24 hours",
+        "wednesdayday_open_hrs": "24 hours",
+        "thrusday_open_hrs": "24 hours",
+        "friday_open_hrs": "24 hours",
+        "phone": "NA",
+        "google-reviews": 4,
+        "website": "https://yuensfarmersmarket.com.au/",
+        "latNLong": [-27.608899433187002, 153.11017169675213]
+    },
+    {
+        "type": "Produce",
+        "name": "Yuen's Farmers Market",
+        "address": "Shop 1, Waterford Plaza,, 917 Kingston Rd, Waterford West QLD 4133",
+        "saturday_open_hrs": "6 am-7 pm",
+        "sunday_open_hrs": "6 am-7 pm",
+        "monday_open_hrs": "6 am-7 pm",
+        "tuesday_open_hrs": "6 am-7 pm",
+        "wednesdayday_open_hrs": "6 am-7 pm",
+        "thrusday_open_hrs": "6 am-7 pm",
+        "friday_open_hrs": "6 am-7 pm",
+        "phone": "(07) 3805 3147",
+        "google-reviews": 4,
+        "website": "https://yuensfarmersmarket.com.au/",
+        "latNLong": [-27.69220327736614, 153.13523385442525]
+    },
+    {
+        "type": "Meats",
+        "name": "Super Butcher Eagle Farm",
+        "address": "6 Eagleview Pl, Eagle Farm QLD 4009",
+        "saturday_open_hrs": "7 am-5 pm",
+        "sunday_open_hrs": "8 am-5 pm",
+        "monday_open_hrs": "8 am-6 pm",
+        "tuesday_open_hrs": "8 am-6 pm",
+        "wednesdayday_open_hrs": "8 am-6 pm",
+        "thrusday_open_hrs": "8 am-6 pm",
+        "friday_open_hrs": "8 am-6 pm",
+        "phone": "1300 002 493",
+        "google-reviews": 4.5,
+        "website": "https://superbutcher.com.au/",
+        "latNLong": [-27.43610034367169, 153.08554481208714]
+    },
+    {
+        "type": "Meats",
+        "name": "Super Butcher Browns Plains",
+        "address": "18 Eastern Rd, Browns Plains QLD 4118",
+        "saturday_open_hrs": "7 am-5 pm",
+        "sunday_open_hrs": "8 am-5 pm",
+        "monday_open_hrs": "8 am-6 pm",
+        "tuesday_open_hrs": "8 am-6 pm",
+        "wednesdayday_open_hrs": "8 am-6 pm",
+        "thrusday_open_hrs": "8 am-6 pm",
+        "friday_open_hrs": "8 am-6 pm",
+        "phone": "0407 194 956",
+        "google-reviews": 4.5,
+        "website": "https://superbutcher.com.au/",
+        "latNLong": [-27.663913079200412, 153.04379405151153]
+    },
+    {
+        "type": "Meats",
+        "name": "Super Butcher Birkdale",
+        "address": "180 Birkdale Rd, Birkdale QLD 4159",
+        "saturday_open_hrs": "7 am-5 pm",
+        "sunday_open_hrs": "8 am-5 pm",
+        "monday_open_hrs": "8 am-6 pm",
+        "tuesday_open_hrs": "8 am-6 pm",
+        "wednesdayday_open_hrs": "8 am-6 pm",
+        "thrusday_open_hrs": "8 am-6 pm",
+        "friday_open_hrs": "8 am-6 pm",
+        "phone": "0400 155 833",
+        "google-reviews": 4.5,
+        "website": "https://superbutcher.com.au/",
+        "latNLong": [-27.49190198611973, 153.21733682558352]
+    },
+    {
+        "type": "Grocery",
+        "name": "T-Bones Fresh Food Market",
+        "address": "605 Robinson Rd W, Aspley QLD 4034",
+        "saturday_open_hrs": "7 am-9 pm",
+        "sunday_open_hrs": "8 am-6 pm",
+        "monday_open_hrs": "7 am-9 pm",
+        "tuesday_open_hrs": "7 am-9 pm",
+        "wednesdayday_open_hrs": "7 am-9 pm",
+        "thrusday_open_hrs": "7 am-9 pm",
+        "friday_open_hrs": "7 am-9 pm",
+        "phone": "(07) 3863 1100",
+        "google-reviews": 4,
+        "website": "https://www.tbonesfresh.com.au/",
+        "latNLong": [-27.36404745163986, 153.02409379674413]
+    },
+    {
+        "type": "Meats",
+        "name": "Deagon Bulk Meats",
+        "address": "116 Barclay St, Deagon QLD 4017",
+        "saturday_open_hrs": "6 am-3 pm",
+        "sunday_open_hrs": "8 am-6 pm",
+        "monday_open_hrs": "7 am-1 pm",
+        "tuesday_open_hrs": "6 am-5:30 pm",
+        "wednesdayday_open_hrs": "6 am-5:30 pm",
+        "thrusday_open_hrs": "6 am-5:30 pm",
+        "friday_open_hrs": "6 am-5:30 pm",
+        "phone": "(07) 3269 1417",
+        "google-reviews": 4.5,
+        "website": "https://www.deagonbulkmeats.com.au/",
+        "latNLong": [-27.32682340363385, 153.0619930544134]
+    },
+    {
+        "type": "Grocery",
+        "name": "Lighthouse Care Loganholme",
+        "address": "17 Monte Khoury Dr, Loganholme QLD 4129",
+        "saturday_open_hrs": "9 am-12 pm",
+        "sunday_open_hrs": "Closed",
+        "monday_open_hrs": "9 am-5 pm",
+        "tuesday_open_hrs": "9 am-5 pm",
+        "wednesdayday_open_hrs": "9 am-5 pm",
+        "thrusday_open_hrs": "9 am-5 pm",
+        "friday_open_hrs": "9 am-5 pm",
+        "phone": "(07) 3806 0639",
+        "google-reviews": 4.5,
+        "website": "https://lighthousecare.org.au/",
+        "latNLong": [-27.68454990435829, 153.19317243617508]
+    },
+    {
+        "type": "Grocery",
+        "name": "Lighthouse Care Hillcrest",
+        "address": "1/16 Central Ct, Hillcrest QLD 4118",
+        "saturday_open_hrs": "9 am-12 pm",
+        "sunday_open_hrs": "Closed",
+        "monday_open_hrs": "9 am-5 pm",
+        "tuesday_open_hrs": "9 am-5 pm",
+        "wednesdayday_open_hrs": "9 am-5 pm",
+        "thrusday_open_hrs": "9 am-5 pm",
+        "friday_open_hrs": "9 am-5 pm",
+        "phone": "(07) 3806 0639",
+        "google-reviews": 4.5,
+        "website": "https://lighthousecare.org.au/",
+        "latNLong": [-27.661594604183854, 153.03600588325943]
+    }
 ]
 

@@ -24,7 +24,6 @@ map.maxBoundsViscosity = 1.0;
 map.setMaxBounds(bounds);
 
 //Custom Icons
-const shadowUrl = './images/drop-pin-shadow.png';
 const iconSize = [42, 41];
 const iconAnchor = [21, 41];
 const shadowSize = [42, 41];
@@ -34,7 +33,52 @@ const popupAnchor = [0, -35]
 
 const youIcon = L.icon({
     iconUrl: './images/you-are-here-drop-pin.png',
-    shadowUrl,
+    shadowUrl : './images/drop-pin-shadow.png',
+    iconSize,
+    iconAnchor,
+    shadowSize,
+    shadowAnchor,
+    popupAnchor,
+});
+const groceryIcon = L.icon({
+    iconUrl: './images/grocery-drop-pin.png',
+    shadowUrl : './images/grocery-pin-shadow.png',
+    iconSize,
+    iconAnchor,
+    shadowSize,
+    shadowAnchor,
+    popupAnchor,
+});
+const vegIcon = L.icon({
+    iconUrl: './images/veg-drop-pin.png',
+    shadowUrl : './images/veg-pin-shadow.png',
+    iconSize,
+    iconAnchor,
+    shadowSize,
+    shadowAnchor,
+    popupAnchor,
+});
+const meatsIcon = L.icon({
+    iconUrl: './images/meat-drop-pin.png',
+    shadowUrl : './images/meats-pin-shadow.png',
+    iconSize,
+    iconAnchor,
+    shadowSize,
+    shadowAnchor,
+    popupAnchor,
+});
+const fishIcon = L.icon({
+    iconUrl: './images/fish-drop-pin.png',
+    shadowUrl : './images/fish-pin-shadow.png',
+    iconSize,
+    iconAnchor,
+    shadowSize,
+    shadowAnchor,
+    popupAnchor,
+});
+const marketsIcon = L.icon({
+    iconUrl: './images/markets-drop-pin.png',
+    shadowUrl : './images/markets-pin-shadow.png',
     iconSize,
     iconAnchor,
     shadowSize,
@@ -46,11 +90,21 @@ const youIcon = L.icon({
 currPos = (pos) => {
     const lat = pos.coords.latitude;
     const lng = pos.coords.longitude;
-
-    let youMarker = L.marker([lat, lng], {riseOnHover: true, icon:youIcon}).update().addTo(map);
+    const youCheckbox = document.getElementById('you-checkbox');
+    const youMarker = L.marker([lat, lng], {riseOnHover: true, icon:youIcon}).addTo(map);
     const youPopup = youMarker.bindPopup('Your Location :)');
-
     youPopup.addTo(map);
+
+
+    function youCheckBoxes(e){
+        if(e.target === youCheckbox && youCheckbox.checked == true){
+            youMarker.addTo(map);
+        } else if (e.target === youCheckbox && youCheckbox.checked == false){
+            youMarker.remove()
+        }
+    }
+
+    document.addEventListener('click', youCheckBoxes);
 }
 
 navigator.geolocation.getCurrentPosition(currPos);
@@ -194,33 +248,169 @@ function showFieldsetInputs(e){
 
 //Checking and Unchecking Boxes
 
-const youCheck = document.getElementById('youCheckbox');
-const groceryCheck = document.querySelector('input[name="Grocery"]');
-const vegCheck = document.querySelector('input[name="Veg"]');
-const meatsCheck = document.querySelector('input[name="Meats"]');
-const fishCheck = document.querySelector('input[name="Fish"]');
-const marketsCheck = document.querySelector('input[name="Markets"]');
+function groceryCheckBoxes(e){
+
+    const iconImg = document.querySelectorAll('.leaflet-marker-icon');
+    const iconImgShadow = document.querySelectorAll('.leaflet-marker-shadow');
+    
+    if(e.target.classList.contains('grocery-checkbox') && e.target.checked === false){
+        for(i = 0; i < iconImg.length; i++){
+            if(iconImg[i].classList.contains('grocery-icon') && iconImgShadow[i].classList.contains('grocery-icon')){
+                 iconImg[i].style.display = 'none';
+                 iconImgShadow[i].style.display = 'none';
+            }}} 
+            else if (e.target.classList.contains ('grocery-checkbox') && e.target.checked === true){
+            for(i = 0; i < iconImg.length; i++){
+                if(iconImg[i].classList.contains('grocery-icon') && iconImgShadow[i].classList.contains('grocery-icon')){
+                    iconImg[i].style.display = 'block';
+                    iconImgShadow[i].style.display = 'block';
+            }}
+}};
 
 
-function checkBoxes(e){
-    const youImg = document.querySelector('.leaflet-marker-icon');
-    const youImgShadow = document.querySelector('.leaflet-marker-shadow');
+function vegCheckBoxes(e){
 
-    if(e.target === youCheck && youCheck.checked === true){
-        if(youImg.src.indexOf('you') != -1){
-            youImgShadow.style.display = "block";
-            youImg.style.display = "block";
-    }}else if(e.target === youCheck && youCheck.checked === false){
-            youImgShadow.style.display = "none";
-            youImg.style.display = "none";
+    const iconImg = document.querySelectorAll('.leaflet-marker-icon');
+    const iconImgShadow = document.querySelectorAll('.leaflet-marker-shadow');
+    
+    if(e.target.classList.contains('veg-checkbox') && e.target.checked === false){
+        for(i = 0; i < iconImg.length; i++){
+            if(iconImg[i].classList.contains('veg-icon') && iconImgShadow[i].classList.contains('veg-icon')){
+                 iconImg[i].style.display = 'none';
+                 iconImgShadow[i].style.display = 'none';
+            }}} 
+            else if (e.target.classList.contains ('veg-checkbox') && e.target.checked === true){
+            for(i = 0; i < iconImg.length; i++){
+                if(iconImg[i].classList.contains('veg-icon') && iconImgShadow[i].classList.contains('veg-icon')){
+                    iconImg[i].style.display = 'block';
+                    iconImgShadow[i].style.display = 'block';
+            }}
+}};
+
+function meatsCheckBoxes(e){
+
+    const iconImg = document.querySelectorAll('.leaflet-marker-icon');
+    const iconImgShadow = document.querySelectorAll('.leaflet-marker-shadow');
+    
+    if(e.target.classList.contains('meats-checkbox') && e.target.checked === false){
+        for(i = 0; i < iconImg.length; i++){
+            if(iconImg[i].classList.contains('meats-icon') && iconImgShadow[i].classList.contains('meats-icon')){
+                 iconImg[i].style.display = 'none';
+                 iconImgShadow[i].style.display = 'none';
+            }}} 
+            else if (e.target.classList.contains ('meats-checkbox') && e.target.checked === true){
+            for(i = 0; i < iconImg.length; i++){
+                if(iconImg[i].classList.contains('meats-icon') && iconImgShadow[i].classList.contains('meats-icon')){
+                    iconImg[i].style.display = 'block';
+                    iconImgShadow[i].style.display = 'block';
+            }}
+}};
+
+function fishCheckBoxes(e){
+
+    const iconImg = document.querySelectorAll('.leaflet-marker-icon');
+    const iconImgShadow = document.querySelectorAll('.leaflet-marker-shadow');
+    
+    if(e.target.classList.contains('fish-checkbox') && e.target.checked === false){
+        for(i = 0; i < iconImg.length; i++){
+            if(iconImg[i].classList.contains('fish-icon') && iconImgShadow[i].classList.contains('fish-icon')){
+                 iconImg[i].style.display = 'none';
+                 iconImgShadow[i].style.display = 'none';
+            }}} 
+            else if (e.target.classList.contains ('fish-checkbox') && e.target.checked === true){
+            for(i = 0; i < iconImg.length; i++){
+                if(iconImg[i].classList.contains('fish-icon') && iconImgShadow[i].classList.contains('fish-icon')){
+                    iconImg[i].style.display = 'block';
+                    iconImgShadow[i].style.display = 'block';
+            }}
+}};
+
+function marketsCheckBoxes(e){
+
+    const iconImg = document.querySelectorAll('.leaflet-marker-icon');
+    const iconImgShadow = document.querySelectorAll('.leaflet-marker-shadow');
+    
+    if(e.target.classList.contains('markets-checkbox') && e.target.checked === false){
+        for(i = 0; i < iconImg.length; i++){
+            if(iconImg[i].classList.contains('markets-icon') && iconImgShadow[i].classList.contains('markets-icon')){
+                 iconImg[i].style.display = 'none';
+                 iconImgShadow[i].style.display = 'none';
+            }}} 
+            else if (e.target.classList.contains ('markets-checkbox') && e.target.checked === true){
+            for(i = 0; i < iconImg.length; i++){
+                if(iconImg[i].classList.contains('markets-icon') && iconImgShadow[i].classList.contains('markets-icon')){
+                    iconImg[i].style.display = 'block';
+                    iconImgShadow[i].style.display = 'block';
+            }}
+}};
+
+
+function addClassesToIcons(){
+    function settingBS(){
+
+        const iconImg = document.querySelectorAll('.leaflet-marker-icon');
+        const iconImgShadow = document.querySelectorAll('.leaflet-marker-shadow');
+    
+    for(i = 0; i < iconImg.length; i++){
+         if(iconImg[i].src.indexOf('grocery') != -1){
+             iconImg[i].classList.add('grocery-icon');
+         } else if(iconImg[i].src.indexOf('veg') != -1){
+            iconImg[i].classList.add('veg-icon');
+         } else if(iconImg[i].src.indexOf('meat') != -1){
+             iconImg[i].classList.add('meats-icon');
+         } else if(iconImg[i].src.indexOf('fish') != -1){
+             iconImg[i].classList.add('fish-icon');
+         } else if(iconImg[i].src.indexOf('markets') != -1){
+             iconImg[i].classList.add('markets-icon');
+         }}
+    
+    for(i = 0; i < iconImgShadow.length; i++){
+         if(iconImgShadow[i].src.indexOf('grocery') != -1){
+             iconImgShadow[i].classList.add('grocery-icon');
+         } else if(iconImgShadow[i].src.indexOf('veg') != -1){
+             iconImgShadow[i].classList.add('veg-icon');
+         } else if(iconImgShadow[i].src.indexOf('meat') != -1){
+             iconImgShadow[i].classList.add('meats-icon');
+         } else if(iconImgShadow[i].src.indexOf('fish') != -1){
+             iconImgShadow[i].classList.add('fish-icon');
+         } else if(iconImgShadow[i].src.indexOf('markets') != -1){
+             iconImgShadow[i].classList.add('markets-icon');
+         }
+    }}
+
+
+    fetch('./shops.json')
+    .then((response) => {
+    return response.json();
+    })
+    .then((data) => {
+    
+    for(i = 0; i < data.length; i++){
+        if(data[i].type == 'Grocery'){
+            const groceryMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:groceryIcon});
+            groceryMarker.addTo(map);
+        } else if(data[i].type == 'Produce'){
+            const vegMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:vegIcon}).addTo(map);
+            // vegMarker.classList.add('veg-marker');
+            vegMarker.addTo(map);
+        } else if(data[i].type == 'Meats'){
+            const meatsMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:meatsIcon}).addTo(map);
+            // meatsMarker.classList.add('meats-marker');
+            meatsMarker.addTo(map);
+        } else if(data[i].type == 'Fish'){
+            const fishMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:fishIcon}).addTo(map);
+            // fishMarker.classList.add('fish-marker');
+            fishMarker.addTo(map);
+        } else if(data[i].type == 'Markets'){
+            const marketsMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:marketsIcon}).addTo(map);
+            // marketsMarker.classList.add('markets-marker');
+            marketsMarker.addTo(map);
+        }
+    };
+    settingBS();
     }
+    );
 }
-
-
-
-
-
-
 
 
 function checkUI(){
@@ -234,79 +424,11 @@ document.addEventListener('click', hideInfo);
 document.addEventListener('click', maxInfo);
 document.addEventListener('click', hideFieldsetInputs);
 document.addEventListener('click', showFieldsetInputs);
-document.addEventListener('click', checkBoxes);
 
-
-
-// Code Graveyard
-
-    // document.addEventListener('mouseenter', function(e) { 
-    //     // if(e.target.classList.contains('leaflet-marker-icon')){
-    //     //     youIcon.options.iconSize = [45,44];
-    //     //     youIcon.options.iconAnchor = [24,44];
-    //     //     youIcon.options.shadowSize = [45,44];
-    //     //     youIcon.options.shadowAnchor = [24,44];
-    //     //     test.remove();
-    //     //     L.marker([lat, lng], {icon:youIcon}).update().addTo(map);
-    //         console.log(e.target)
-    //     });
-
-    //     // document.addEventListener('mouseout', function(e) { 
-    //     //     if(e.target.classList.contains('leaflet-marker-icon')){
-    //     //         youIcon.options.iconSize = [45,44];
-    //     //         youIcon.options.iconAnchor = [24,44];
-    //     //         youIcon.options.shadowSize = [45,44];
-    //     //         youIcon.options.shadowAnchor = [24,44];
-    //     //         test.remove();
-    //     //         L.marker([lat, lng], {icon:youIcon}).update().addTo(map);
-    //     //         console.log(e.target)
-    //     //     }});
-
-    
-// function checkBoxes(e){
-//     for(let i = 0; i < checkBtns.length; i++){
-//         if(e.target === checkBtns[i]){
-//             console.log(checkBtns[i])
-//         }
-
-//     }
-// }
-
-// const checkBtns = [youCheck,groceryCheck,vegCheck,meatsCheck,fishCheck,marketsCheck]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.addEventListener('click', groceryCheckBoxes);
+document.addEventListener('click', vegCheckBoxes);
+document.addEventListener('click', meatsCheckBoxes);
+document.addEventListener('click', fishCheckBoxes);
+document.addEventListener('click', marketsCheckBoxes);
+document.addEventListener('DOMContentLoaded', addClassesToIcons);
 
