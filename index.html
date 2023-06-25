@@ -12,12 +12,10 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
-    <div class="site-container">
-        
-        <div class="info-container">
-        <div class="intro-legend">
+    <div class="site-container"> 
+        <div class="intro-legend info-container map-box map-box-overlay">
             <div class="intro">
-                <button class="min-btn"><img src="./images/icons8-left-arrow-48.png" alt="" class="min-btn-img"></button>
+               <button class="min-btn"><img src="./images/icons8-left-arrow-48.png" alt="" class="min-btn-img"></button>
                <h1>Brissy Bargs</h1>
                <div class="intro-p"><img src="./images/icons8-happy-32.png" alt=""><p>To help you save cash</p></div>
                <div class="search">
@@ -29,7 +27,7 @@
                 <ul>
                     <li><input type="checkbox" checked="true" id="you-checkbox" class="checkbox" name="You"><label for="You"><img src="./images/you-are-here-drop-pin.png"><h4>You</h4></label></li>
                     <li><input type="checkbox" checked="true" id="grocery-checkbox" class="checkbox grocery-checkbox" name="Grocery"><label for="Grocery"><img src="./images/grocery-drop-pin.png"><h4>Grocery</h4></label></li>
-                    <li><input type="checkbox" checked="true" id="veg-checkbox" class="checkbox veg-checkbox" name="Veg"><label for="Veg"><img src="./images/veg-drop-pin.png"><h4>Veg</h4></label></li>
+                    <li><input type="checkbox" checked="true" id="veg-checkbox" class="checkbox veg-checkbox" name="Veg"><label for="Veg"><img src="./images/veg-drop-pin.png"><h4>Produce</h4></label></li>
                     <li><input type="checkbox" checked="true" id="meats-checkbox" class="checkbox meats-checkbox" name="Meats"><label for="Meats"><img src="./images/meat-drop-pin.png"><h4>Meats</h4></label></li>
                     <li><input type="checkbox" id="fish-checkbox" class="checkbox fish-checkbox" name="Fish"><label for="Fish"><img src="./images/fish-drop-pin.png"><h4>Fish</h4></label></li>
                     <li><input type="checkbox" checked="true" id="markets-checkbox" class="checkbox markets-checkbox" name="Markets"><label for="Markets"><img src="./images/markets-drop-pin.png"><h4>Markets</h4></label></li>
@@ -52,8 +50,12 @@
                 <button class="donate-btn"><img src="./images/icons8-donate-50-2.png" alt=""></button>
             </div>
         </div>
-        </div>
-    <div id="map-container"></div>
+        <div class="minimised-info-container map-box map-box-min-overlay">
+            <button class="max-btn">
+                <img src="./images/icons8-right-arrow-50.png" alt="" class="max-btn-img">
+            </button>
+    </div>
+    <div id="map-container" class="map-box"></div>
     </div>
 
 

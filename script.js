@@ -16,12 +16,17 @@ map.attributionControl.addAttribution("<a href=\"https://www.jawg.io\" target=\"
 map.options.minZoom = 7;
 
 //Setting Bounds
-const somersetLatLng = L.latLng( -27.1190, 152.5511);
-const coralSeaLatLng = L.latLng(-27.863158, 153.572523);
+const somersetLatLng = L.latLng(-26.89934132845556, 152.27835647929754);
+const coralSeaLatLng = L.latLng(-28.32550372935167, 153.6042539531648);
 
 const bounds = L.latLngBounds(somersetLatLng, coralSeaLatLng);
 map.maxBoundsViscosity = 1.0;
 map.setMaxBounds(bounds);
+
+//Move Control Zoom
+L.control.zoom({
+    position: 'topright'
+}).addTo(map);
 
 //Custom Icons
 const iconSize = [42, 41];
@@ -113,59 +118,18 @@ navigator.geolocation.getCurrentPosition(currPos);
 //Hiding Info Container
 const hideBtn = document.querySelector('.min-btn');
 const hideBtnImg = document.querySelector('.min-btn-img');
-const siteContainer = document.querySelector('.site-container');
+const showBtn = document.querySelector('.max-btn');
+const showBtnImg = document.querySelector('.max-btn-img');
 const infoContainer = document.querySelector('.info-container');
 
 function hideInfo(e){
     if(e.target === hideBtn || e.target === hideBtnImg){
-        infoContainer.classList.add('hide-info');
-        checkUI();
-        createMaxInfo();
+        infoContainer.style.display = 'none';
+    } else if (e.target === showBtn || e.target === showBtnImg) {
+        infoContainer.style.display = 'block';
     }
 }
 
-//Maximising Info Container
-function createMaxInfo(){
-    const maxInfoDiv = document.createElement('div');
-    const maxBtn = createMaxBtn('max-btn max-btn:hover');
-    maxInfoDiv.appendChild(maxBtn);
-    
-    
-    maxInfoDiv.classList.add('max-info-container');
-    siteContainer.insertBefore(maxInfoDiv, mapContainer);
-}
-
-function createMaxBtn(classes){
-    const maxBtn = document.createElement('button');
-    maxBtn.className = classes;
-
-    const maxBtnImg = createMaxBtnImg('max-btn-img');
-    maxBtn.appendChild(maxBtnImg);
-
-    return maxBtn;
-}
-
-function createMaxBtnImg(classes){
-    const maxBtnImg = document.createElement('img');
-    maxBtnImg.className = classes;
-    maxBtnImg.src = './images/icons8-right-arrow-50.png';
-
-    return maxBtnImg;
-}
-
-const maxBtn = document.querySelector('.maxBtn');
-const maxBtnImg = document.querySelector('.maxBtnImg');
-
-function maxInfo(e){
-    if(e.target.classList.contains('max-btn') || e.target.classList.contains('max-btn-img')){
-        infoContainer.classList.remove('hide-info');
-
-        const removeDiv = document.querySelector('.max-info-container');
-        removeDiv.remove();
-
-        siteContainer.classList.remove('site-container-hide-info');
-    }
-}
 
 //Fieldset Submitted
 const fieldset = document.querySelector('.help-fieldset');
@@ -247,7 +211,6 @@ function showFieldsetInputs(e){
 }
 
 //Checking and Unchecking Boxes
-
 function groceryCheckBoxes(e){
 
     const iconImg = document.querySelectorAll('.leaflet-marker-icon');
@@ -344,7 +307,7 @@ function marketsCheckBoxes(e){
             }}
 }};
 
-
+//Adding Classes to Icons
 function addClassesToIcons(){
     function settingBS(){
 
@@ -412,19 +375,10 @@ function addClassesToIcons(){
     );
 }
 
-
-function checkUI(){
-    if(infoContainer.classList.contains('hide-info')){
-        siteContainer.classList.add('site-container-hide-info');
-    }
-};
-
-
+//Event Listeners
 document.addEventListener('click', hideInfo);
-document.addEventListener('click', maxInfo);
 document.addEventListener('click', hideFieldsetInputs);
 document.addEventListener('click', showFieldsetInputs);
-
 document.addEventListener('click', groceryCheckBoxes);
 document.addEventListener('click', vegCheckBoxes);
 document.addEventListener('click', meatsCheckBoxes);
