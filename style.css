@@ -337,7 +337,7 @@ fieldset{
 }
 
 .leaflet-popup-content-wrapper{
-    max-width: 250px;
+    max-width: 230px;
 }
 
 .style-icon{
@@ -345,10 +345,19 @@ fieldset{
     color: #212529;
 }
 
-.style-icon p{
+.style-icon p:first-child{
     font-size: 1.1em;
     margin-bottom: 5px;
 }
+
+.style-icon p:nth-child(2){
+    border-style: none none solid none;
+    padding-bottom: 5px;
+    border-color: #93B4AE;
+    border-width: 3px;
+    margin: 0;
+}
+
 
 
 .veg-hours, .grocery-hours, .meats-hours, .fish-hours, .markets-hours{
@@ -386,7 +395,7 @@ fieldset{
 }
 
 .phone-grid div{
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 

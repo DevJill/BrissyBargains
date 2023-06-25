@@ -354,7 +354,7 @@ function addClassesToIcons(){
             const groceryPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
             .setContent
-            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p>${data[i].address}<br><br>
+            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p><p>${data[i].address}</p><br>
                     <div class="grocery-hours"
                         Mon: ${data[i].mondayOpenHrs}<br>
                         Tue: ${data[i].tuesdayOpenHrs}<br>
@@ -372,7 +372,7 @@ function addClassesToIcons(){
             const vegPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
             .setContent
-            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p>${data[i].address}<br><br>
+            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p><p>${data[i].address}</p><br>
                     <div class="veg-hours"
                         Mon: ${data[i].mondayOpenHrs}<br>
                         Tue: ${data[i].tuesdayOpenHrs}<br>
@@ -390,7 +390,7 @@ function addClassesToIcons(){
             const meatsPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
             .setContent
-            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p>${data[i].address}<br><br>
+            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p><p>${data[i].address}</p><br>
                     <div class="meats-hours"
                         Mon: ${data[i].mondayOpenHrs}<br>
                         Tue: ${data[i].tuesdayOpenHrs}<br>
@@ -408,7 +408,7 @@ function addClassesToIcons(){
             const fishPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
             .setContent
-            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p>${data[i].address}<br><br>
+            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p><p>${data[i].address}</p><br>
                     <div class="fish-hours"
                         Mon: ${data[i].mondayOpenHrs}<br>
                         Tue: ${data[i].tuesdayOpenHrs}<br>
@@ -426,7 +426,7 @@ function addClassesToIcons(){
             const marketsPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
             .setContent
-            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p>${data[i].address}<br><br>
+            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p><p>${data[i].address}</p><br>
                     <div class="markets-hours"
                         Mon: ${data[i].mondayOpenHrs}<br>
                         Tue: ${data[i].tuesdayOpenHrs}<br>
