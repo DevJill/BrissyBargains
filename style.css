@@ -13,20 +13,7 @@ html, body {
     width: 100%;
     height: 900px;
     position: relative;
-    margin: 30px;
 }
-/* 
-.site-container-hide-info{
-    display: block;
-    background-color: #B7CDC9;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #93B4AE;
-    border-width: 1px;
-    padding: 15px;
-    height: 100%;
-}  */
-
                                                  /* Info Tings */
 
                                                 
@@ -39,20 +26,8 @@ html, body {
     border-color: #93B4AE;
     border-width: 1px;
     padding: 15px;
-    /* margin-right: 5px; */
 }
 
-/* .max-info{
-    display: block;
-    background-color: #B7CDC9;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #93B4AE;
-    border-width: 1px;
-    padding: 15px;
-    height: 100%;
-    
-} */
 
                                          /* Minimize Btn Tings */
 
@@ -330,7 +305,6 @@ fieldset{
     border-radius: 10px;
 }
 
-
 .map-box{
     width: 100%;
     height: 100%;
@@ -362,21 +336,58 @@ fieldset{
     filter: drop-shadow(3px 0 4px rgb(136, 136, 136));
 }
 
-.site-container{
-    margin: 0;
+.leaflet-popup-content-wrapper{
+    max-width: 250px;
+}
+
+.style-icon{
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #212529;
+}
+
+.style-icon p{
+    font-size: 1.1em;
+    margin-bottom: 5px;
 }
 
 
+.veg-hours, .grocery-hours, .meats-hours, .fish-hours, .markets-hours{
+    height:135px;
+    max-width: 150px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 auto 15px auto;
+}
 
+.veg-hours{
+    background-color: #bbffc4;
+}
 
+.grocery-hours{
+    background-color: #ffd8ac
+}
 
+.meats-hours{
+    background-color: #ffacac
+}
 
+.markets-hours{
+    background-color: #fff9ac
+}
 
+.phone-grid{
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
 
+.phone-grid img{
+    width: 17px;
+}
 
-
-
-
+.phone-grid div{
+    padding-left: 10px;
+}
 
 
                                                  /* Body Tings */

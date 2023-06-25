@@ -97,7 +97,7 @@ currPos = (pos) => {
     const lng = pos.coords.longitude;
     const youCheckbox = document.getElementById('you-checkbox');
     const youMarker = L.marker([lat, lng], {riseOnHover: true, icon:youIcon}).addTo(map);
-    const youPopup = youMarker.bindPopup('Your Location :)');
+    const youPopup = youMarker.bindPopup(`<strong>Your Location :)</strong>`);
     youPopup.addTo(map);
 
 
@@ -230,7 +230,6 @@ function groceryCheckBoxes(e){
             }}
 }};
 
-
 function vegCheckBoxes(e){
 
     const iconImg = document.querySelectorAll('.leaflet-marker-icon');
@@ -313,6 +312,7 @@ function addClassesToIcons(){
 
         const iconImg = document.querySelectorAll('.leaflet-marker-icon');
         const iconImgShadow = document.querySelectorAll('.leaflet-marker-shadow');
+        const iconPopup = document.querySelectorAll('.leaflet-popup-content');
     
     for(i = 0; i < iconImg.length; i++){
          if(iconImg[i].src.indexOf('grocery') != -1){
@@ -342,6 +342,7 @@ function addClassesToIcons(){
     }}
 
 
+
     fetch('./shops.json')
     .then((response) => {
     return response.json();
@@ -350,69 +351,94 @@ function addClassesToIcons(){
     
     for(i = 0; i < data.length; i++){
         if(data[i].type == 'Grocery'){
+            const groceryPopup = L.popup()
+            .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
+            .setContent
+            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p>${data[i].address}<br><br>
+                    <div class="grocery-hours"
+                        Mon: ${data[i].mondayOpenHrs}<br>
+                        Tue: ${data[i].tuesdayOpenHrs}<br>
+                        Wed: ${data[i].wednesdaydayOpenHrs}<br>
+                        Thu: ${data[i].thrusdayOpenHrs}<br>
+                        Fri: ${data[i].fridayOpenHrs}<br>
+                        Sat: ${data[i].saturdayOpenHrs}<br>
+                        Sun: ${data[i].sundayOpenHrs}<br><br>
+                    </div>
+                    <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
             const groceryMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:groceryIcon});
-                groceryMarker.bindPopup([data[i].latNLong[0], data[i].latNLong[1]])
-                .bindPopup(`<strong>${data[i].name}</strong><br>${data[i].address}<br><br>
-                Mon: ${data[i].mondayOpenHrs}<br>
-                Tue: ${data[i].tuesdayOpenHrs}<br>
-                Wed: ${data[i].wednesdaydayOpenHrs}<br>
-                Thu: ${data[i].thrusdayOpenHrs}<br>
-                Fri: ${data[i].fridayOpenHrs}<br>
-                Sat: ${data[i].saturdayOpenHrs}<br>
-                Sun: ${data[i].sundayOpenHrs}<br><br>
-                Phone: ${data[i].phone}`).addTo(map);
+            groceryMarker.bindPopup(groceryPopup);
             groceryMarker.addTo(map);
         } else if(data[i].type == 'Produce'){
-            const vegMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:vegIcon}).addTo(map);
-                vegMarker.bindPopup([data[i].latNLong[0], data[i].latNLong[1]])
-                .bindPopup(`<strong>${data[i].name}</strong><br>${data[i].address}<br><br>
-                Mon: ${data[i].mondayOpenHrs}<br>
-                Tue: ${data[i].tuesdayOpenHrs}<br>
-                Wed: ${data[i].wednesdaydayOpenHrs}<br>
-                Thu: ${data[i].thrusdayOpenHrs}<br>
-                Fri: ${data[i].fridayOpenHrs}<br>
-                Sat: ${data[i].saturdayOpenHrs}<br>
-                Sun: ${data[i].sundayOpenHrs}<br><br>
-                Phone: ${data[i].phone}`).addTo(map);
+            const vegPopup = L.popup()
+            .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
+            .setContent
+            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p>${data[i].address}<br><br>
+                    <div class="veg-hours"
+                        Mon: ${data[i].mondayOpenHrs}<br>
+                        Tue: ${data[i].tuesdayOpenHrs}<br>
+                        Wed: ${data[i].wednesdaydayOpenHrs}<br>
+                        Thu: ${data[i].thrusdayOpenHrs}<br>
+                        Fri: ${data[i].fridayOpenHrs}<br>
+                        Sat: ${data[i].saturdayOpenHrs}<br>
+                        Sun: ${data[i].sundayOpenHrs}<br><br>
+                    </div>
+                    <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
+            const vegMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:vegIcon});
+            vegMarker.bindPopup(vegPopup);
             vegMarker.addTo(map);
         } else if(data[i].type == 'Meats'){
-            const meatsMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:meatsIcon}).addTo(map);
-                meatsMarker.bindPopup([data[i].latNLong[0], data[i].latNLong[1]])
-                .bindPopup(`<strong>${data[i].name}</strong><br>${data[i].address}<br><br>
-                Mon: ${data[i].mondayOpenHrs}<br>
-                Tue: ${data[i].tuesdayOpenHrs}<br>
-                Wed: ${data[i].wednesdaydayOpenHrs}<br>
-                Thu: ${data[i].thrusdayOpenHrs}<br>
-                Fri: ${data[i].fridayOpenHrs}<br>
-                Sat: ${data[i].saturdayOpenHrs}<br>
-                Sun: ${data[i].sundayOpenHrs}<br><br>
-                Phone: ${data[i].phone}`).addTo(map);
+            const meatsPopup = L.popup()
+            .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
+            .setContent
+            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p>${data[i].address}<br><br>
+                    <div class="meats-hours"
+                        Mon: ${data[i].mondayOpenHrs}<br>
+                        Tue: ${data[i].tuesdayOpenHrs}<br>
+                        Wed: ${data[i].wednesdaydayOpenHrs}<br>
+                        Thu: ${data[i].thrusdayOpenHrs}<br>
+                        Fri: ${data[i].fridayOpenHrs}<br>
+                        Sat: ${data[i].saturdayOpenHrs}<br>
+                        Sun: ${data[i].sundayOpenHrs}<br><br>
+                    </div>
+                    <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
+            const meatsMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:meatsIcon});
+            meatsMarker.bindPopup(meatsPopup);
             meatsMarker.addTo(map);
         } else if(data[i].type == 'Fish'){
-            const fishMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:fishIcon}).addTo(map);
-                fishMarker.bindPopup([data[i].latNLong[0], data[i].latNLong[1]])
-                .bindPopup(`<strong>${data[i].name}</strong><br>${data[i].address}<br><br>
-                Mon: ${data[i].mondayOpenHrs}<br>
-                Tue: ${data[i].tuesdayOpenHrs}<br>
-                Wed: ${data[i].wednesdaydayOpenHrs}<br>
-                Thu: ${data[i].thrusdayOpenHrs}<br>
-                Fri: ${data[i].fridayOpenHrs}<br>
-                Sat: ${data[i].saturdayOpenHrs}<br>
-                Sun: ${data[i].sundayOpenHrs}<br><br>
-                Phone: ${data[i].phone}`).addTo(map);
+            const fishPopup = L.popup()
+            .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
+            .setContent
+            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p>${data[i].address}<br><br>
+                    <div class="fish-hours"
+                        Mon: ${data[i].mondayOpenHrs}<br>
+                        Tue: ${data[i].tuesdayOpenHrs}<br>
+                        Wed: ${data[i].wednesdaydayOpenHrs}<br>
+                        Thu: ${data[i].thrusdayOpenHrs}<br>
+                        Fri: ${data[i].fridayOpenHrs}<br>
+                        Sat: ${data[i].saturdayOpenHrs}<br>
+                        Sun: ${data[i].sundayOpenHrs}<br><br>
+                    </div>
+                    <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
+            const fishMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:fishIcon});
+            fishMarker.bindPopup(meatsPopup);
             fishMarker.addTo(map);
         } else if(data[i].type == 'Markets'){
-            const marketsMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:marketsIcon}).addTo(map);
-                marketsMarker.bindPopup([data[i].latNLong[0], data[i].latNLong[1]])
-                .bindPopup(`<strong>${data[i].name}</strong><br>${data[i].address}<br><br>
-                Mon: ${data[i].mondayOpenHrs}<br>
-                Tue: ${data[i].tuesdayOpenHrs}<br>
-                Wed: ${data[i].wednesdaydayOpenHrs}<br>
-                Thu: ${data[i].thrusdayOpenHrs}<br>
-                Fri: ${data[i].fridayOpenHrs}<br>
-                Sat: ${data[i].saturdayOpenHrs}<br>
-                Sun: ${data[i].sundayOpenHrs}<br><br>
-                Phone: ${data[i].phone}`).addTo(map);
+            const marketsPopup = L.popup()
+            .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
+            .setContent
+            (`<div class="style-icon"><p><strong>${data[i].name}</strong></p>${data[i].address}<br><br>
+                    <div class="markets-hours"
+                        Mon: ${data[i].mondayOpenHrs}<br>
+                        Tue: ${data[i].tuesdayOpenHrs}<br>
+                        Wed: ${data[i].wednesdaydayOpenHrs}<br>
+                        Thu: ${data[i].thrusdayOpenHrs}<br>
+                        Fri: ${data[i].fridayOpenHrs}<br>
+                        Sat: ${data[i].saturdayOpenHrs}<br>
+                        Sun: ${data[i].sundayOpenHrs}<br><br>
+                    </div>
+                    <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
+            const marketsMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:marketsIcon});
+            marketsMarker.bindPopup(marketsPopup);
             marketsMarker.addTo(map);
         }
     };
