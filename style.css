@@ -351,8 +351,8 @@ fieldset{
 }
 
 .style-icon p:nth-child(2){
-    border-style: none none solid none;
     padding-bottom: 5px;
+    border-style: none none solid none;
     border-color: #93B4AE;
     border-width: 3px;
     margin: 0;
