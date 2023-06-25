@@ -16,7 +16,7 @@ map.attributionControl.addAttribution("<a href=\"https://www.jawg.io\" target=\"
 map.options.minZoom = 7;
 
 //Setting Bounds
-const somersetLatLng = L.latLng(-26.89934132845556, 152.27835647929754);
+const somersetLatLng = L.latLng(-26.558024573349204, 152.26855768218965);
 const coralSeaLatLng = L.latLng(-28.32550372935167, 153.6042539531648);
 
 const bounds = L.latLngBounds(somersetLatLng, coralSeaLatLng);
@@ -351,22 +351,68 @@ function addClassesToIcons(){
     for(i = 0; i < data.length; i++){
         if(data[i].type == 'Grocery'){
             const groceryMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:groceryIcon});
+                groceryMarker.bindPopup([data[i].latNLong[0], data[i].latNLong[1]])
+                .bindPopup(`<strong>${data[i].name}</strong><br>${data[i].address}<br><br>
+                Mon: ${data[i].mondayOpenHrs}<br>
+                Tue: ${data[i].tuesdayOpenHrs}<br>
+                Wed: ${data[i].wednesdaydayOpenHrs}<br>
+                Thu: ${data[i].thrusdayOpenHrs}<br>
+                Fri: ${data[i].fridayOpenHrs}<br>
+                Sat: ${data[i].saturdayOpenHrs}<br>
+                Sun: ${data[i].sundayOpenHrs}<br><br>
+                Phone: ${data[i].phone}`).addTo(map);
             groceryMarker.addTo(map);
         } else if(data[i].type == 'Produce'){
             const vegMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:vegIcon}).addTo(map);
-            // vegMarker.classList.add('veg-marker');
+                vegMarker.bindPopup([data[i].latNLong[0], data[i].latNLong[1]])
+                .bindPopup(`<strong>${data[i].name}</strong><br>${data[i].address}<br><br>
+                Mon: ${data[i].mondayOpenHrs}<br>
+                Tue: ${data[i].tuesdayOpenHrs}<br>
+                Wed: ${data[i].wednesdaydayOpenHrs}<br>
+                Thu: ${data[i].thrusdayOpenHrs}<br>
+                Fri: ${data[i].fridayOpenHrs}<br>
+                Sat: ${data[i].saturdayOpenHrs}<br>
+                Sun: ${data[i].sundayOpenHrs}<br><br>
+                Phone: ${data[i].phone}`).addTo(map);
             vegMarker.addTo(map);
         } else if(data[i].type == 'Meats'){
             const meatsMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:meatsIcon}).addTo(map);
-            // meatsMarker.classList.add('meats-marker');
+                meatsMarker.bindPopup([data[i].latNLong[0], data[i].latNLong[1]])
+                .bindPopup(`<strong>${data[i].name}</strong><br>${data[i].address}<br><br>
+                Mon: ${data[i].mondayOpenHrs}<br>
+                Tue: ${data[i].tuesdayOpenHrs}<br>
+                Wed: ${data[i].wednesdaydayOpenHrs}<br>
+                Thu: ${data[i].thrusdayOpenHrs}<br>
+                Fri: ${data[i].fridayOpenHrs}<br>
+                Sat: ${data[i].saturdayOpenHrs}<br>
+                Sun: ${data[i].sundayOpenHrs}<br><br>
+                Phone: ${data[i].phone}`).addTo(map);
             meatsMarker.addTo(map);
         } else if(data[i].type == 'Fish'){
             const fishMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:fishIcon}).addTo(map);
-            // fishMarker.classList.add('fish-marker');
+                fishMarker.bindPopup([data[i].latNLong[0], data[i].latNLong[1]])
+                .bindPopup(`<strong>${data[i].name}</strong><br>${data[i].address}<br><br>
+                Mon: ${data[i].mondayOpenHrs}<br>
+                Tue: ${data[i].tuesdayOpenHrs}<br>
+                Wed: ${data[i].wednesdaydayOpenHrs}<br>
+                Thu: ${data[i].thrusdayOpenHrs}<br>
+                Fri: ${data[i].fridayOpenHrs}<br>
+                Sat: ${data[i].saturdayOpenHrs}<br>
+                Sun: ${data[i].sundayOpenHrs}<br><br>
+                Phone: ${data[i].phone}`).addTo(map);
             fishMarker.addTo(map);
         } else if(data[i].type == 'Markets'){
             const marketsMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:marketsIcon}).addTo(map);
-            // marketsMarker.classList.add('markets-marker');
+                marketsMarker.bindPopup([data[i].latNLong[0], data[i].latNLong[1]])
+                .bindPopup(`<strong>${data[i].name}</strong><br>${data[i].address}<br><br>
+                Mon: ${data[i].mondayOpenHrs}<br>
+                Tue: ${data[i].tuesdayOpenHrs}<br>
+                Wed: ${data[i].wednesdaydayOpenHrs}<br>
+                Thu: ${data[i].thrusdayOpenHrs}<br>
+                Fri: ${data[i].fridayOpenHrs}<br>
+                Sat: ${data[i].saturdayOpenHrs}<br>
+                Sun: ${data[i].sundayOpenHrs}<br><br>
+                Phone: ${data[i].phone}`).addTo(map);
             marketsMarker.addTo(map);
         }
     };
