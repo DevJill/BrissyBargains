@@ -16,8 +16,8 @@ map.attributionControl.addAttribution("<a href=\"https://www.jawg.io\" target=\"
 map.options.minZoom = 7;
 
 //Setting Bounds
-const somersetLatLng = L.latLng(-26.558024573349204, 152.26855768218965);
-const coralSeaLatLng = L.latLng(-28.32550372935167, 153.6042539531648);
+const somersetLatLng = L.latLng(-26.336390035126595, 151.70417250677656);
+const coralSeaLatLng = L.latLng(-28.42635504054971, 154.139599395836);
 
 const bounds = L.latLngBounds(somersetLatLng, coralSeaLatLng);
 map.maxBoundsViscosity = 1.0;
