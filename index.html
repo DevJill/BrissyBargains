@@ -15,7 +15,7 @@
     <div class="site-container"> 
         <div class="intro-legend info-container map-box map-box-overlay">
             <div class="intro">
-               <button class="min-btn"><img src="./images/icons8-left-arrow-48.png" srcset = "./images/icons8-up-arrow-64.png 420w" alt="" class="min-btn-img"></button>
+               <button class="min-btn"><img src="./images/icons8-left-arrow-48.png" srcset = "./images/icons8-down-arrow-64.png 420w" alt="" class="min-btn-img"></button>
                 <div class="intro-grid-4-small-viewport">
                     <h1>Brissy Bargs</h1>
                     <div class="intro-p"><img src="./images/icons8-happy-32.png" alt=""><p>To help you save cash</p></div>
@@ -39,6 +39,11 @@
                     </div>
                 </ul>
             </div>
+            <div class="show-want-to-help">
+                <div class="align-btn">
+                <button class="show-want-to-help-btn"><p class="show-want-to-help-btn">Know of other cheap places?</p></button>
+                </div>
+            </div>
             <div class="want-to-help">
                 <fieldset class="help-fieldset">
                     <legend>Know of other cheap places?</legend>
@@ -48,8 +53,11 @@
                     <label for="shop-suburb-name" class="fieldset-input-title">Shop Suburb:</label>
                     <input type="text" name="shop-suburb-name" class="fieldset-input">
                     <input type="submit" value="Send Suggestion" class="fieldset-submit-suggestion">
+                    <div class="hidden-want-to-help-buttons">
+                        <input type="submit" value="Send Suggestion" class="hidden-fieldset-submit-suggestion">
+                        <button class="nevermind-btn">Nvm</button>
                     </div>
-                    
+                    </div>                    
                 </fieldset>                
             </div>
             <div class="donate">
@@ -59,7 +67,7 @@
         </div>
         <div class="minimised-info-container map-box map-box-min-overlay">
             <button class="max-btn">
-                <img src="./images/icons8-right-arrow-50.png" alt="" class="max-btn-img">
+                <img src="./images/icons8-right-arrow-50.png" srcset = "./images/icons8-up-arrow-64.png 420w"alt="" class="max-btn-img">
             </button>
          </div>
          <div id="map-container" class="map-box"></div>

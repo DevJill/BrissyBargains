@@ -7,6 +7,22 @@ html, body {
     height: 100%;
 }
 
+.hidden-want-to-help{
+    display: none;
+}
+
+.show-want-to-help{
+    display: none;
+}
+
+.hidden-want-to-help-buttons{
+    display: none;
+}
+
+.hidden-suggest-more-btn{
+    display: none;
+}
+
                                         /* Site Container Tings */
 
 .site-container{
@@ -96,7 +112,7 @@ html, body {
                                                  /* Search Tings */
 
 .search{
-    margin-top: 15px;
+    margin: 15px 0;
     height: 2em;
     display: grid;
     max-width: 100%;
@@ -139,11 +155,6 @@ html, body {
 
                                                  /* Legend Tings */
 
-.legend{
-    padding-top: 15px;
-    max-width: 100%;
-    margin: auto;
-}
 
 .legend ul{
     padding: 5px 0;
@@ -225,7 +236,7 @@ fieldset{
 }
 
 .fieldset-submit-suggestion:hover, .fieldset-submit-more-suggestion:hover{
-    background-color: #ABC4C0;
+        background-color: #ABC4C0;
 }
 
 .help-fieldset p{
@@ -422,11 +433,30 @@ body h1{
 /* background-color: #555B6E; */
 /* background-color: #789284; */
 
+
+
+
+
+
+
+
 @media only screen and (max-width: 420px){
 
+.site-container{
+     height: 800px;
+}
+
+.fieldset-submit-more-suggestion{
+    display: none;
+}
+
+.fieldset-submit-suggestion{
+    display: none;
+}
 
 body{
     margin: 5px;
+    height: 100%;
 }
 
 /* Map Tings  */
@@ -434,7 +464,7 @@ body{
 
 .map-box-overlay{
     width: 100%;
-    height: 50%;
+    height: 55%;
     top: auto;
     bottom: 0;
     left: 0;
@@ -479,7 +509,9 @@ body{
 
 /* Legend Tings */
 
-
+.legend{
+    margin-top: 15px;
+}
 
 .legend label{
     display: grid;
@@ -511,10 +543,159 @@ body{
     border-width: 0 1px 0 0;
 }
 
+/* Hidden Button Tings */
 
 .want-to-help{
     display: none;
 }
+
+.show-want-to-help{
+    display: block;
+}
+
+.show-want-to-help button{
+    padding: 5px;
+    width: 250px;
+    height: 3em;
+    margin: 30px auto 15px auto;
+    outline: #93B4AE;
+    background-color: #B7CDC9;
+    border: solid 1px;
+    border-color: #93B4AE;
+    border-radius: 5px;
+    transition: ease-in .3s;
+}
+
+.show-want-to-help button:hover{
+    background-color: #ABC4C0;
+}
+
+.show-want-to-help p{
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #212529;
+}
+
+.align-btn{
+    text-align: center;
+}
+
+.nevermind-btn, .hidden-fieldset-submit-suggestion{
+padding: 5px;
+height: 2.5em;
+margin: 15px 0;
+outline: #93B4AE;
+background-color: #B7CDC9;
+border: solid 1px;
+border-color: #93B4AE;
+border-radius: 5px;
+transition: ease-in .3s;
+}
+
+/* Hidden Legend Tings */
+
+
+.help-fieldset{
+    height: 250px;
+}
+
+.hidden-want-to-help{
+    display: none;
+    margin-top: 15px;
+}
+
+.hidden-fieldset-input-title{
+    margin-top: 15px;
+    display: block;
+    color: #212529;
+}
+
+.hidden-want-to-help{
+    padding-top: 15px;
+}
+
+.hidden-want-to-help fieldset{
+    color: #93B4AE;
+    border-radius: 5px;
+    border: solid 1px;
+}
+
+.hidden-want-to-help legend{
+    color: #212529;
+    padding: 0 5px;
+    text-align: center;
+}
+
+.hidden-want-to-help-buttons{
+    display: grid;
+    margin-top: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hidden-want-to-help-buttons input{
+    margin-left: 15px;
+}
+
+.hidden-want-to-help-buttons button{
+    margin: auto 15px auto auto;
+    width: 130px;
+}
+
+.fieldset-submit-suggestion{
+    max-width: 130px;
+}
+
+.fieldset-input{
+    height: 2.2em;
+}
+
+.hidden-suggest-more-btn{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hidden-fieldset-submit-more-suggestion{
+    padding: 5px;
+    height: 2.5em;
+    margin: 15px 10px;
+    outline: #93B4AE;
+    background-color: #B7CDC9;
+    border: solid 1px;
+    border-color: #93B4AE;
+    border-radius: 5px;
+}
+
+
+/* Donate Tings */
+
+.donate{
+    padding: 0;
+}
+
+.donate p{
+    padding-left: 20px;
+}
+
+.donate button{
+    margin-top: 15px;
+    height: 3em;
+    width: 3em;
+}
+
+/* Max Button Tings */
+
+.max-btn{
+    width: 3.5em;
+    height: 3.5em;
+}
+
+.max-btn img{
+    width: 3em;
+    height: 3em;
+    padding-top: 2px;
+}
+
+
 
 
 }

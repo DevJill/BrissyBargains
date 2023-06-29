@@ -24,9 +24,9 @@ map.maxBoundsViscosity = 1.0;
 map.setMaxBounds(bounds);
 
 //Move Control Zoom
-L.control.zoom({
-    position: 'topright'
-}).addTo(map);
+
+map.zoomControl.setPosition('topright')
+
 
 //Custom Icons
 const iconSize = [42, 41];
@@ -131,11 +131,13 @@ function hideInfo(e){
 }
 
 
+
+
 //Fieldset Submitted
 const fieldset = document.querySelector('.help-fieldset');
 
 function hideFieldsetInputs(e){
-        if(e.target.classList.contains('fieldset-submit-suggestion')){
+        if(e.target.classList.contains('fieldset-submit-suggestion') || e.target.classList.contains('hidden-fieldset-submit-suggestion')){
 
         const fieldsetDiv = fieldset.querySelector('div');
         if(fieldsetDiv.classList.contains('fieldset-inputs')){
@@ -159,15 +161,31 @@ function hideFieldsetInputs(e){
         suggestMoreBtn.type = 'submit';
         suggestMoreBtn.classList.add('fieldset-submit-more-suggestion');
         suggestMoreBtn.appendChild(document.createTextNode('Suggest More'));
-    
+
+        const hiddenfieldsetBtnDiv = document.createElement('div');
+
+        hiddenfieldsetBtnDiv.classList.add('hidden-suggest-more-btn');
+        const hiddenSuggestMoreBtn = document.createElement('button');
+        hiddenSuggestMoreBtn.type = 'submit';
+        hiddenSuggestMoreBtn.classList.add('hidden-fieldset-submit-more-suggestion');
+        hiddenSuggestMoreBtn.appendChild(document.createTextNode('Suggest More'));
+
+        const hiddenNopeBtn = document.createElement('button');
+        hiddenNopeBtn.classList.add('nope-btn')
+        hiddenNopeBtn.classList.add('hidden-fieldset-submit-more-suggestion');
+        hiddenNopeBtn.appendChild(document.createTextNode('Nope'));
+
+        hiddenfieldsetBtnDiv.appendChild(hiddenSuggestMoreBtn);
+        hiddenfieldsetBtnDiv.appendChild(hiddenNopeBtn);
         fieldsetBtnDiv.appendChild(suggestMoreBtn);
         fieldsetNewDiv.appendChild(fieldsetBtnDiv);
+        fieldsetNewDiv.appendChild(hiddenfieldsetBtnDiv);
         fieldset.appendChild(fieldsetNewDiv);
     }
 }
 
 function showFieldsetInputs(e){  
-    if(e.target.classList.contains('fieldset-submit-more-suggestion')){
+    if(e.target.classList.contains('fieldset-submit-more-suggestion') || e.target.classList.contains('hidden-fieldset-submit-more-suggestion')){
         const fieldsetDiv = fieldset.querySelector('div');
         if(fieldsetDiv.classList.contains('fieldset-ty-div')){
             fieldsetDiv.remove();
@@ -198,13 +216,28 @@ function showFieldsetInputs(e){
         shopSuburbInput.type = 'text';
         shopSuburbInput.name = "shop-suburb-name";
         shopSuburbInput.classList.add('fieldset-input');
-        createFieldsetInputs.appendChild(shopSuburbInput)
+        createFieldsetInputs.appendChild(shopSuburbInput);
 
         const fieldsetSubmit = document.createElement('input');
         fieldsetSubmit.type = 'submit';
         fieldsetSubmit.value = "Send Suggestion";
         fieldsetSubmit.classList.add('fieldset-submit-suggestion');
         createFieldsetInputs.appendChild(fieldsetSubmit);
+
+        const hiddenFieldsetSubmit = document.createElement('input');
+        hiddenFieldsetSubmit.type = 'submit';
+        hiddenFieldsetSubmit.value = "Send Suggestion";
+        hiddenFieldsetSubmit.classList.add('hidden-fieldset-submit-suggestion');
+
+        const fieldsetNvmBtn = document.createElement('button');
+        fieldsetNvmBtn.classList.add('nevermind-btn');
+        fieldsetNvmBtn.appendChild(document.createTextNode('Nvm'))
+
+        const fieldsetBtnGrid = document.createElement('div');
+        fieldsetBtnGrid.classList.add('hidden-want-to-help-buttons');
+        fieldsetBtnGrid.appendChild(hiddenFieldsetSubmit);
+        fieldsetBtnGrid.appendChild(fieldsetNvmBtn);
+        createFieldsetInputs.appendChild(fieldsetBtnGrid);
 
         fieldset.appendChild(createFieldsetInputs);
     }
@@ -305,6 +338,28 @@ function marketsCheckBoxes(e){
                     iconImgShadow[i].style.display = 'block';
             }}
 }};
+
+//Hiding Site Legend For Mobile
+const wantToHelpBtn = document.querySelector('.show-want-to-help')
+const showFieldset = document.querySelector('.want-to-help')
+const siteLegend = document.querySelector('.legend');
+
+
+function hideSiteLegend(e){
+    if(e.target.classList.contains('show-want-to-help-btn')){
+        wantToHelpBtn.style.display = 'none';
+        showFieldset.style.display = 'block';
+        siteLegend.style.display = 'none';
+    }
+}
+
+function showSiteLegend(e){
+    if(e.target.classList.contains('nevermind-btn') || e.target.classList.contains('nope-btn')){
+        wantToHelpBtn.style.display = 'block';
+        showFieldset.style.display = 'none';
+        siteLegend.style.display = 'block';
+    }
+}
 
 //Adding Classes to Icons
 function addClassesToIcons(){
@@ -461,5 +516,7 @@ document.addEventListener('click', vegCheckBoxes);
 document.addEventListener('click', meatsCheckBoxes);
 document.addEventListener('click', fishCheckBoxes);
 document.addEventListener('click', marketsCheckBoxes);
+document.addEventListener('click', hideSiteLegend);
+document.addEventListener('click', showSiteLegend);
 document.addEventListener('DOMContentLoaded', addClassesToIcons);
 
