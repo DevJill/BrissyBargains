@@ -443,7 +443,7 @@ body h1{
 @media only screen and (max-width: 420px){
 
 .site-container{
-     height: 750px;
+     height: 700px;
 }
 
 .fieldset-submit-more-suggestion{
@@ -570,7 +570,7 @@ body{
     padding: 5px;
     width: 250px;
     height: 3em;
-    margin: 15px auto;
+    margin: 10px auto;
     outline: #93B4AE;
     background-color: #B7CDC9;
     border: solid 1px;
@@ -608,7 +608,7 @@ transition: ease-in .3s;
 
 
 .help-fieldset{
-    height: 250px;
+    height: 225px;
 }
 
 .hidden-want-to-help{
@@ -639,17 +639,18 @@ transition: ease-in .3s;
 }
 
 .hidden-want-to-help-buttons{
+    width: 310px;
     display: grid;
-    margin-top: 15px;
+    margin: 5px auto;
     grid-template-columns: 1fr 1fr;
 }
 
 .hidden-want-to-help-buttons input{
-    margin-left: 15px;
+    margin-left: 5px;
 }
 
 .hidden-want-to-help-buttons button{
-    margin: auto 15px auto auto;
+    margin: auto 5px auto auto;
     width: 130px;
 }
 
@@ -659,6 +660,15 @@ transition: ease-in .3s;
 
 .fieldset-input{
     height: 2.2em;
+}
+
+.fieldset-input-title{
+    margin-top: 10px;
+}
+
+.shrink-inputs{
+    width: 310px;
+    margin: 0 auto;
 }
 
 .hidden-suggest-more-btn{
