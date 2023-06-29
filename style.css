@@ -443,7 +443,7 @@ body h1{
 @media only screen and (max-width: 420px){
 
 .site-container{
-     height: 800px;
+     height: 750px;
 }
 
 .fieldset-submit-more-suggestion{
@@ -492,6 +492,18 @@ body{
     padding-top: 2px;
 }
 
+.max-btn{
+    width: 3.5em;
+    height: 3.5em;
+}
+
+.max-btn img{
+    width: 3em;
+    height: 3em;
+    padding-top: 2px;
+}
+
+
 /* Intro Tings */
 
 .intro{
@@ -522,7 +534,7 @@ body{
 .legend-grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 250p;
+    height: 175px;
 }
 
 .legend-grid-container li{
@@ -547,6 +559,7 @@ body{
 
 .want-to-help{
     display: none;
+    margin-bottom: 15px;
 }
 
 .show-want-to-help{
@@ -557,7 +570,7 @@ body{
     padding: 5px;
     width: 250px;
     height: 3em;
-    margin: 30px auto 15px auto;
+    margin: 15px auto;
     outline: #93B4AE;
     background-color: #B7CDC9;
     border: solid 1px;
@@ -677,22 +690,8 @@ transition: ease-in .3s;
 }
 
 .donate button{
-    margin-top: 15px;
     height: 3em;
     width: 3em;
-}
-
-/* Max Button Tings */
-
-.max-btn{
-    width: 3.5em;
-    height: 3.5em;
-}
-
-.max-btn img{
-    width: 3em;
-    height: 3em;
-    padding-top: 2px;
 }
 
 
