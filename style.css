@@ -242,6 +242,11 @@ fieldset{
         background-color: #ABC4C0;
 }
 
+.fieldset-submit-suggestion{
+    margin-left: 5px;
+}
+
+
 .help-fieldset p{
     color: #212529;
     text-align: center;
@@ -280,7 +285,7 @@ fieldset{
 .donate{
     padding-top: 15px;
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 70% 30%;
 }
 
 .donate button img{
@@ -288,6 +293,7 @@ fieldset{
 }
 
 .donate p{
+    padding-left: 25px;
     margin: auto 0;
 }
 
@@ -299,8 +305,7 @@ fieldset{
     border: solid 1px #93B4AE;
     width: 32px;
     height: 32px;
-    padding: none;
-    margin: 0 auto;
+    margin: 0 auto 0 5px;
 }
 
 .donate button:hover{
@@ -445,6 +450,10 @@ body h1{
 
 @media only screen and (max-width: 420px){
 
+#map{
+    border-radius: 0;
+}
+
 .site-container{
      height: 85vh;
      margin-bottom: .5em;;
@@ -459,7 +468,7 @@ body h1{
 }
 
 body{
-    margin: 5px;
+    margin: 5px 0;
     height: 100%;
 }
 
@@ -473,6 +482,7 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
+    border-radius:  10px 10px 0 0;
 }
 
 .map-box-min-overlay{
@@ -696,23 +706,24 @@ transition: ease-in .3s;
 /* Donate Tings */
 
 .donate{
+    grid-template-columns: 68% 32%;
     padding: 0;
 }
 
 .donate p{
-    padding-left: 20px;
+    padding-left: 30%;
 }
 
 .donate button{
     height: 3em;
     width: 3em;
+    margin: 0;
 }
 
 /* Footer Tings */
 
 
 .mobile-footer{
-    border-radius: 10px;
     display: block;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
     background-color: #212529;
