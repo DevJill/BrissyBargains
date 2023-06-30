@@ -443,7 +443,7 @@ body h1{
 @media only screen and (max-width: 420px){
 
 .site-container{
-     height: 700px;
+     height: 98.5vh;
 }
 
 .fieldset-submit-more-suggestion{
@@ -522,7 +522,7 @@ body{
 /* Legend Tings */
 
 .legend{
-    margin-top: 15px;
+    margin-top: 1em;
 }
 
 .legend label{
