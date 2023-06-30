@@ -26,6 +26,10 @@ html, body {
 .mobile-footer{
     display: none;
 }
+
+.hidden-search{
+    display: none;
+}
                                         /* Site Container Tings */
 
 .site-container{
@@ -450,10 +454,6 @@ body h1{
 
 @media only screen and (max-width: 420px){
 
-#map{
-    border-radius: 0;
-}
-
 .site-container{
      height: 85vh;
      margin-bottom: .5em;;
@@ -468,7 +468,7 @@ body h1{
 }
 
 body{
-    margin: 5px 0;
+    margin: 5px;
     height: 100%;
 }
 
@@ -480,9 +480,9 @@ body{
     height: 58%;
     top: auto;
     bottom: 0;
+    filter: drop-shadow(0 0 4px rgb(105, 105, 105));
     left: 0;
     right: 0;
-    border-radius:  10px 10px 0 0;
 }
 
 .map-box-min-overlay{
@@ -490,6 +490,56 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.hidden-search{
+    opacity: 1;
+    z-index: 9;
+    filter: drop-shadow(0 0 4px rgb(75, 75, 75));
+    display: block;
+    margin: 15px;
+    width: 80%;
+}
+
+/* Hidden Search Tings */
+
+.hidden-search{
+    height: 5%;
+    display: grid;
+    grid-template-columns: 85% 15%;
+}
+
+.hidden-search input, .hidden-search button{
+    height: 100%;
+}
+
+.hidden-search input{
+    background-color: #f5f8f7;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    padding-left: 20px;
+} 
+
+.hidden-search input:focus{
+    outline-color: #93B4AE;
+} 
+
+.hidden-search button{
+    padding: 0;
+    border-width: 0 0 0 1px ;
+    border-style: solid ;
+    border-color: #93B4AE;
+    background-color: #B7CDC9;
+    border-radius: 0 5px 5px 0;
+}
+
+.hidden-search button:focus{
+    outline-color: #93B4AE;
+}
+
+.hidden-search img{
+    width: 2em;
+    height: 2em;
 }
 
 /* Min Max Btn Tings */
@@ -509,12 +559,17 @@ body{
 .max-btn{
     width: 3.5em;
     height: 3.5em;
+    
 }
 
 .max-btn img{
     width: 3em;
     height: 3em;
     padding-top: 2px;
+}
+
+.minimised-info-container{
+    filter: drop-shadow(0 0 4px rgb(105, 105, 105));
 }
 
 
@@ -724,6 +779,7 @@ transition: ease-in .3s;
 
 
 .mobile-footer{
+    border-radius: 10px;
     display: block;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
     background-color: #212529;
@@ -793,3 +849,5 @@ transition: ease-in .3s;
 
 
 }
+
+
