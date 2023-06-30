@@ -720,8 +720,8 @@ transition: ease-in .3s;
 }
 
 .mobile-footer img{
-    width: 100%;
-    height:120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin: auto;
 }
@@ -739,19 +739,19 @@ transition: ease-in .3s;
 
 .about-the-creator-div h4{
     font-weight: 200;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border-style: solid;
     border-width: 0 0 1px 0;
     border-color: #93B4AE;
 }
 
 .about-the-creator-div p{
-    max-width: 150px;
+    max-width: 140px;
 
 }
 
 .first-testimonial{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 
 }
 
@@ -760,6 +760,9 @@ transition: ease-in .3s;
 
 }
 
+.first-testimonial p:last-of-type{
+    font-weight: 200;
+}
 
 .second-testimonial p{
     margin: 0 0 0 auto;
@@ -770,6 +773,11 @@ transition: ease-in .3s;
     margin-bottom: 5px;
 
 }
+
+.second-testimonial p:last-of-type{
+    font-weight: 200;
+}
+
 
 
 
