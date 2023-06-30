@@ -504,7 +504,7 @@ body{
 /* Hidden Search Tings */
 
 .hidden-search{
-    height: 5%;
+    height:  6%;
     display: grid;
     grid-template-columns: 85% 15%;
 }
@@ -540,6 +540,7 @@ body{
 .hidden-search img{
     width: 1.8em;
     height: 1.8em;
+    padding-top: 2px;
 }
 
 /* Min Max Btn Tings */
