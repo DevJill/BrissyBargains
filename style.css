@@ -23,6 +23,9 @@ html, body {
     display: none;
 }
 
+.mobile-footer{
+    display: none;
+}
                                         /* Site Container Tings */
 
 .site-container{
@@ -444,6 +447,7 @@ body h1{
 
 .site-container{
      height: 85vh;
+     margin-bottom: .5em;;
 }
 
 .fieldset-submit-more-suggestion{
@@ -464,7 +468,7 @@ body{
 
 .map-box-overlay{
     width: 100%;
-    height: 60%;
+    height: 58%;
     top: auto;
     bottom: 0;
     left: 0;
@@ -704,6 +708,68 @@ transition: ease-in .3s;
     width: 3em;
 }
 
+/* Footer Tings */
+
+
+.mobile-footer{
+    border-radius: 10px;
+    display: block;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    background-color: #212529;
+    color: #93B4AE;
+}
+
+.mobile-footer img{
+    width: 100%;
+    height:120px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.about-the-creator{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 15px;
+}
+
+.about-the-creator-div{
+    padding-left: 10px;
+    text-align: center;
+}
+
+.about-the-creator-div h4{
+    font-weight: 200;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: #93B4AE;
+}
+
+.about-the-creator-div p{
+    max-width: 150px;
+
+}
+
+.first-testimonial{
+    margin-bottom: 15px;
+
+}
+
+.first-testimonial p:first-of-type{
+    margin-bottom: 5px;
+
+}
+
+
+.second-testimonial p{
+    margin: 0 0 0 auto;
+
+}
+
+.second-testimonial p:first-of-type{
+    margin-bottom: 5px;
+
+}
 
 
 

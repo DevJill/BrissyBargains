@@ -489,7 +489,7 @@ function addClassesToIcons(){
                     <p>${data[i].address}</p><br>
                     <div class="markets-hours"
                         Mon: ${data[i].mondayOpenHrs}<br>
-                        Tue: ${data[i].tuesdayOpenHrs}<br>
+                        Tue: ${data[i].tuesdayOpenHrs}<br></div>
                         Wed: ${data[i].wednesdaydayOpenHrs}<br>
                         Thu: ${data[i].thrusdayOpenHrs}<br>
                         Fri: ${data[i].fridayOpenHrs}<br>
