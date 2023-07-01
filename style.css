@@ -30,6 +30,15 @@ html, body {
 .hidden-search{
     display: none;
 }
+
+.hide{
+    display: none;
+}
+
+.unhide{
+    display: block;
+}
+
                                         /* Site Container Tings */
 
 .site-container{
@@ -118,8 +127,9 @@ html, body {
 
                                                  /* Search Tings */
 
+
 .search{
-    margin: 15px 0;
+    margin: 15px 0 0 0;
     height: 2em;
     display: grid;
     max-width: 100%;
@@ -160,8 +170,68 @@ html, body {
     margin: auto;
 }
 
+/* Search Overlay Tings */
+
+.search-drop-down-overlay{
+    position: absolute;
+    opacity: 1;
+    z-index: 11;
+    width: 85%;
+    max-height: 240px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: #212529;
+    text-align: center;
+}
+ 
+.card{
+    padding: 0 20px;
+    background-color: #f5f8f7;
+    width: 100%;
+    padding-top: 10px;
+    border-style: solid;
+    border-color: #ebebeb;
+    border-width: 0 0 1px 0;
+    font-size: small;
+}
+
+.card:first-of-type{
+    border-width: 1px 0 1px 0;
+}
+
+.card-p p:first-of-type {
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.card-p p:last-of-type {
+    padding-bottom: 10px;
+}
+
+.grocery-card p:first-of-type{
+    background-color: #ffd8ac;
+}
+.veg-card p:first-of-type{
+    background-color: #bbffc4;
+}
+.meats-card p:first-of-type{
+    background-color: #ffacac;
+}
+.fish-card p:first-of-type{
+    background-color: #ffacac;
+}
+.markets-card p:first-of-type{
+    background-color: #fff9ac;
+}
+
+
+
                                                  /* Legend Tings */
 
+.legend {
+    margin-top: 15px;
+}
 
 .legend ul{
     padding: 5px 0;
@@ -337,6 +407,13 @@ fieldset{
     opacity: 0.9;
 }
 
+
+.map-box-overlay{
+    opacity: 1;
+    z-index: 10;
+    width: 20%;
+    filter: drop-shadow(3px 0 4px rgb(136, 136, 136));
+}
 
 .map-box-overlay{
     opacity: 1;

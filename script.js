@@ -396,7 +396,30 @@ function addClassesToIcons(){
          }
     }}
 
+    //Trying to Make Search Bar Functional...... Kind of Getting Silly ehehe
 
+    document.addEventListener('click', searchFocus);
+    document.addEventListener('click', searchUnfocus);
+
+    const searchInput = document.getElementById('site-search');
+    const searchDDContainer = document.querySelector('.search-drop-down-overlay');
+
+    function searchFocus(e){
+        if(e.target === searchInput){
+            searchInput.style.borderRadius = '5px 0 0 0'
+            searchDDContainer.classList.remove('hide')
+        }
+    }
+
+    function searchUnfocus(e){
+        if(e.target !== searchInput && !e.target.classList.contains('card') 
+        && !e.target.classList.contains('search-drop-down-overlay') 
+        && !e.target.classList.contains('card-p') && !searchDDContainer.classList.contains('hide')){
+            searchInput.style.borderRadius = '5px 0 0 5px'
+            searchDDContainer.classList.add('hide');
+            console.log(e.target)
+        }
+    }
 
     fetch('./shops.json')
     .then((response) => {
@@ -501,11 +524,65 @@ function addClassesToIcons(){
             marketsMarker.bindPopup(marketsPopup);
             marketsMarker.addTo(map);
         }
+
     };
     settingBS();
+
+    for(j = 0; j < data.length; j++){
+
+        const div = document.createElement('div');
+        div.classList.add('card');
+        div.classList.add('card-p');
+
+        if(data[j].type === 'Grocery'){
+            div.classList.add('grocery-card')
+        } else if(data[j].type === 'Produce'){
+            div.classList.add('veg-card')
+        } else if(data[j].type === 'Meats'){
+            div.classList.add('meats-card')
+        } else if(data[j].type === 'Fish'){
+            div.classList.add('fish-card')
+        } else if(data[j].type === 'Markets'){
+            div.classList.add('markets-card')
+        }
+
+        const paragraph = document.createElement('p');
+        paragraph.classList.add('card-p');
+
+
+
+        const strongP = document.createElement('strong');
+        strongP.classList.add('card-p');
+        strongP
+        .appendChild(document.createTextNode(data[j].name));
+
+        paragraph
+        .appendChild(strongP);
+
+        const paragraph2 = document.createElement('p')
+        paragraph2.classList.add('card-p');
+        paragraph2.appendChild(document.createTextNode(data[j].address));
+
+        div.appendChild(paragraph);
+        div.appendChild(paragraph2);
+
+        searchDDContainer.appendChild(div);
+
+
     }
-    );
-}
+    
+})}
+
+
+    //     searchDDContainer
+    //     .appendChild(document.createElement('div').classList.add('card').classList.add('card-p')
+    //     .appendChild(document.createElement('p').classList.add('card-p')
+    //     .appendChild(document.createElement('strong').classList.add('card-p')
+    //     .appendChild(document.createTextNode(data[i].name)))));
+    // }
+
+
+
 
 //Event Listeners
 document.addEventListener('click', hideInfo);
