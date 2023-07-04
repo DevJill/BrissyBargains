@@ -362,8 +362,9 @@ function showSiteLegend(e){
 }
 
 //Adding Classes to Icons
-function addClassesToIcons(){
-    function settingBS(){
+
+    
+function settingBS(){
 
         const iconImg = document.querySelectorAll('.leaflet-marker-icon');
         const iconImgShadow = document.querySelectorAll('.leaflet-marker-shadow');
@@ -394,7 +395,11 @@ function addClassesToIcons(){
          } else if(iconImgShadow[i].src.indexOf('markets') != -1){
              iconImgShadow[i].classList.add('markets-icon');
          }
-    }}
+    }
+
+}
+
+
 
     //Trying to Make Search Bar Functional...... Kind of Getting Silly ehehe
 
@@ -421,11 +426,36 @@ function addClassesToIcons(){
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    let storeArray = [];
+    let card2Array = [];
+
+
+    
+
+
     fetch('./shops.json')
     .then((response) => {
     return response.json();
     })
     .then((data) => {
+
+    let storePopup;
     
     for(i = 0; i < data.length; i++){
         if(data[i].type == 'Grocery'){
@@ -445,6 +475,9 @@ function addClassesToIcons(){
                     </div>
                     <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
             const groceryMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:groceryIcon});
+            storePopup = groceryPopup;
+            storePopup.store = `${data[i].name}`;
+            storeArray.push(groceryPopup);
             groceryMarker.bindPopup(groceryPopup);
             groceryMarker.addTo(map);
         } else if(data[i].type == 'Produce'){
@@ -464,6 +497,9 @@ function addClassesToIcons(){
                     </div>
                     <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
             const vegMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:vegIcon});
+            storePopup = vegPopup;
+            storePopup.store = `${data[i].name}`;
+            storeArray.push(vegPopup);
             vegMarker.bindPopup(vegPopup);
             vegMarker.addTo(map);
         } else if(data[i].type == 'Meats'){
@@ -483,6 +519,9 @@ function addClassesToIcons(){
                     </div>
                     <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
             const meatsMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:meatsIcon});
+            storePopup = meatsPopup;
+            storePopup.store = `${data[i].name}`;
+            storeArray.push(meatsPopup);
             meatsMarker.bindPopup(meatsPopup);
             meatsMarker.addTo(map);
         } else if(data[i].type == 'Fish'){
@@ -502,7 +541,10 @@ function addClassesToIcons(){
                     </div>
                     <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
             const fishMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:fishIcon});
-            fishMarker.bindPopup(meatsPopup);
+            storePopup = fishPopup;
+            storePopup.store = `${data[i].name}`;
+            storeArray.push(fishPopup);
+            fishMarker.bindPopup(fishPopup);
             fishMarker.addTo(map);
         } else if(data[i].type == 'Markets'){
             const marketsPopup = L.popup()
@@ -521,15 +563,22 @@ function addClassesToIcons(){
                     </div>
                     <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
             const marketsMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:marketsIcon});
+            storePopup = marketsPopup;
+            storePopup.store = `${data[i].name}`;
+            storeArray.push(marketsPopup);
             marketsMarker.bindPopup(marketsPopup);
             marketsMarker.addTo(map);
         }
 
+        settingBS();
+
     };
-    settingBS();
+
+
 
     for(j = 0; j < data.length; j++){
 
+        // console.log(data[j])
         const div = document.createElement('div');
         div.classList.add('card');
         div.classList.add('card-p');
@@ -568,10 +617,29 @@ function addClassesToIcons(){
 
         searchDDContainer.appendChild(div);
 
+        card2Array.push({name: data[j].name, element : div});
+
 
     }
-    
-})}
+
+})
+
+console.log(card2Array);
+searchInput.addEventListener('input', e => {
+     const value = e.target.value;
+     card2Array.forEach(card => {
+        if(card.name.includes(value)){
+            console.log(card)
+         }
+
+})})
+
+    // const cardDiv = document.querySelectorAll('.card');
+
+// });
+
+
+
 
 
     //     searchDDContainer
@@ -595,5 +663,5 @@ document.addEventListener('click', fishCheckBoxes);
 document.addEventListener('click', marketsCheckBoxes);
 document.addEventListener('click', hideSiteLegend);
 document.addEventListener('click', showSiteLegend);
-document.addEventListener('DOMContentLoaded', addClassesToIcons);
+document.addEventListener('DOMContentLoaded', settingBS);
 
