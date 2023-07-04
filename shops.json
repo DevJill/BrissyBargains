@@ -1,7 +1,7 @@
 [
     {
         "type": "Grocery",
-        "name": "Golden Circle Factory Outlet",
+        "name": "Golden Circle Factory Outlet, Capalaba",
         "address": "Shop 16/200 Old Cleveland Rd, Capalaba QLD 4157",
         "saturdayOpenHrs": "8:30 am-4 pm",
         "sundayOpenHrs": "9 am-5 pm",
@@ -16,41 +16,8 @@
         "latNLong": [-27.516813491490236, 153.1991478976023]
     },
     {
-        "type": "Meats",
-        "name": "Inghams Factory Outlet",
-        "address": "86 Trade St, Lytton QLD 4178",
-        "saturdayOpenHrs": "8 am - 2 pm",
-        "sundayOpenHrs": "Closed",
-        "mondayOpenHrs": "8 am-4 pm",
-        "tuesdayOpenHrs": "8 am-4 pm",
-        "wednesdaydayOpenHrs": "8 am-4 pm",
-        "thrusdayOpenHrs": "8 am-4 pm",
-        "fridayOpenHrs": "8 am-4 pm",
-        "phone": "(07) 3097 2032",
-        "google-reviews": 4.5,
-        "website": "https://www.facebook.com/InghamsLyttonFactoryOutlet",
-        "latNLong": [-27.426777607591514, 153.1504541102406]
-    },
-    {
         "type": "Grocery",
-        "name": "Golden Circle Factory Outlet",
-        "address": "Shop 3/343 Morayfield Rd, Morayfield QLD 4506",
-        "saturdayOpenHrs": "8:30 am-4 pm",
-        "sundayOpenHrs": "9 am-5 pm",
-        "mondayOpenHrs": "9 am-5 pm",
-        "tuesdayOpenHrs": "9 am-5 pm",
-        "wednesdaydayOpenHrs": "9 am-5 pm",
-        "thrusdayOpenHrs": "9 am-5 pm",
-        "fridayOpenHrs": "9 am-5 pm",
-        "phone": "(07) 5499 0938",
-        "google-reviews": 4.5,
-        "website": "https://www.gcfo.com.au/",
-        "latNLong": [-27.117677322771932, 152.95574649373154]
-
-    },
-    {
-        "type": "Grocery",
-        "name": "Fresh & Save Morayfield",
+        "name": "Fresh And Save, Morayfield",
         "address": "70/86 Michael Ave, Morayfield QLD 4506",
         "saturdayOpenHrs": "7 am-9 pm",
         "sundayOpenHrs": "7 am-9 pm",
@@ -66,7 +33,7 @@
     },
     {
         "type": "Grocery",
-        "name": "Fresh & Save Deagon",
+        "name": "Fresh & Save, Deagon",
         "address": "75 Braun St, Deagon QLD 4017",
         "saturdayOpenHrs": "6 am-8 pm",
         "sundayOpenHrs": "6 am-8 pm",
@@ -82,7 +49,7 @@
     },
     {
         "type": "Grocery",
-        "name": "Fresh & Save Richlands",
+        "name": "Fresh And Save, Richlands",
         "address": "144 Pine Rd, Richlands QLD 4077",
         "saturdayOpenHrs": "7 am-9 pm",
         "sundayOpenHrs": "7 am-9 pm",
@@ -98,7 +65,7 @@
     },
     {
         "type": "Grocery",
-        "name": "Fresh & Save Eagleby",
+        "name": "Fresh And Save, Eagleby",
         "address": "River Hills Rd, Eagleby QLD 4207",
         "saturdayOpenHrs": "6 am-9 pm",
         "sundayOpenHrs": "6 am-9 pm",
@@ -114,7 +81,7 @@
     },
     {
         "type": "Produce",
-        "name": "Coco's Annerley",
+        "name": "Coco's, Annerley",
         "address": "310 Ipswich Rd, Annerley QLD 4103",
         "saturdayOpenHrs": "24 hours",
         "sundayOpenHrs": "24 hours",
@@ -146,7 +113,7 @@
     },
     {
         "type": "Markets",
-        "name": "Saturday Fresh Market Rocklea",
+        "name": "Saturday Fresh Market, Rocklea",
         "address": "385 Sherwood Rd, Rocklea QLD 4106",
         "saturdayOpenHrs": "6 am-12 pm",
         "sundayOpenHrs": "Closed",
@@ -226,7 +193,7 @@
     },
     {
         "type": "Grocery",
-        "name": "Drakes Rochedale",
+        "name": "Drakes, Rochedale",
         "address": "549 Underwood Rd, Rochedale QLD 4123",
         "saturdayOpenHrs": "7 am-9 pm",
         "sundayOpenHrs": "9 am-6 pm",
@@ -242,7 +209,7 @@
     },
     {
         "type": "Grocery",
-        "name": "Drakes McDowall",
+        "name": "Drakes, McDowall",
         "address": "Shop 467/109 Beckett Rd, McDowall QLD 4053",
         "saturdayOpenHrs": "7 am-9 pm",
         "sundayOpenHrs": "7 am-9 pm",
@@ -258,7 +225,7 @@
     },
     {
         "type": "Grocery",
-        "name": "Drakes Regents Park",
+        "name": "Drakes, Regents Park",
         "address": "Cnr Estramina Road &, Beaudesert Rd, Regents Park QLD 4118",
         "saturdayOpenHrs": "6 am-9 pm",
         "sundayOpenHrs": "6 am-9 pm",
@@ -274,7 +241,7 @@
     },
     {
         "type": "Grocery",
-        "name": "Drakes North Lakes",
+        "name": "Drakes, North Lakes",
         "address": "71 Astley Parade, North Lakes QLD 4509",
         "saturdayOpenHrs": "7 am-9 pm",
         "sundayOpenHrs": "7 am-9 pm",
@@ -290,7 +257,7 @@
     },
     {
         "type": "Grocery",
-        "name": "Drakes Parkinson",
+        "name": "Drakes, Parkinson",
         "address": "Cnr Nottingham Road & Algester Road, Parkinson QLD 4115",
         "saturdayOpenHrs": "7 am-9 pm",
         "sundayOpenHrs": "9 am-6 pm",
@@ -306,7 +273,7 @@
     },
     {
         "type": "Grocery",
-        "name": "Drakes Ashmore",
+        "name": "Drakes, Ashmore",
         "address": "Cnr Currumburra Road &, Southport Nerang Rd, Ashmore QLD 4214",
         "saturdayOpenHrs": "7 am-9 pm",
         "sundayOpenHrs": "9 am-6 pm",
@@ -322,7 +289,7 @@
     },
     {
         "type": "Grocery",
-        "name": "Drakes Winston Glades",
+        "name": "Drakes, Winston Glades",
         "address": "259 Ash St, Yamanto QLD 4305",
         "saturdayOpenHrs": "7 am-9 pm",
         "sundayOpenHrs": "9 am-6 pm",
@@ -338,7 +305,7 @@
     },
     {
         "type": "Produce",
-        "name": "Yuen's Farmers Market",
+        "name": "Yuen's Farmers Market, Underwood",
         "address": "Shop 11, 11/21 Kingston Rd, Underwood QLD 4119",
         "saturdayOpenHrs": "24 hours",
         "sundayOpenHrs": "24 hours",
@@ -354,7 +321,7 @@
     },
     {
         "type": "Produce",
-        "name": "Yuen's Farmers Market",
+        "name": "Yuen's Farmers Market, Waterford West",
         "address": "Shop 1, Waterford Plaza,, 917 Kingston Rd, Waterford West QLD 4133",
         "saturdayOpenHrs": "6 am-7 pm",
         "sundayOpenHrs": "6 am-7 pm",
@@ -370,7 +337,7 @@
     },
     {
         "type": "Meats",
-        "name": "Super Butcher Eagle Farm",
+        "name": "Super Butcher, Eagle Farm",
         "address": "6 Eagleview Pl, Eagle Farm QLD 4009",
         "saturdayOpenHrs": "7 am-5 pm",
         "sundayOpenHrs": "8 am-5 pm",
@@ -386,7 +353,7 @@
     },
     {
         "type": "Meats",
-        "name": "Super Butcher Browns Plains",
+        "name": "Super Butcher, Browns Plains",
         "address": "18 Eastern Rd, Browns Plains QLD 4118",
         "saturdayOpenHrs": "7 am-5 pm",
         "sundayOpenHrs": "8 am-5 pm",
@@ -402,7 +369,7 @@
     },
     {
         "type": "Meats",
-        "name": "Super Butcher Birkdale",
+        "name": "Super Butcher, Birkdale",
         "address": "180 Birkdale Rd, Birkdale QLD 4159",
         "saturdayOpenHrs": "7 am-5 pm",
         "sundayOpenHrs": "8 am-5 pm",
@@ -450,7 +417,7 @@
     },
     {
         "type": "Grocery",
-        "name": "Lighthouse Care Loganholme",
+        "name": "Lighthouse Care, Loganholme",
         "address": "17 Monte Khoury Dr, Loganholme QLD 4129",
         "saturdayOpenHrs": "9 am-12 pm",
         "sundayOpenHrs": "Closed",
@@ -466,7 +433,7 @@
     },
     {
         "type": "Grocery",
-        "name": "Lighthouse Care Hillcrest",
+        "name": "Lighthouse Care, Hillcrest",
         "address": "1/16 Central Ct, Hillcrest QLD 4118",
         "saturdayOpenHrs": "9 am-12 pm",
         "sundayOpenHrs": "Closed",
@@ -479,6 +446,71 @@
         "google-reviews": 4.5,
         "website": "https://lighthousecare.org.au/",
         "latNLong": [-27.661594604183854, 153.03600588325943]
+    },
+    {
+        "type": "Meats",
+        "name": "Inghams Factory Outlet, Lytton",
+        "address": "86 Trade St, Lytton QLD 4178",
+        "saturdayOpenHrs": "8 am - 2 pm",
+        "sundayOpenHrs": "Closed",
+        "mondayOpenHrs": "8 am-4 pm",
+        "tuesdayOpenHrs": "8 am-4 pm",
+        "wednesdaydayOpenHrs": "8 am-4 pm",
+        "thrusdayOpenHrs": "8 am-4 pm",
+        "fridayOpenHrs": "8 am-4 pm",
+        "phone": "(07) 3097 2032",
+        "google-reviews": 4.5,
+        "website": "https://www.facebook.com/InghamsLyttonFactoryOutlet",
+        "latNLong": [-27.426777607591514, 153.1504541102406]
+    },
+    {
+        "type": "Grocery",
+        "name": "Golden Circle Factory Outlet, Morayfield",
+        "address": "Shop 3/343 Morayfield Rd, Morayfield QLD 4506",
+        "saturdayOpenHrs": "8:30 am-4 pm",
+        "sundayOpenHrs": "9 am-5 pm",
+        "mondayOpenHrs": "9 am-5 pm",
+        "tuesdayOpenHrs": "9 am-5 pm",
+        "wednesdaydayOpenHrs": "9 am-5 pm",
+        "thrusdayOpenHrs": "9 am-5 pm",
+        "fridayOpenHrs": "9 am-5 pm",
+        "phone": "(07) 5499 0938",
+        "google-reviews": 4.5,
+        "website": "https://www.gcfo.com.au/",
+        "latNLong": [-27.117677322771932, 152.95574649373154]
+
+    },
+    {
+        "type": "Grocery",
+        "name": "Fresh And Save, Morayfield",
+        "address": "70/86 Michael Ave, Morayfield QLD 4506",
+        "saturdayOpenHrs": "7 am-9 pm",
+        "sundayOpenHrs": "7 am-9 pm",
+        "mondayOpenHrs": "7 am-9 pm",
+        "tuesdayOpenHrs": "7 am-9 pm",
+        "wednesdaydayOpenHrs": "7 am-9 pm",
+        "thrusdayOpenHrs": "7 am-9 pm",
+        "fridayOpenHrs": "7 am-9 pm",
+        "phone": "(07) 5432 3555",
+        "google-reviews": 4.5,
+        "website": "https://www.freshandsave.com.au/",
+        "latNLong": [-27.10070853275601, 152.94587786790046]
+    },
+    {
+        "type": "Grocery",
+        "name": "Fresh & Save, Deagon",
+        "address": "75 Braun St, Deagon QLD 4017",
+        "saturdayOpenHrs": "6 am-8 pm",
+        "sundayOpenHrs": "6 am-8 pm",
+        "mondayOpenHrs": "6 am-8 pm",
+        "tuesdayOpenHrs": "6 am-8 pm",
+        "wednesdaydayOpenHrs": "6 am-8 pm",
+        "thrusdayOpenHrs": "6 am-8 pm",
+        "fridayOpenHrs": "6 am-8 pm",
+        "phone": "(07) 3269 0387",
+        "google-reviews": 4.5,
+        "website": "https://www.freshandsave.com.au/",
+        "latNLong": [-27.330376273805786, 153.05726049589373]
     }
 ]
 

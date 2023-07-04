@@ -430,21 +430,9 @@ function settingBS(){
 
 
 
-
-
-
-
-
-
-
-
-    
-
-
-
     let storeArray = [];
     let card2Array = [];
-
+    let popupArray = [];
 
     
 
@@ -454,8 +442,6 @@ function settingBS(){
     return response.json();
     })
     .then((data) => {
-
-    let storePopup;
     
     for(i = 0; i < data.length; i++){
         if(data[i].type == 'Grocery'){
@@ -475,11 +461,10 @@ function settingBS(){
                     </div>
                     <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
             const groceryMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:groceryIcon});
-            storePopup = groceryPopup;
-            storePopup.store = `${data[i].name}`;
-            storeArray.push(groceryPopup);
+            groceryPopup.store = `${data[i].name}`;
             groceryMarker.bindPopup(groceryPopup);
             groceryMarker.addTo(map);
+            popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: groceryMarker});
         } else if(data[i].type == 'Produce'){
             const vegPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
@@ -497,11 +482,10 @@ function settingBS(){
                     </div>
                     <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
             const vegMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:vegIcon});
-            storePopup = vegPopup;
-            storePopup.store = `${data[i].name}`;
-            storeArray.push(vegPopup);
+            vegPopup.store = `${data[i].name}`;
             vegMarker.bindPopup(vegPopup);
             vegMarker.addTo(map);
+            popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: vegMarker});
         } else if(data[i].type == 'Meats'){
             const meatsPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
@@ -519,11 +503,10 @@ function settingBS(){
                     </div>
                     <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
             const meatsMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:meatsIcon});
-            storePopup = meatsPopup;
-            storePopup.store = `${data[i].name}`;
-            storeArray.push(meatsPopup);
+            meatsPopup.store = `${data[i].name}`;
             meatsMarker.bindPopup(meatsPopup);
             meatsMarker.addTo(map);
+            popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: meatsMarker});
         } else if(data[i].type == 'Fish'){
             const fishPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
@@ -541,11 +524,10 @@ function settingBS(){
                     </div>
                     <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
             const fishMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:fishIcon});
-            storePopup = fishPopup;
-            storePopup.store = `${data[i].name}`;
-            storeArray.push(fishPopup);
+            fishPopup.store = `${data[i].name}`;
             fishMarker.bindPopup(fishPopup);
             fishMarker.addTo(map);
+            popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: fishMarker});
         } else if(data[i].type == 'Markets'){
             const marketsPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
@@ -563,11 +545,10 @@ function settingBS(){
                     </div>
                     <div class="phone-grid"><img src="./images/icons8-phone-48.png"><div>Phone: ${data[i].phone}</div></div></div>`)
             const marketsMarker = L.marker([data[i].latNLong[0], data[i].latNLong[1]], {riseOnHover: true, icon:marketsIcon});
-            storePopup = marketsPopup;
-            storePopup.store = `${data[i].name}`;
-            storeArray.push(marketsPopup);
+            marketsPopup.store = `${data[i].name}`;
             marketsMarker.bindPopup(marketsPopup);
             marketsMarker.addTo(map);
+            popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: marketsMarker});
         }
 
         settingBS();
@@ -578,7 +559,6 @@ function settingBS(){
 
     for(j = 0; j < data.length; j++){
 
-        // console.log(data[j])
         const div = document.createElement('div');
         div.classList.add('card');
         div.classList.add('card-p');
@@ -617,42 +597,40 @@ function settingBS(){
 
         searchDDContainer.appendChild(div);
 
-        card2Array.push({name: data[j].name, element : div});
-
+        card2Array.push({name: data[j].name, element : div, latNLong: data[j].latNLong});
 
     }
 
 })
 
-console.log(card2Array);
 searchInput.addEventListener('input', e => {
-     const value = e.target.value;
+     const value = e.target.value.toLowerCase();
      card2Array.forEach(card => {
-        if(card.name.includes(value)){
-            console.log(card)
-         }
+        const isVisible = 
+        card.name.toLowerCase().includes(value);
+        card.element.classList.toggle('hide', !isVisible)
 
 })})
 
-    // const cardDiv = document.querySelectorAll('.card');
+console.log(popupArray)
 
-// });
+function openPopup(e){
+    const card = e.target;
+    const cardStrong = card.querySelector('strong');
+    popupArray.forEach(popup => {
+        if(e.target.classList.contains('card') && e.target.querySelector('strong').innerHTML === popup.name){
+            popup.marker.openPopup();
 
+        }
+    })
 
-
-
-
-    //     searchDDContainer
-    //     .appendChild(document.createElement('div').classList.add('card').classList.add('card-p')
-    //     .appendChild(document.createElement('p').classList.add('card-p')
-    //     .appendChild(document.createElement('strong').classList.add('card-p')
-    //     .appendChild(document.createTextNode(data[i].name)))));
-    // }
-
+}
 
 
 
 //Event Listeners
+
+
 document.addEventListener('click', hideInfo);
 document.addEventListener('click', hideFieldsetInputs);
 document.addEventListener('click', showFieldsetInputs);
@@ -663,5 +641,6 @@ document.addEventListener('click', fishCheckBoxes);
 document.addEventListener('click', marketsCheckBoxes);
 document.addEventListener('click', hideSiteLegend);
 document.addEventListener('click', showSiteLegend);
+document.addEventListener('click', openPopup);
 document.addEventListener('DOMContentLoaded', settingBS);
 
