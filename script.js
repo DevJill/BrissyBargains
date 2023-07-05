@@ -612,22 +612,27 @@ searchInput.addEventListener('input', e => {
 
 })})
 
-console.log(popupArray)
 
 function openPopup(e){
     const card = e.target;
     const cardStrong = card.querySelector('strong');
     popupArray.forEach(popup => {
-        if(e.target.classList.contains('card') && e.target.querySelector('strong').innerHTML === popup.name){
+        if(e.target.classList.contains('card') && e.target.querySelector('strong').innerHTML === popup.name
+           || e.target.parentElement.classList.contains('card') && e.target.parentElement.querySelector('strong').innerHTML === popup.name
+           || e.target.parentElement.parentElement.classList.contains('card') && e.target.innerHTML === popup.name){ 
             popup.marker.openPopup();
+            const markerLat = popup.marker._latlng.lat
+            const markerLng = popup.marker._latlng.lng
 
+            map.panTo(new L.LatLng(markerLat,markerLng - (0.049562514)))
         }
-    })
+    }
+    )
 
 }
 
 
-
+// SET LOCATION TO HAVE POPUP CENTRE SCREEN
 //Event Listeners
 
 
