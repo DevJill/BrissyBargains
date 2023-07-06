@@ -137,7 +137,8 @@ function hideInfo(e){
 const fieldset = document.querySelector('.help-fieldset');
 
 function hideFieldsetInputs(e){
-        if(e.target.classList.contains('fieldset-submit-suggestion') || e.target.classList.contains('hidden-fieldset-submit-suggestion')){
+        if(e.target.classList.contains('fieldset-submit-suggestion') 
+        || e.target.classList.contains('hidden-fieldset-submit-suggestion')){
 
         const fieldsetDiv = fieldset.querySelector('div');
         if(fieldsetDiv.classList.contains('fieldset-inputs')){
@@ -185,7 +186,8 @@ function hideFieldsetInputs(e){
 }
 
 function showFieldsetInputs(e){  
-    if(e.target.classList.contains('fieldset-submit-more-suggestion') || e.target.classList.contains('hidden-fieldset-submit-more-suggestion')){
+    if(e.target.classList.contains('fieldset-submit-more-suggestion') 
+    || e.target.classList.contains('hidden-fieldset-submit-more-suggestion')){
         const fieldsetDiv = fieldset.querySelector('div');
         if(fieldsetDiv.classList.contains('fieldset-ty-div')){
             fieldsetDiv.remove();
@@ -252,14 +254,14 @@ function groceryCheckBoxes(e){
     if(e.target.classList.contains('grocery-checkbox') && e.target.checked === false){
         for(i = 0; i < iconImg.length; i++){
             if(iconImg[i].classList.contains('grocery-icon') && iconImgShadow[i].classList.contains('grocery-icon')){
-                 iconImg[i].style.display = 'none';
-                 iconImgShadow[i].style.display = 'none';
+                 iconImg[i].classList.add('hide');
+                 iconImgShadow[i].classList.add('hide');
             }}} 
             else if (e.target.classList.contains ('grocery-checkbox') && e.target.checked === true){
             for(i = 0; i < iconImg.length; i++){
                 if(iconImg[i].classList.contains('grocery-icon') && iconImgShadow[i].classList.contains('grocery-icon')){
-                    iconImg[i].style.display = 'block';
-                    iconImgShadow[i].style.display = 'block';
+                    iconImg[i].classList.remove('hide');
+                    iconImgShadow[i].classList.remove('hide');
             }}
 }};
 
@@ -268,17 +270,18 @@ function vegCheckBoxes(e){
     const iconImg = document.querySelectorAll('.leaflet-marker-icon');
     const iconImgShadow = document.querySelectorAll('.leaflet-marker-shadow');
     
-    if(e.target.classList.contains('veg-checkbox') && e.target.checked === false){
+    if(e.target.classList.contains('veg-checkbox') 
+    && e.target.checked === false){
         for(i = 0; i < iconImg.length; i++){
             if(iconImg[i].classList.contains('veg-icon') && iconImgShadow[i].classList.contains('veg-icon')){
-                 iconImg[i].style.display = 'none';
-                 iconImgShadow[i].style.display = 'none';
+                iconImg[i].classList.add('hide');
+                iconImgShadow[i].classList.add('hide');
             }}} 
             else if (e.target.classList.contains ('veg-checkbox') && e.target.checked === true){
             for(i = 0; i < iconImg.length; i++){
                 if(iconImg[i].classList.contains('veg-icon') && iconImgShadow[i].classList.contains('veg-icon')){
-                    iconImg[i].style.display = 'block';
-                    iconImgShadow[i].style.display = 'block';
+                    iconImg[i].classList.remove('hide');
+                    iconImgShadow[i].classList.remove('hide');
             }}
 }};
 
@@ -290,14 +293,14 @@ function meatsCheckBoxes(e){
     if(e.target.classList.contains('meats-checkbox') && e.target.checked === false){
         for(i = 0; i < iconImg.length; i++){
             if(iconImg[i].classList.contains('meats-icon') && iconImgShadow[i].classList.contains('meats-icon')){
-                 iconImg[i].style.display = 'none';
-                 iconImgShadow[i].style.display = 'none';
+                iconImg[i].classList.add('hide');
+                iconImgShadow[i].classList.add('hide');
             }}} 
             else if (e.target.classList.contains ('meats-checkbox') && e.target.checked === true){
             for(i = 0; i < iconImg.length; i++){
                 if(iconImg[i].classList.contains('meats-icon') && iconImgShadow[i].classList.contains('meats-icon')){
-                    iconImg[i].style.display = 'block';
-                    iconImgShadow[i].style.display = 'block';
+                    iconImg[i].classList.remove('hide');
+                    iconImgShadow[i].classList.remove('hide');
             }}
 }};
 
@@ -309,14 +312,14 @@ function fishCheckBoxes(e){
     if(e.target.classList.contains('fish-checkbox') && e.target.checked === false){
         for(i = 0; i < iconImg.length; i++){
             if(iconImg[i].classList.contains('fish-icon') && iconImgShadow[i].classList.contains('fish-icon')){
-                 iconImg[i].style.display = 'none';
-                 iconImgShadow[i].style.display = 'none';
+                iconImg[i].classList.add('hide');
+                iconImgShadow[i].classList.add('hide');
             }}} 
             else if (e.target.classList.contains ('fish-checkbox') && e.target.checked === true){
             for(i = 0; i < iconImg.length; i++){
                 if(iconImg[i].classList.contains('fish-icon') && iconImgShadow[i].classList.contains('fish-icon')){
-                    iconImg[i].style.display = 'block';
-                    iconImgShadow[i].style.display = 'block';
+                    iconImg[i].classList.remove('hide');
+                    iconImgShadow[i].classList.remove('hide');
             }}
 }};
 
@@ -328,14 +331,14 @@ function marketsCheckBoxes(e){
     if(e.target.classList.contains('markets-checkbox') && e.target.checked === false){
         for(i = 0; i < iconImg.length; i++){
             if(iconImg[i].classList.contains('markets-icon') && iconImgShadow[i].classList.contains('markets-icon')){
-                 iconImg[i].style.display = 'none';
-                 iconImgShadow[i].style.display = 'none';
+                iconImg[i].classList.add('hide');
+                iconImgShadow[i].classList.add('hide');
             }}} 
             else if (e.target.classList.contains ('markets-checkbox') && e.target.checked === true){
             for(i = 0; i < iconImg.length; i++){
                 if(iconImg[i].classList.contains('markets-icon') && iconImgShadow[i].classList.contains('markets-icon')){
-                    iconImg[i].style.display = 'block';
-                    iconImgShadow[i].style.display = 'block';
+                    iconImg[i].classList.remove('hide');
+                    iconImgShadow[i].classList.remove('hide');
             }}
 }};
 
@@ -362,13 +365,10 @@ function showSiteLegend(e){
 }
 
 //Adding Classes to Icons
-
-    
 function settingBS(){
 
         const iconImg = document.querySelectorAll('.leaflet-marker-icon');
         const iconImgShadow = document.querySelectorAll('.leaflet-marker-shadow');
-        const iconPopup = document.querySelectorAll('.leaflet-popup-content');
     
     for(i = 0; i < iconImg.length; i++){
          if(iconImg[i].src.indexOf('grocery') != -1){
@@ -400,9 +400,7 @@ function settingBS(){
 }
 
 
-
-    //Trying to Make Search Bar Functional...... Kind of Getting Silly ehehe
-
+//Trying to Make Search Bar Functional...... Kind of Getting Silly ehehe
     document.addEventListener('click', searchFocus);
     document.addEventListener('click', searchUnfocus);
 
@@ -418,25 +416,20 @@ function settingBS(){
 
     function searchUnfocus(e){
         if(e.target !== searchInput && !e.target.classList.contains('card') 
-        && !e.target.classList.contains('search-drop-down-overlay') 
+        && !e.target.classList.contains('search-drop-down-overlay') && !e.target.classList.contains('main-search')
         && !e.target.classList.contains('card-p') && !searchDDContainer.classList.contains('hide')){
             searchInput.style.borderRadius = '5px 0 0 5px'
             searchDDContainer.classList.add('hide');
             console.log(e.target)
         }
     }
-
-
-
-
-
+ 
+//Fetching Data From JSON File
     let storeArray = [];
     let card2Array = [];
     let popupArray = [];
 
     
-
-
     fetch('./shops.json')
     .then((response) => {
     return response.json();
@@ -565,14 +558,27 @@ function settingBS(){
 
         if(data[j].type === 'Grocery'){
             div.classList.add('grocery-card')
+            div.classList.add('grocery')
+            div.classList.add('groceries')
+            div.classList.add('supermarket')
         } else if(data[j].type === 'Produce'){
             div.classList.add('veg-card')
+            div.classList.add('vegetables')
+            div.classList.add('veg')
+            div.classList.add('fruit')
+            div.classList.add('fruits')
         } else if(data[j].type === 'Meats'){
-            div.classList.add('meats-card')
+            div.classList.add('meats-card');
+            div.classList.add('butcher');
+            div.classList.add('butchers');
+            div.classList.add('meat');
         } else if(data[j].type === 'Fish'){
             div.classList.add('fish-card')
+            div.classList.add('fish')
         } else if(data[j].type === 'Markets'){
             div.classList.add('markets-card')
+            div.classList.add('market')
+            div.classList.add('markets')
         }
 
         const paragraph = document.createElement('p');
@@ -603,6 +609,91 @@ function settingBS(){
 
 })
 
+//Search/Checkbox Tings
+const searchBtn = document.querySelector('#main-search');
+const groceryCheck = document.querySelector('.grocery-checkbox');
+const vegCheck = document.querySelector('.veg-checkbox');
+const meatsCheck = document.querySelector('.meats-checkbox');
+const fishCheck = document.querySelector('.fish-checkbox');
+const marketsCheck = document.querySelector('.markets-checkbox');
+
+function hidingAndUnhidingIconsForSearch(){
+    const iconImg = document.querySelectorAll('.leaflet-marker-icon');
+    const iconImgShadow = document.querySelectorAll('.leaflet-marker-shadow');
+
+    card2Array.forEach(card => {
+
+        if(searchInput.value === ''){
+            searchDDContainer.classList.add('hide');
+        } else if(card.element.classList.contains(`${searchInput.value.toLowerCase()}`)){
+            card.element.classList.remove('hide');
+
+            if(card.element.classList.contains('grocery-card') && !groceryCheck.checked){
+                for(let i = 0; i < iconImg.length; i++){
+                    if(iconImg[i].classList.contains('grocery-icon') 
+                    && iconImgShadow[i].classList.contains('grocery-icon')
+                    && iconImg[i].classList.contains('hide')){
+                        groceryCheck.checked === true;
+                        iconImg[i].classList.remove('hide')
+                        iconImgShadow[i].classList.remove('hide')
+                    }
+           }}
+        
+           if(card.element.classList.contains('veg-card') && !vegCheck.checked){
+            for(let i = 0; i < iconImg.length; i++){
+                if(iconImg[i].classList.contains('veg-icon') 
+                && iconImgShadow[i].classList.contains('veg-icon')
+                && iconImg[i].classList.contains('hide')){
+                    vegCheck.checked === true;
+                    iconImg[i].classList.remove('hide')
+                    iconImgShadow[i].classList.remove('hide')
+                }
+            }}
+        
+            if(card.element.classList.contains('meats-card') && !meatsCheck.checked){
+                for(let i = 0; i < iconImg.length; i++){
+                    if(iconImg[i].classList.contains('meats-icon') 
+                    && iconImgShadow[i].classList.contains('meats-icon')
+                    && iconImg[i].classList.contains('hide')){
+                        meatsCheck.checked === true;
+                        iconImg[i].classList.remove('hide')
+                        iconImgShadow[i].classList.remove('hide')
+                    }
+           }}
+                                           
+           if(card.element.classList.contains('fish-card') && !fishCheck.checked){
+            for(let i = 0; i < iconImg.length; i++){
+                if(iconImg[i].classList.contains('fish-icon') 
+                && iconImgShadow[i].classList.contains('fish-icon')
+                && iconImg[i].classList.contains('hide')){
+                    fishCheck.checked === true;
+                    iconImg[i].classList.remove('hide')
+                    iconImgShadow[i].classList.remove('hide')
+                }
+            }}                     
+                      
+            if(card.element.classList.contains('markets-card') && !marketsCheck.checked){
+                for(let i = 0; i < iconImg.length; i++){
+                    if(iconImg[i].classList.contains('markets-icon') 
+                    && iconImgShadow[i].classList.contains('markets-icon')
+                    && iconImg[i].classList.contains('hide')){
+                        marketsCheck.checked === true;
+                        iconImg[i].classList.remove('hide')
+                        iconImgShadow[i].classList.remove('hide')
+                    }
+           }}}}
+)}
+
+function enterSearch (e){
+    if(document.activeElement === searchInput && e.key === "Enter"){
+        hidingAndUnhidingIconsForSearch()
+}}
+
+searchBtn.addEventListener('click', e => {
+    hidingAndUnhidingIconsForSearch()
+})
+
+
 searchInput.addEventListener('input', e => {
      const value = e.target.value.toLowerCase();
      card2Array.forEach(card => {
@@ -613,6 +704,9 @@ searchInput.addEventListener('input', e => {
 })})
 
 
+// - (0.049562514)
+
+//SET LOCATION TO HAVE POPUP CENTRE SCREEN
 function openPopup(e){
     const card = e.target;
     const cardStrong = card.querySelector('strong');
@@ -624,15 +718,59 @@ function openPopup(e){
             const markerLat = popup.marker._latlng.lat
             const markerLng = popup.marker._latlng.lng
 
-            map.panTo(new L.LatLng(markerLat,markerLng - (0.049562514)))
+            map.setView([markerLat, markerLng - (0.049562514)], 12)
         }
-    }
-    )
+    })
+}
 
+//Hiding Card(s) if Checkbox is Marked False
+
+function hideCards(e){
+    const target = e.target;
+    card2Array.forEach(card => {
+        if(target.classList.contains('grocery-checkbox') && target.checked === false
+        && card.element.classList.contains('grocery-card')){
+            card.element.classList.add('hide')
+        } else if (target.classList.contains('grocery-checkbox') && target.checked === true
+        && card.element.classList.contains('grocery-card') && card.element.classList.contains('hide')){           
+            card.element.classList.remove('hide');
+        }
+
+        else if (target.classList.contains('veg-checkbox') && target.checked === false
+        && card.element.classList.contains('veg-card')){
+            card.element.classList.add('hide');
+        } else if (target.classList.contains('veg-checkbox') && target.checked === true
+        && card.element.classList.contains('veg-card') && card.element.classList.contains('hide')){
+            card.element.classList.remove('hide');
+        }
+
+        else if(target.classList.contains('meats-checkbox') && target.checked === false
+        && card.element.classList.contains('meats-card')){
+            card.element.classList.add('hide')
+        } else if (target.classList.contains('meats-checkbox') && target.checked === true
+        && card.element.classList.contains('meats-card') && card.element.classList.contains('hide')){
+            card.element.classList.remove('hide');
+        }
+
+        else if(target.classList.contains('fish-checkbox') && target.checked === false
+        && card.element.classList.contains('fish-card')){
+            card.element.classList.add('hide')
+        } else if (target.classList.contains('fish-checkbox') && target.checked === true
+        && card.element.classList.contains('fish-card') && card.element.classList.contains('hide')){
+            card.element.classList.remove('hide');
+        }
+
+        else if(target.classList.contains('markets-checkbox') && target.checked === false
+        && card.element.classList.contains('markets-card')){
+            card.element.classList.add('hide')
+        } else if (target.classList.contains('markets-checkbox') && target.checked === true
+        && card.element.classList.contains('markets-card') && card.element.classList.contains('hide')){
+            card.element.classList.remove('hide');
+        }
+})
 }
 
 
-// SET LOCATION TO HAVE POPUP CENTRE SCREEN
 //Event Listeners
 
 
@@ -647,5 +785,7 @@ document.addEventListener('click', marketsCheckBoxes);
 document.addEventListener('click', hideSiteLegend);
 document.addEventListener('click', showSiteLegend);
 document.addEventListener('click', openPopup);
+document.addEventListener('click', hideCards)
+document.addEventListener('keypress', enterSearch)
 document.addEventListener('DOMContentLoaded', settingBS);
 

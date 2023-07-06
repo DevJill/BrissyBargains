@@ -143,7 +143,7 @@ html, body {
     background-color: #f5f8f7;
     border-radius: 5px 0 0 5px;
     border-width: 1px;
-    padding-left: 20px;
+    padding: 0 10px 0 20px;
 } 
 
 .search input:focus{

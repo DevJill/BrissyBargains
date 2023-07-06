@@ -13,6 +13,7 @@
         "phone": "(07) 3245 2477",
         "google-reviews": 4.5,
         "website": "https://www.gcfo.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.516813491490236, 153.1991478976023]
     },
     {
@@ -29,6 +30,7 @@
         "phone": "(07) 5432 3555",
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.10070853275601, 152.94587786790046]
     },
     {
@@ -45,6 +47,7 @@
         "phone": "(07) 3269 0387",
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.330376273805786, 153.05726049589373]
     },
     {
@@ -61,6 +64,7 @@
         "phone": "(07) 3879 5906",
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.58941967785702, 152.95153871589764]
     },
     {
@@ -77,6 +81,7 @@
         "phone": "(07) 3287 2444",
         "google-reviews": 4,
         "website": "https://www.freshandsave.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.693242754620822, 153.21423331159446]
     },
     {
@@ -93,6 +98,7 @@
         "phone": "(07) 3891 2292",
         "google-reviews": 4,
         "website": "https://www.samcocotrading.com.au/",
+        "keywords": ["fruit", "vegetables"],
         "latNLong": [-27.50185519547979, 153.03500336058482]
     },
     {
@@ -109,6 +115,7 @@
         "phone": "NA",
         "google-reviews": 4.5,
         "website": "https://www.facebook.com/ClintsFarmFreshProduce/",
+        "keywords": ["fruit", "vegetables"],
         "latNLong": [-27.59511274263985, 152.76134276976273]
     },
     {
@@ -125,6 +132,7 @@
         "phone": "(07) 3915 4277",
         "google-reviews": 4.5,
         "website": "https://saturdayfreshmarket.com.au/",
+        "keywords": ["markets", "market"],
         "latNLong": [-27.536524261441887, 153.00216446791453]
     },
     {
@@ -141,6 +149,7 @@
         "phone": "0452 098 670",
         "google-reviews": 4.5,
         "website": "https://globalfoodmarkets.com.au/",
+        "keywords": ["markets", "market"],
         "latNLong": [-27.63729570588213, 153.1043430967529]
     },
     {
@@ -157,6 +166,7 @@
         "phone": "NA",
         "google-reviews": 4.5,
         "website": "https://www.janpowersfarmersmarkets.com.au/",
+        "keywords": ["markets", "market"],
         "latNLong": [-27.46854408323546, 153.05397318140663]
     },
     {
@@ -173,6 +183,7 @@
         "phone": "0419 739 411",
         "google-reviews": 4.5,
         "website": "https://mtgravattmarkets.com/",
+        "keywords": ["markets", "market"],
         "latNLong": [-27.544178221015905, 153.0842187679148]
     },
     {
@@ -189,6 +200,7 @@
         "phone": "(07) 3290 3610",
         "google-reviews": 4.5,
         "website": "https://m.facebook.com/tribecare/",
+        "keywords": ["grocery"],
         "latNLong": [-27.626874814245603, 153.12760843616334]
     },
     {
@@ -205,6 +217,7 @@
         "phone": "(07) 3714 7000",
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.596777126981348, 153.12490739675158]
     },
     {
@@ -221,6 +234,7 @@
         "phone": "(07) 3550 6000",
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.379938930258227, 152.9901134346201]
     },
     {
@@ -237,6 +251,7 @@
         "phone": "(07) 3386 8500",
         "google-reviews": 4,
         "website": "https://drakes.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.665499833710754, 153.0345826390836]
     },
     {
@@ -253,6 +268,7 @@
         "phone": "(07) 3490 1000",
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.22141530857835, 153.00146265440983]
     },
     {
@@ -269,6 +285,7 @@
         "phone": "(07) 3711 0000",
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.628592743530778, 153.02766525442306]
     },
     {
@@ -285,6 +302,7 @@
         "phone": "(07) 5585 6000",
         "google-reviews": 4,
         "website": "https://drakes.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.977614427626374, 153.38070109676406]
     },
     {
@@ -301,6 +319,7 @@
         "phone": "(07) 3436 4900",
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.652402154108593, 152.76467872267395]
     },
     {
@@ -317,6 +336,7 @@
         "phone": "NA",
         "google-reviews": 4,
         "website": "https://yuensfarmersmarket.com.au/",
+        "keywords": ["fruit", "vegetables"],
         "latNLong": [-27.608899433187002, 153.11017169675213]
     },
     {
@@ -333,6 +353,7 @@
         "phone": "(07) 3805 3147",
         "google-reviews": 4,
         "website": "https://yuensfarmersmarket.com.au/",
+        "keywords": ["fruit", "vegetables"],
         "latNLong": [-27.69220327736614, 153.13523385442525]
     },
     {
@@ -349,6 +370,7 @@
         "phone": "1300 002 493",
         "google-reviews": 4.5,
         "website": "https://superbutcher.com.au/",
+        "keywords": ["butcher", "butchers", "meat"],
         "latNLong": [-27.43610034367169, 153.08554481208714]
     },
     {
@@ -365,6 +387,7 @@
         "phone": "0407 194 956",
         "google-reviews": 4.5,
         "website": "https://superbutcher.com.au/",
+        "keywords": ["butcher", "butchers", "meat"],
         "latNLong": [-27.663913079200412, 153.04379405151153]
     },
     {
@@ -381,6 +404,7 @@
         "phone": "0400 155 833",
         "google-reviews": 4.5,
         "website": "https://superbutcher.com.au/",
+        "keywords": ["butcher", "butchers", "meat"],
         "latNLong": [-27.49190198611973, 153.21733682558352]
     },
     {
@@ -397,6 +421,7 @@
         "phone": "(07) 3863 1100",
         "google-reviews": 4,
         "website": "https://www.tbonesfresh.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.36404745163986, 153.02409379674413]
     },
     {
@@ -413,6 +438,7 @@
         "phone": "(07) 3269 1417",
         "google-reviews": 4.5,
         "website": "https://www.deagonbulkmeats.com.au/",
+        "keywords": ["butcher", "butchers", "meat"],
         "latNLong": [-27.32682340363385, 153.0619930544134]
     },
     {
@@ -429,6 +455,7 @@
         "phone": "(07) 3806 0639",
         "google-reviews": 4.5,
         "website": "https://lighthousecare.org.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.68454990435829, 153.19317243617508]
     },
     {
@@ -445,6 +472,7 @@
         "phone": "(07) 3806 0639",
         "google-reviews": 4.5,
         "website": "https://lighthousecare.org.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.661594604183854, 153.03600588325943]
     },
     {
@@ -461,6 +489,7 @@
         "phone": "(07) 3097 2032",
         "google-reviews": 4.5,
         "website": "https://www.facebook.com/InghamsLyttonFactoryOutlet",
+        "keywords": ["butcher", "butchers", "meat"],
         "latNLong": [-27.426777607591514, 153.1504541102406]
     },
     {
@@ -477,6 +506,7 @@
         "phone": "(07) 5499 0938",
         "google-reviews": 4.5,
         "website": "https://www.gcfo.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.117677322771932, 152.95574649373154]
 
     },
@@ -494,6 +524,7 @@
         "phone": "(07) 5432 3555",
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.10070853275601, 152.94587786790046]
     },
     {
@@ -510,6 +541,7 @@
         "phone": "(07) 3269 0387",
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
+        "keywords": ["grocery"],
         "latNLong": [-27.330376273805786, 153.05726049589373]
     }
 ]
