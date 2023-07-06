@@ -407,12 +407,25 @@ function settingBS(){
     const searchInput = document.getElementById('site-search');
     const searchDDContainer = document.querySelector('.search-drop-down-overlay');
 
+    const hiddenSearchInputContainer = document.querySelector('.hidden-search');
+    const hiddenSearchInput = document.getElementById('hidden-site-search');
+    const hiddenSearchDDContainer = document.querySelector('.hidden-search-drop-down-overlay')
+    const hiddenSearchDDContainerBtn = hiddenSearchInputContainer.querySelector('button');
+
     function searchFocus(e){
         if(e.target === searchInput){
             searchInput.style.borderRadius = '5px 0 0 0'
             searchDDContainer.classList.remove('hide')
         }
     }
+    
+    hiddenSearchInput.addEventListener('click', (e) => {
+        if(e.target === hiddenSearchInput){
+            hiddenSearchInput.style.borderRadius = '5px 0 0 0';
+            hiddenSearchDDContainer.classList.remove('hide')
+            console.log('peepee')
+        }
+    })
 
     function searchUnfocus(e){
         if(e.target !== searchInput && !e.target.classList.contains('card') 
@@ -420,13 +433,24 @@ function settingBS(){
         && !e.target.classList.contains('card-p') && !searchDDContainer.classList.contains('hide')){
             searchInput.style.borderRadius = '5px 0 0 5px'
             searchDDContainer.classList.add('hide');
-            console.log(e.target)
         }
     }
+
+    document.addEventListener('click', (e) => {
+        if(e.target !== hiddenSearchInput && !e.target.classList.contains('hidden-search-drop-down-overlay') 
+        && !e.target.classList.contains('mobile-card') && !e.target.classList.contains('hidden-main-search')
+        && !e.target.classList.contains('mobile-card-p') && !e.target.classList.contains('card-p') 
+        && !hiddenSearchDDContainer.classList.contains('hide')){
+            hiddenSearchInput.style.borderRadius = '5px 0 0 5px'
+            hiddenSearchDDContainer.classList.add('hide');
+            console.log(e.target)
+        }
+    })
  
 //Fetching Data From JSON File
     let storeArray = [];
     let card2Array = [];
+    let card2ArrayMobile = [];
     let popupArray = [];
 
     
@@ -584,15 +608,11 @@ function settingBS(){
         const paragraph = document.createElement('p');
         paragraph.classList.add('card-p');
 
-
-
         const strongP = document.createElement('strong');
         strongP.classList.add('card-p');
-        strongP
-        .appendChild(document.createTextNode(data[j].name));
+        strongP.appendChild(document.createTextNode(data[j].name));
 
-        paragraph
-        .appendChild(strongP);
+        paragraph.appendChild(strongP);
 
         const paragraph2 = document.createElement('p')
         paragraph2.classList.add('card-p');
@@ -604,13 +624,65 @@ function settingBS(){
         searchDDContainer.appendChild(div);
 
         card2Array.push({name: data[j].name, element : div, latNLong: data[j].latNLong});
-
     }
 
+    for(j = 0; j < data.length; j++){
+
+        const div = document.createElement('div');
+        div.classList.add('mobile-card');
+        div.classList.add('mobile-card-p');
+
+        if(data[j].type === 'Grocery'){
+            div.classList.add('grocery-card')
+            div.classList.add('grocery')
+            div.classList.add('groceries')
+            div.classList.add('supermarket')
+        } else if(data[j].type === 'Produce'){
+            div.classList.add('veg-card')
+            div.classList.add('vegetables')
+            div.classList.add('veg')
+            div.classList.add('fruit')
+            div.classList.add('fruits')
+        } else if(data[j].type === 'Meats'){
+            div.classList.add('meats-card');
+            div.classList.add('butcher');
+            div.classList.add('butchers');
+            div.classList.add('meat');
+        } else if(data[j].type === 'Fish'){
+            div.classList.add('fish-card')
+            div.classList.add('fish')
+        } else if(data[j].type === 'Markets'){
+            div.classList.add('markets-card')
+            div.classList.add('market')
+            div.classList.add('markets')
+        }
+
+        const paragraph = document.createElement('p');
+        paragraph.classList.add('card-p');
+
+        const strongP = document.createElement('strong');
+        strongP.classList.add('card-p');
+        strongP.appendChild(document.createTextNode(data[j].name));
+
+        paragraph.appendChild(strongP);
+
+        const paragraph2 = document.createElement('p')
+        paragraph2.classList.add('card-p');
+        paragraph2.appendChild(document.createTextNode(data[j].address));
+
+        div.appendChild(paragraph);
+        div.appendChild(paragraph2);
+
+
+        hiddenSearchDDContainer.appendChild(div)
+
+        card2ArrayMobile.push({name: data[j].name, element : div, latNLong: data[j].latNLong});
+    }
 })
 
 //Search/Checkbox Tings
 const searchBtn = document.querySelector('#main-search');
+const mobileSearchBtn = document.querySelector('#hidden-main-search');
 const groceryCheck = document.querySelector('.grocery-checkbox');
 const vegCheck = document.querySelector('.veg-checkbox');
 const meatsCheck = document.querySelector('.meats-checkbox');
@@ -624,7 +696,7 @@ function hidingAndUnhidingIconsForSearch(){
     card2Array.forEach(card => {
 
         if(searchInput.value === ''){
-            searchDDContainer.classList.add('hide');
+            hiddenSearchDDContainer.classList.add('hide');
         } else if(card.element.classList.contains(`${searchInput.value.toLowerCase()}`)){
             card.element.classList.remove('hide');
 
@@ -689,10 +761,22 @@ function enterSearch (e){
         hidingAndUnhidingIconsForSearch()
 }}
 
+mobileSearchBtn.addEventListener('click', (e) => {
+    if(document.activeElement === searchInput && e.key === "Enter"){
+        hidingAndUnhidingIconsForSearch()
+}})
+
 searchBtn.addEventListener('click', e => {
     hidingAndUnhidingIconsForSearch()
 })
 
+hiddenSearchInput.addEventListener('input', (e) => {
+    const value = e.target.value.toLowerCase();
+    card2ArrayMobile.forEach(card => {
+       const isVisible = 
+       card.name.toLowerCase().includes(value);
+       card.element.classList.toggle('hide', !isVisible)
+})})
 
 searchInput.addEventListener('input', e => {
      const value = e.target.value.toLowerCase();
@@ -703,17 +787,19 @@ searchInput.addEventListener('input', e => {
 
 })})
 
+//Search/Checkbox Tings For Mobile
+
+const hiddenSearch = document.querySelector('#hidden-site-search');
 
 // - (0.049562514)
 
 //SET LOCATION TO HAVE POPUP CENTRE SCREEN
 function openPopup(e){
     const card = e.target;
-    const cardStrong = card.querySelector('strong');
     popupArray.forEach(popup => {
-        if(e.target.classList.contains('card') && e.target.querySelector('strong').innerHTML === popup.name
-           || e.target.parentElement.classList.contains('card') && e.target.parentElement.querySelector('strong').innerHTML === popup.name
-           || e.target.parentElement.parentElement.classList.contains('card') && e.target.innerHTML === popup.name){ 
+        if(card.classList.contains('card') && card.querySelector('strong').innerHTML === popup.name
+           || card.parentElement.classList.contains('card') && card.parentElement.querySelector('strong').innerHTML === popup.name
+           || card.parentElement.parentElement.classList.contains('card') && card.innerHTML === popup.name){ 
             popup.marker.openPopup();
             const markerLat = popup.marker._latlng.lat
             const markerLng = popup.marker._latlng.lng
@@ -724,7 +810,6 @@ function openPopup(e){
 }
 
 //Hiding Card(s) if Checkbox is Marked False
-
 function hideCards(e){
     const target = e.target;
     card2Array.forEach(card => {

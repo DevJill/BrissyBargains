@@ -181,7 +181,7 @@ html, body {
     text-align: center;
 }
  
-.card{
+.card, .mobile-card{
     padding: 0 20px;
     background-color: #f5f8f7;
     width: 100%;
@@ -197,7 +197,7 @@ html, body {
     background-color: #f0f0f0;
 }
 
-.card:first-of-type{
+.card:first-of-type, .mobile-card:first-of-type{
     border-width: 1px 0 1px 0;
 }
 
@@ -627,18 +627,17 @@ body{
 }
 
 .hidden-search{
-    opacity: 1;
-    z-index: 9;
     filter: drop-shadow(0 0 4px rgb(75, 75, 75));
     display: block;
     margin: 15px;
     width: 80%;
+    height:  80%;
 }
 
 /* Hidden Search Tings */
 
 .hidden-search{
-    height:  6%;
+    z-index: 9;
     display: grid;
     grid-template-columns: 85% 15%;
 }
@@ -651,7 +650,7 @@ body{
     background-color: #f5f8f7;
     border-radius: 5px 0 0 5px;
     border: none;
-    padding-left: 20px;
+    padding:  0 10px 0 20px;
 } 
 
 .hidden-search input:focus{
@@ -676,6 +675,54 @@ body{
     height: 1.8em;
     padding-top: 2px;
 }
+
+.hidden-search-grid{
+    display: grid;
+    grid-template-rows: 13% 87%;
+    height: 60%;
+}
+
+.hidden-search-wrapper{
+    opacity: 1;
+
+}
+
+.hidden-search-drop-down-overlay{
+    filter: drop-shadow(0 4px 4px rgb(139, 139, 139));
+    margin: 4px 0 0 15px;
+    position: relative;
+    z-index: 11;
+    width: 79%;
+    max-height: 410px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: #212529;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+
+.mobile-card{
+    padding: 1em;
+}
+
+.mobile-card p{
+    margin: auto;
+    max-width: 90%;
+}
+
+.mobile-card p:first-of-type{
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Hidden Search Scroll bar Tings */
+
+  /* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 /* Min Max Btn Tings */
 
