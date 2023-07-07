@@ -663,7 +663,7 @@ body{
 
 .hidden-search button{
     padding: 0;
-    border-width: 0 0 0 1px ;
+    border-width: 0 0 0 1px;
     border-style: solid ;
     border-color: #93B4AE;
     background-color: #B7CDC9;
@@ -795,7 +795,7 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
     margin: 0 auto;
-    padding: 10px 0 0 12px;
+    padding: 10px 15px 0 20px;
 }
 
 .intro-legend h1{
@@ -908,7 +908,7 @@ transition: ease-in .3s;
 .fieldset-inputs{
     margin: 10px 15px;
     display: grid;
-    height: 100%;
+    height:100%;
     grid-template-rows: 50% 50%;
 }
 
@@ -947,7 +947,7 @@ transition: ease-in .3s;
 }
 
 .hidden-want-to-help-buttons{
-    height: 50px;
+    height: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
@@ -1022,6 +1022,7 @@ transition: ease-in .3s;
 .donate{
     grid-template-columns: 68% 32%;
     padding: 0;
+    margin-bottom: 10px;
 }
 
 .donate p{
