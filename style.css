@@ -795,7 +795,7 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
     margin: 0 auto;
-    padding-left: 25px;
+    padding: 10px 0 0 13px;
 }
 
 .intro-legend h1{
@@ -955,7 +955,7 @@ transition: ease-in .3s;
 
 .hidden-want-to-help-buttons button, .hidden-want-to-help-buttons input{
     height: 30px;
-    width: 75%;
+    width: 85%;
 }
 
 .hidden-want-to-help-buttons button{
