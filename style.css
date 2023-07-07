@@ -870,11 +870,12 @@ transition: ease-in .3s;
 .fieldset-inputs{
     margin: 10px 15px;
     display: grid;
-    grid-template-rows: 60% 40%;
+    height: 100%;
+    grid-template-rows: 50% 50%;
 }
 
 .help-fieldset{
-    height: 165px;
+    height: 170px;
     padding: 0;
     margin:0
 }
@@ -908,6 +909,7 @@ transition: ease-in .3s;
 }
 
 .hidden-want-to-help-buttons{
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
@@ -921,7 +923,7 @@ transition: ease-in .3s;
 
 .shrink-inputs{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40%  60%;
     margin: 0;
     text-align: center;
 }
@@ -932,13 +934,15 @@ transition: ease-in .3s;
 
 
 .shrink-inputs label{
-    margin-top: 1em;
+    margin: auto;
 }
 
 
 .fieldset-input{
     height: 30px;
     padding-left: 10px;
+    width: 80%;
+    margin: auto;
 }
 
 
