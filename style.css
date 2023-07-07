@@ -615,7 +615,7 @@ body{
 
 .map-box-overlay{
     width: 100%;
-    height: 45%;
+    height: 34%;
     top: auto;
     bottom: 0;
     filter: drop-shadow(0 0 4px rgb(105, 105, 105));
@@ -733,13 +733,14 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #697774;
+    background-color: #889995;
     border-radius: 10px;
+    margin-top: 10px;
     border: 2px solid #B7CDC9;
 }
 
 ::-webkit-scrollbar-track {
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 6px 6px 0;
     background-color: #B7CDC9;
 }
 
