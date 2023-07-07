@@ -589,7 +589,7 @@ body h1{
 @media only screen and (max-width: 420px){
 
 .site-container{
-     height: 85vh;
+     height: 90vh;
      margin-bottom: .5em;;
 }
 
@@ -606,12 +606,17 @@ body{
     height: 100%;
 }
 
+.intro-legend h1{
+    font-weight: 600;
+    height: .9em;
+}
+
 /* Map Tings  */
 
 
 .map-box-overlay{
     width: 100%;
-    height: 58%;
+    height: 45%;
     top: auto;
     bottom: 0;
     filter: drop-shadow(0 0 4px rgb(105, 105, 105));
@@ -776,6 +781,10 @@ body{
     margin-top: 1em;
 }
 
+/* .legend img{
+    height: 30px;
+} */
+
 .legend label{
     display: grid;
     grid-template-columns: 40% 60%;
@@ -785,12 +794,12 @@ body{
 .legend-grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 175px;
+    height: 150px;
 }
 
 .legend-grid-container li{
     padding-left: 25px;
-    height: 70px;
+    height: 40px;
     
 }
 
@@ -820,7 +829,7 @@ body{
 .show-want-to-help button{
     padding: 5px;
     width: 250px;
-    height: 3em;
+    height: 2.5em;
     margin: 10px auto;
     outline: #93B4AE;
     background-color: #B7CDC9;
@@ -857,14 +866,22 @@ transition: ease-in .3s;
 
 /* Hidden Legend Tings */
 
+.fieldset-inputs{
+    margin: 0 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 .help-fieldset{
-    height: 225px;
+    height: 170px;
+    padding: 0;
+    margin:0
 }
 
 .hidden-want-to-help{
     display: none;
     margin-top: 15px;
+    
 }
 
 .hidden-fieldset-input-title{
@@ -890,43 +907,37 @@ transition: ease-in .3s;
 }
 
 .hidden-want-to-help-buttons{
-    width: 310px;
     display: grid;
-    margin: 5px auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
 }
 
-.hidden-want-to-help-buttons input{
-    margin-left: 5px;
-}
-
-.hidden-want-to-help-buttons button{
-    margin: auto 5px auto auto;
-    width: 130px;
-}
-
-.fieldset-submit-suggestion{
-    max-width: 130px;
-}
-
-.fieldset-input{
-    height: 2.2em;
-}
-
-.fieldset-input-title{
-    margin-top: 10px;
+.hidden-want-to-help-buttons button, .hidden-want-to-help-buttons input{
+    height: 30px;
+    width: 85%;
+    margin: 2.6em auto 0 auto;
 }
 
 .shrink-inputs{
-    width: 310px;
-    margin: 0 auto;
+    margin: 0 10px;
 }
 
+.shrink-inputs label{
+    margin-top: .7em;
+}
+
+
+.fieldset-input{
+    height: 30px;
+}
+
+
 .hidden-suggest-more-btn{
-    margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
+    max-width: 80%;
+    margin: 0 auto;
+} 
 
 .hidden-fieldset-submit-more-suggestion{
     padding: 5px;
@@ -937,6 +948,14 @@ transition: ease-in .3s;
     border: solid 1px;
     border-color: #93B4AE;
     border-radius: 5px;
+}
+
+.fieldset-ty-div{
+    margin: auto;
+}
+
+.fieldset-ty-div p:first-of-type{
+    padding-top: 27px;
 }
 
 
@@ -952,8 +971,8 @@ transition: ease-in .3s;
 }
 
 .donate button{
-    height: 3em;
-    width: 3em;
+    height: 2.5em;
+    width: 2.5em;
     margin: 0;
 }
 

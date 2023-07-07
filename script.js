@@ -123,10 +123,12 @@ const showBtnImg = document.querySelector('.max-btn-img');
 const infoContainer = document.querySelector('.info-container');
 
 function hideInfo(e){
-    if(e.target === hideBtn || e.target === hideBtnImg){
-        infoContainer.style.display = 'none';
-    } else if (e.target === showBtn || e.target === showBtnImg) {
-        infoContainer.style.display = 'block';
+    if(e.target === hideBtn && !infoContainer.classList.contains('hide') 
+    || e.target === hideBtnImg && !infoContainer.classList.contains('hide')){
+        infoContainer.classList.add('hide')
+    } else if (e.target === showBtn && infoContainer.classList.contains('hide') 
+    || e.target === showBtnImg && infoContainer.classList.contains('hide')) {
+        infoContainer.classList.remove('hide')
     }
 }
 
@@ -194,37 +196,39 @@ function showFieldsetInputs(e){
         }
 
         const createFieldsetInputs = document.createElement('div');
-        createFieldsetInputs.classList.add('fieldset-inputs')
+        createFieldsetInputs.classList.add('fieldset-inputs');
+        const createShrinkInputs = document.createElement('div');
+        createShrinkInputs.classList.add('shrink-inputs')
 
         const shopLabel = document.createElement('label');
         shopLabel.htmlFor = "shop-name";
         shopLabel.classList.add('fieldset-input-title');
         shopLabel.appendChild(document.createTextNode('Shop Name:'));
-        createFieldsetInputs.appendChild(shopLabel);
+        createShrinkInputs.appendChild(shopLabel);
 
         const shopLabelInput = document.createElement('input');
         shopLabelInput.type = 'text';
         shopLabelInput.name = "shop-name";
         shopLabelInput.classList.add('fieldset-input');
-        createFieldsetInputs.appendChild(shopLabelInput)
+        createShrinkInputs.appendChild(shopLabelInput)
 
         const shopSuburbLabel = document.createElement('label');
         shopSuburbLabel.htmlFor = "shop-suburb-name";
         shopSuburbLabel.classList.add('fieldset-input-title');
         shopSuburbLabel.appendChild(document.createTextNode('Shop Suburb:'));
-        createFieldsetInputs.appendChild(shopSuburbLabel);
+        createShrinkInputs.appendChild(shopSuburbLabel);
 
         const shopSuburbInput = document.createElement('input');
         shopSuburbInput.type = 'text';
         shopSuburbInput.name = "shop-suburb-name";
         shopSuburbInput.classList.add('fieldset-input');
-        createFieldsetInputs.appendChild(shopSuburbInput);
+        createShrinkInputs.appendChild(shopSuburbInput);
 
         const fieldsetSubmit = document.createElement('input');
         fieldsetSubmit.type = 'submit';
         fieldsetSubmit.value = "Send Suggestion";
         fieldsetSubmit.classList.add('fieldset-submit-suggestion');
-        createFieldsetInputs.appendChild(fieldsetSubmit);
+        createShrinkInputs.appendChild(fieldsetSubmit);
 
         const hiddenFieldsetSubmit = document.createElement('input');
         hiddenFieldsetSubmit.type = 'submit';
@@ -239,7 +243,9 @@ function showFieldsetInputs(e){
         fieldsetBtnGrid.classList.add('hidden-want-to-help-buttons');
         fieldsetBtnGrid.appendChild(hiddenFieldsetSubmit);
         fieldsetBtnGrid.appendChild(fieldsetNvmBtn);
-        createFieldsetInputs.appendChild(fieldsetBtnGrid);
+
+        createFieldsetInputs.appendChild(createShrinkInputs)
+        createFieldsetInputs.appendChild(fieldsetBtnGrid)
 
         fieldset.appendChild(createFieldsetInputs);
     }
@@ -791,7 +797,6 @@ function mobileHidingAndUnhidingIconsForSearch(){
         if(hiddenSearchInput.value === ''){
             hiddenSearchDDContainer.classList.add('hide');
             hiddenSearchInput.style.borderRadius = '5px 0 0 5px';
-            console.log('poopoo')
         } else if(card.element.classList.contains(`${hiddenSearchInput.value.toLowerCase()}`)){
             card.element.classList.remove('hide');
             if(card.element.classList.contains('grocery-card') && !groceryCheck.checked){
@@ -893,11 +898,15 @@ function mobileOpenPopup(e){
            || card.parentElement.parentElement.classList.contains('mobile-card') && card.innerHTML === popup.name){ 
             hiddenSearchDDContainer.classList.add('hide')
             hiddenSearchInput.style.borderRadius = '5px 0 0 5px'
-            infoContainer.classList.add('hide')
+
+            if(!infoContainer.classList.contains('hide')){
+                infoContainer.classList.add('hide')
+            }
+
             popup.marker.openPopup();
             const markerLat = popup.marker._latlng.lat
             const markerLng = popup.marker._latlng.lng
-            map.setView([markerLat + (0.049562514), markerLng], 12)
+            map.setView([markerLat + (0.049562514), markerLng - (0.003)], 12)
         }
     })
 }
