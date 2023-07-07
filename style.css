@@ -784,7 +784,7 @@ body{
 .intro{
     display: grid;
     grid-template-columns: 30% 70%;
-    height: 3em;
+    height: 3.2em;
 }
 
 .intro button{
