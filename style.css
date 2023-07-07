@@ -909,7 +909,7 @@ transition: ease-in .3s;
 }
 
 .hidden-want-to-help-buttons{
-
+    height: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
@@ -918,7 +918,14 @@ transition: ease-in .3s;
 .hidden-want-to-help-buttons button, .hidden-want-to-help-buttons input{
     height: 30px;
     width: 75%;
-    margin: 1.4em auto 0 auto;
+}
+
+.hidden-want-to-help-buttons button{
+    margin: 1.4em 10px 0 auto;
+}
+
+.hidden-want-to-help-buttons input{
+    margin: 1.4em auto 0 10px;
 }
 
 .shrink-inputs{
