@@ -601,14 +601,13 @@ body h1{
     display: none;
 }
 
+.search{
+    display: none;
+}
+
 body{
     margin: 5px;
     height: 100%;
-}
-
-.intro-legend h1{
-    font-weight: 600;
-    height: .9em;
 }
 
 /* Map Tings  */
@@ -693,13 +692,13 @@ body{
 }
 
 .hidden-search-drop-down-overlay{
-    filter: drop-shadow(0 4px 4px rgb(139, 139, 139));
+    filter: drop-shadow(0 3px 4px rgb(122, 122, 122));
     margin: 4px 0 0 15px;
     position: relative;
     z-index: 11;
     width: 79%;
     max-height: 410px;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     color: #212529;
     text-align: center;
@@ -723,9 +722,25 @@ body{
 
 /* Hidden Search Scroll bar Tings */
 
-  /* width */
 ::-webkit-scrollbar {
-    display: none;
+    -webkit-appearance: none;
+
+}
+
+::-webkit-scrollbar:vertical {
+    width: 12px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #697774;
+    border-radius: 10px;
+    border: 2px solid #B7CDC9;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0 10px 10px 0;
+    background-color: #B7CDC9;
 }
 
 
@@ -767,12 +782,15 @@ body{
     grid-template-columns: 25% 75%;
 }
 
-.intro h1{
-    padding-top: 0;
+.intro-legend{
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-.search{
-    display: none;
+.intro-legend h1{
+    font-weight: 600;
+    height: .9em;
+    padding-top: 0;
 }
 
 /* Legend Tings */

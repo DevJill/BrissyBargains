@@ -207,7 +207,7 @@ function showFieldsetInputs(e){
         createShrinkInputs.appendChild(shopLabel);
 
         const shopLabelInput = document.createElement('input');
-        shopLabelInput.setAttribute('id', 'shop-name-id')
+        shopLabelInput.setAttribute('id', 'shop-name-id'); 
         shopLabelInput.type = 'text';
         shopLabelInput.name = "shop-name";
         shopLabelInput.classList.add('fieldset-input');
@@ -220,7 +220,7 @@ function showFieldsetInputs(e){
         createShrinkInputs.appendChild(shopSuburbLabel);
 
         const shopSuburbInput = document.createElement('input');
-        shopSuburbInput.setAttribute('id', 'shop-suburb-name-id')
+        shopSuburbInput.setAttribute('id', 'shop-suburb-name-id');
         shopSuburbInput.type = 'text';
         shopSuburbInput.name = "shop-suburb-name";
         shopSuburbInput.classList.add('fieldset-input');
