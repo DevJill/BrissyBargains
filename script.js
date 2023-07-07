@@ -452,7 +452,7 @@ function settingBS(){
     let card2Array = [];
     let card2ArrayMobile = [];
     let popupArray = [];
-
+    let popupArrayMobile = [];
     
     fetch('./shops.json')
     .then((response) => {
@@ -482,6 +482,7 @@ function settingBS(){
             groceryMarker.bindPopup(groceryPopup);
             groceryMarker.addTo(map);
             popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: groceryMarker});
+            popupArrayMobile.push({name: data[i].name, latNLong: data[i].latNLong, marker: groceryMarker});
         } else if(data[i].type == 'Produce'){
             const vegPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
@@ -503,6 +504,7 @@ function settingBS(){
             vegMarker.bindPopup(vegPopup);
             vegMarker.addTo(map);
             popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: vegMarker});
+            popupArrayMobile.push({name: data[i].name, latNLong: data[i].latNLong, marker: vegMarker});
         } else if(data[i].type == 'Meats'){
             const meatsPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
@@ -524,6 +526,7 @@ function settingBS(){
             meatsMarker.bindPopup(meatsPopup);
             meatsMarker.addTo(map);
             popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: meatsMarker});
+            popupArrayMobile.push({name: data[i].name, latNLong: data[i].latNLong, marker: meatsMarker});
         } else if(data[i].type == 'Fish'){
             const fishPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
@@ -545,6 +548,7 @@ function settingBS(){
             fishMarker.bindPopup(fishPopup);
             fishMarker.addTo(map);
             popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: fishMarker});
+            popupArrayMobile.push({name: data[i].name, latNLong: data[i].latNLong, marker: fishMarker});
         } else if(data[i].type == 'Markets'){
             const marketsPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
@@ -566,6 +570,7 @@ function settingBS(){
             marketsMarker.bindPopup(marketsPopup);
             marketsMarker.addTo(map);
             popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: marketsMarker});
+            popupArrayMobile.push({name: data[i].name, latNLong: data[i].latNLong, marker: marketsMarker});
         }
 
         settingBS();
@@ -680,9 +685,9 @@ function settingBS(){
     }
 })
 
+
 //Search/Checkbox Tings
 const searchBtn = document.querySelector('#main-search');
-const mobileSearchBtn = document.querySelector('#hidden-main-search');
 const groceryCheck = document.querySelector('.grocery-checkbox');
 const vegCheck = document.querySelector('.veg-checkbox');
 const meatsCheck = document.querySelector('.meats-checkbox');
@@ -696,10 +701,10 @@ function hidingAndUnhidingIconsForSearch(){
     card2Array.forEach(card => {
 
         if(searchInput.value === ''){
-            hiddenSearchDDContainer.classList.add('hide');
+            searchDDContainer.classList.add('hide');
+            searchInput.style.borderRadius = '5px 0 0 5px';
         } else if(card.element.classList.contains(`${searchInput.value.toLowerCase()}`)){
             card.element.classList.remove('hide');
-
             if(card.element.classList.contains('grocery-card') && !groceryCheck.checked){
                 for(let i = 0; i < iconImg.length; i++){
                     if(iconImg[i].classList.contains('grocery-icon') 
@@ -761,13 +766,99 @@ function enterSearch (e){
         hidingAndUnhidingIconsForSearch()
 }}
 
-mobileSearchBtn.addEventListener('click', (e) => {
-    if(document.activeElement === searchInput && e.key === "Enter"){
-        hidingAndUnhidingIconsForSearch()
-}})
-
 searchBtn.addEventListener('click', e => {
     hidingAndUnhidingIconsForSearch()
+})
+
+searchInput.addEventListener('input', (e) => {
+    const value = e.target.value.toLowerCase();
+    card2Array.forEach(card => {
+       const isVisible = 
+       card.name.toLowerCase().includes(value);
+       card.element.classList.toggle('hide', !isVisible)
+
+})})
+
+//Mobile Search/Checkbox Tings
+const mobileSearchBtn = document.querySelector('#hidden-main-search');
+
+function mobileHidingAndUnhidingIconsForSearch(){
+    const iconImg = document.querySelectorAll('.leaflet-marker-icon');
+    const iconImgShadow = document.querySelectorAll('.leaflet-marker-shadow');
+
+    card2ArrayMobile.forEach(card => {
+
+        if(hiddenSearchInput.value === ''){
+            hiddenSearchDDContainer.classList.add('hide');
+            hiddenSearchInput.style.borderRadius = '5px 0 0 5px';
+            console.log('poopoo')
+        } else if(card.element.classList.contains(`${hiddenSearchInput.value.toLowerCase()}`)){
+            card.element.classList.remove('hide');
+            if(card.element.classList.contains('grocery-card') && !groceryCheck.checked){
+                for(let i = 0; i < iconImg.length; i++){
+                    if(iconImg[i].classList.contains('grocery-icon') 
+                    && iconImgShadow[i].classList.contains('grocery-icon')
+                    && iconImg[i].classList.contains('hide')){
+                        groceryCheck.checked === true;
+                        iconImg[i].classList.remove('hide')
+                        iconImgShadow[i].classList.remove('hide')
+                    }
+           }}
+        
+           if(card.element.classList.contains('veg-card') && !vegCheck.checked){
+            for(let i = 0; i < iconImg.length; i++){
+                if(iconImg[i].classList.contains('veg-icon') 
+                && iconImgShadow[i].classList.contains('veg-icon')
+                && iconImg[i].classList.contains('hide')){
+                    vegCheck.checked === true;
+                    iconImg[i].classList.remove('hide')
+                    iconImgShadow[i].classList.remove('hide')
+                }
+            }}
+        
+            if(card.element.classList.contains('meats-card') && !meatsCheck.checked){
+                for(let i = 0; i < iconImg.length; i++){
+                    if(iconImg[i].classList.contains('meats-icon') 
+                    && iconImgShadow[i].classList.contains('meats-icon')
+                    && iconImg[i].classList.contains('hide')){
+                        meatsCheck.checked === true;
+                        iconImg[i].classList.remove('hide')
+                        iconImgShadow[i].classList.remove('hide')
+                    }
+           }}
+                                           
+           if(card.element.classList.contains('fish-card') && !fishCheck.checked){
+            for(let i = 0; i < iconImg.length; i++){
+                if(iconImg[i].classList.contains('fish-icon') 
+                && iconImgShadow[i].classList.contains('fish-icon')
+                && iconImg[i].classList.contains('hide')){
+                    fishCheck.checked === true;
+                    iconImg[i].classList.remove('hide')
+                    iconImgShadow[i].classList.remove('hide')
+                }
+            }}                     
+                      
+            if(card.element.classList.contains('markets-card') && !marketsCheck.checked){
+                for(let i = 0; i < iconImg.length; i++){
+                    if(iconImg[i].classList.contains('markets-icon') 
+                    && iconImgShadow[i].classList.contains('markets-icon')
+                    && iconImg[i].classList.contains('hide')){
+                        marketsCheck.checked === true;
+                        iconImg[i].classList.remove('hide')
+                        iconImgShadow[i].classList.remove('hide')
+                    }
+           }}}}
+)}
+
+
+
+function mobileEnterSearch (e){
+    if(document.activeElement === hiddenSearchInput && e.key === "Enter"){
+        mobileHidingAndUnhidingIconsForSearch()
+}}
+
+mobileSearchBtn.addEventListener('click', (e) => {   
+        mobileHidingAndUnhidingIconsForSearch()
 })
 
 hiddenSearchInput.addEventListener('input', (e) => {
@@ -777,21 +868,6 @@ hiddenSearchInput.addEventListener('input', (e) => {
        card.name.toLowerCase().includes(value);
        card.element.classList.toggle('hide', !isVisible)
 })})
-
-searchInput.addEventListener('input', e => {
-     const value = e.target.value.toLowerCase();
-     card2Array.forEach(card => {
-        const isVisible = 
-        card.name.toLowerCase().includes(value);
-        card.element.classList.toggle('hide', !isVisible)
-
-})})
-
-//Search/Checkbox Tings For Mobile
-
-const hiddenSearch = document.querySelector('#hidden-site-search');
-
-// - (0.049562514)
 
 //SET LOCATION TO HAVE POPUP CENTRE SCREEN
 function openPopup(e){
@@ -805,6 +881,23 @@ function openPopup(e){
             const markerLng = popup.marker._latlng.lng
 
             map.setView([markerLat, markerLng - (0.049562514)], 12)
+        }
+    })
+}
+
+function mobileOpenPopup(e){
+    const card = e.target;
+    popupArrayMobile.forEach(popup => {
+        if(card.classList.contains('mobile-card') && card.querySelector('strong').innerHTML === popup.name
+           || card.parentElement.classList.contains('mobile-card') && card.parentElement.querySelector('strong').innerHTML === popup.name
+           || card.parentElement.parentElement.classList.contains('mobile-card') && card.innerHTML === popup.name){ 
+            hiddenSearchDDContainer.classList.add('hide')
+            hiddenSearchInput.style.borderRadius = '5px 0 0 5px'
+            infoContainer.classList.add('hide')
+            popup.marker.openPopup();
+            const markerLat = popup.marker._latlng.lat
+            const markerLng = popup.marker._latlng.lng
+            map.setView([markerLat + (0.049562514), markerLng], 12)
         }
     })
 }
@@ -855,10 +948,53 @@ function hideCards(e){
 })
 }
 
+//Mobile Hiding Card(s) if Checkbox is Marked False
+function mobileHideCards(e){
+    const target = e.target;
+    card2ArrayMobile.forEach(card => {
+        if(target.classList.contains('grocery-checkbox')&& target.checked === false
+        && card.element.classList.contains('grocery-card')){
+            card.element.classList.add('hide')
+        } else if (target.classList.contains('grocery-checkbox') && target.checked === true
+        && card.element.classList.contains('grocery-card') && card.element.classList.contains('hide')){           
+            card.element.classList.remove('hide');
+        }
+
+        else if (target.classList.contains('veg-checkbox') && target.checked === false
+        && card.element.classList.contains('veg-card')){
+            card.element.classList.add('hide');
+        } else if (target.classList.contains('veg-checkbox') && target.checked === true
+        && card.element.classList.contains('veg-card') && card.element.classList.contains('hide')){
+            card.element.classList.remove('hide');
+        }
+
+        else if(target.classList.contains('meats-checkbox') && target.checked === false
+        && card.element.classList.contains('meats-card')){
+            card.element.classList.add('hide')
+        } else if (target.classList.contains('meats-checkbox') && target.checked === true
+        && card.element.classList.contains('meats-card') && card.element.classList.contains('hide')){
+            card.element.classList.remove('hide');
+        }
+
+        else if(target.classList.contains('fish-checkbox') && target.checked === false
+        && card.element.classList.contains('fish-card')){
+            card.element.classList.add('hide')
+        } else if (target.classList.contains('fish-checkbox') && target.checked === true
+        && card.element.classList.contains('fish-card') && card.element.classList.contains('hide')){
+            card.element.classList.remove('hide');
+        }
+
+        else if(target.classList.contains('markets-checkbox') && target.checked === false
+        && card.element.classList.contains('markets-card')){
+            card.element.classList.add('hide')
+        } else if (target.classList.contains('markets-checkbox') && target.checked === true
+        && card.element.classList.contains('markets-card') && card.element.classList.contains('hide')){
+            card.element.classList.remove('hide');
+        }
+})
+}
 
 //Event Listeners
-
-
 document.addEventListener('click', hideInfo);
 document.addEventListener('click', hideFieldsetInputs);
 document.addEventListener('click', showFieldsetInputs);
@@ -870,7 +1006,10 @@ document.addEventListener('click', marketsCheckBoxes);
 document.addEventListener('click', hideSiteLegend);
 document.addEventListener('click', showSiteLegend);
 document.addEventListener('click', openPopup);
-document.addEventListener('click', hideCards)
-document.addEventListener('keypress', enterSearch)
+document.addEventListener('click', mobileOpenPopup);
+document.addEventListener('click', hideCards);
+document.addEventListener('click', mobileHideCards);
+document.addEventListener('keypress', enterSearch);
+document.addEventListener('keypress', mobileEnterSearch);
 document.addEventListener('DOMContentLoaded', settingBS);
 
