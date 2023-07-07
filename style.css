@@ -925,7 +925,6 @@ transition: ease-in .3s;
     display: grid;
     grid-template-columns: 40%  60%;
     margin: 0;
-    text-align: center;
 }
 
 .shrink-inputs div{
@@ -934,7 +933,7 @@ transition: ease-in .3s;
 
 
 .shrink-inputs label{
-    margin: auto;
+    margin: auto 5px auto auto;
 }
 
 
@@ -942,7 +941,7 @@ transition: ease-in .3s;
     height: 30px;
     padding-left: 10px;
     width: 80%;
-    margin: auto;
+    margin: auto auto auto 15px;
 }
 
 
