@@ -760,18 +760,21 @@ body{
 }
 
 .max-btn{
-    width: 3.5em;
-    height: 3.5em;
+    width: 3em;
+    height: 3em;
     
 }
 
 .max-btn img{
-    width: 3em;
-    height: 3em;
+    width: 2.5em;
+    height: 2.5em;
     padding-top: 2px;
 }
 
 .minimised-info-container{
+    width: 3.5em;
+    height: 3.5em;
+    padding: .5em;
     filter: drop-shadow(0 0 4px rgb(105, 105, 105));
 }
 
