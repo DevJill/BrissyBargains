@@ -616,7 +616,7 @@ body{
 
 .map-box-overlay{
     width: 100%;
-    height: 47%;
+    height: 45%;
     top: auto;
     bottom: 0;
     filter: drop-shadow(0 0 4px rgb(105, 105, 105));
@@ -781,9 +781,10 @@ body{
     margin-top: 1em;
 }
 
-/* .legend img{
-    height: 30px;
-} */
+.legend img{
+    height: 2em
+}
+
 
 .legend label{
     display: grid;
@@ -794,12 +795,12 @@ body{
 .legend-grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 150px;
+    height: 130px;
 }
 
 .legend-grid-container li{
     padding-left: 25px;
-    height: 40px;
+    height: 2em;
     
 }
 
@@ -867,13 +868,13 @@ transition: ease-in .3s;
 /* Hidden Legend Tings */
 
 .fieldset-inputs{
-    margin: 0 15px;
+    margin: 10px 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60% 40%;
 }
 
 .help-fieldset{
-    height: 170px;
+    height: 165px;
     padding: 0;
     margin:0
 }
@@ -908,27 +909,36 @@ transition: ease-in .3s;
 
 .hidden-want-to-help-buttons{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
 }
 
 .hidden-want-to-help-buttons button, .hidden-want-to-help-buttons input{
     height: 30px;
-    width: 85%;
-    margin: 2.6em auto 0 auto;
+    width: 75%;
+    margin: 1.4em auto 0 auto;
 }
 
 .shrink-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    text-align: center;
+}
+
+.shrink-inputs div{
     margin: 0 10px;
 }
 
+
 .shrink-inputs label{
-    margin-top: .7em;
+    margin-top: 1em;
 }
 
 
 .fieldset-input{
     height: 30px;
+    padding-left: 10px;
 }
 
 

@@ -241,8 +241,8 @@ function showFieldsetInputs(e){
 
         const fieldsetBtnGrid = document.createElement('div');
         fieldsetBtnGrid.classList.add('hidden-want-to-help-buttons');
-        fieldsetBtnGrid.appendChild(hiddenFieldsetSubmit);
         fieldsetBtnGrid.appendChild(fieldsetNvmBtn);
+        fieldsetBtnGrid.appendChild(hiddenFieldsetSubmit);
 
         createFieldsetInputs.appendChild(createShrinkInputs)
         createFieldsetInputs.appendChild(fieldsetBtnGrid)
