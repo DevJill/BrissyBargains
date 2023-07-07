@@ -26,7 +26,7 @@
         
         <div class="intro-legend info-container map-box map-box-overlay">
             <div class="intro">
-               <button class="min-btn"><img src="./images/icons8-left-arrow-48.png" srcset = "./images/icons8-down-arrow-64.png 420w" alt="" class="min-btn-img"></button>
+               <button class="min-btn"><img src="./images/icons8-left-arrow-48.png" srcset = "./images/icons8-left-arrow-48.png, ./images/icons8-down-arrow-64.png 420w" alt="" class="min-btn-img"></button>
                 <div class="intro-grid-4-small-viewport">
                     <h1>Brissy Bargs</h1>
                     <div class="intro-p"><img src="./images/icons8-happy-32.png" alt=""><p>To help you save cash</p></div>
@@ -42,14 +42,14 @@
             <div class="legend">
                 <ul class="legend-grid-container">
                     <div class="legend-grid-1">
-                        <li><input type="checkbox" checked="true" id="you-checkbox" class="checkbox" name="You"><label for="You"><img src="./images/you-are-here-drop-pin.png"><h4>You</h4></label></li>
-                        <li><input type="checkbox" checked="true" id="grocery-checkbox" class="checkbox grocery-checkbox" name="Grocery"><label for="Grocery"><img src="./images/grocery-drop-pin.png"><h4>Grocery</h4></label></li>
-                        <li><input type="checkbox" checked="true" id="veg-checkbox" class="checkbox veg-checkbox" name="Veg"><label for="Veg"><img src="./images/veg-drop-pin.png"><h4>Produce</h4></label></li>
+                        <li><input type="checkbox" checked="true" id="you-checkbox" class="checkbox" name="You"><label for="you-checkbox"><img src="./images/you-are-here-drop-pin.png"><h4>You</h4></label></li>
+                        <li><input type="checkbox" checked="true" id="grocery-checkbox" class="checkbox grocery-checkbox" name="Grocery"><label for="grocery-checkbox"><img src="./images/grocery-drop-pin.png"><h4>Grocery</h4></label></li>
+                        <li><input type="checkbox" checked="true" id="veg-checkbox" class="checkbox veg-checkbox" name="Veg"><label for="veg-checkbox"><img src="./images/veg-drop-pin.png"><h4>Produce</h4></label></li>
                     </div>
                     <div class="legend-grid-2">
-                        <li><input type="checkbox" checked="true" id="meats-checkbox" class="checkbox meats-checkbox" name="Meats"><label for="Meats"><img src="./images/meat-drop-pin.png"><h4>Meats</h4></label></li>
-                        <li><input type="checkbox" id="fish-checkbox" class="checkbox fish-checkbox" name="Fish"><label for="Fish"><img src="./images/fish-drop-pin.png"><h4>Seafood</h4></label></li>
-                        <li><input type="checkbox" checked="true" id="markets-checkbox" class="checkbox markets-checkbox" name="Markets"><label for="Markets"><img src="./images/markets-drop-pin.png"><h4>Markets</h4></label></li>
+                        <li><input type="checkbox" checked="true" id="meats-checkbox" class="checkbox meats-checkbox" name="Meats"><label for="meats-checkbox"><img src="./images/meat-drop-pin.png"><h4>Meats</h4></label></li>
+                        <li><input type="checkbox" id="fish-checkbox" class="checkbox fish-checkbox" name="Fish"><label for="fish-checkbox"><img src="./images/fish-drop-pin.png"><h4>Seafood</h4></label></li>
+                        <li><input type="checkbox" checked="true" id="markets-checkbox" class="checkbox markets-checkbox" name="Markets"><label for="markets-checkbox"><img src="./images/markets-drop-pin.png"><h4>Markets</h4></label></li>
                     </div>
                 </ul>
             </div>
@@ -63,10 +63,10 @@
                     <legend>Know of other cheap places?</legend>
                     <div class="fieldset-inputs">
                         <div class="shrink-inputs">
-                            <label for="shop-name" class="fieldset-input-title">Shop Name:</label>
-                            <input type="text" name="shop-name" class="fieldset-input">
-                            <label for="shop-suburb-name" class="fieldset-input-title">Shop Suburb:</label>
-                            <input type="text" name="shop-suburb-name" class="fieldset-input">
+                            <label for="shop-name-id" class="fieldset-input-title">Shop Name:</label>
+                            <input type="text" id="shop-name-id" name="shop-name" class="fieldset-input">
+                            <label for="shop-suburb-name-id" class="fieldset-input-title">Shop Suburb:</label>
+                            <input type="text" id="shop-suburb-name-id" name="shop-suburb-name" class="fieldset-input">
                         </div>
                         <input type="submit" value="Send Suggestion" class="fieldset-submit-suggestion">
                         <div class="hidden-want-to-help-buttons">
@@ -83,7 +83,7 @@
         </div>
         <div class="minimised-info-container map-box map-box-min-overlay">
             <button class="max-btn">
-                <img src="./images/icons8-right-arrow-50.png" srcset = "./images/icons8-up-arrow-64.png 420w"alt="" class="max-btn-img">
+                <img src="./images/icons8-right-arrow-50.png" srcset = "./images/icons8-right-arrow-50.png, ./images/icons8-up-arrow-64.png 420w" alt="" class="max-btn-img">
             </button>
          </div>
          <div id="map-container" class="map-box"></div>

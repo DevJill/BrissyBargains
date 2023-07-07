@@ -201,24 +201,26 @@ function showFieldsetInputs(e){
         createShrinkInputs.classList.add('shrink-inputs')
 
         const shopLabel = document.createElement('label');
-        shopLabel.htmlFor = "shop-name";
+        shopLabel.htmlFor = "shop-name-id";
         shopLabel.classList.add('fieldset-input-title');
         shopLabel.appendChild(document.createTextNode('Shop Name:'));
         createShrinkInputs.appendChild(shopLabel);
 
         const shopLabelInput = document.createElement('input');
+        shopLabelInput.setAttribute('id', 'shop-name-id')
         shopLabelInput.type = 'text';
         shopLabelInput.name = "shop-name";
         shopLabelInput.classList.add('fieldset-input');
         createShrinkInputs.appendChild(shopLabelInput)
 
         const shopSuburbLabel = document.createElement('label');
-        shopSuburbLabel.htmlFor = "shop-suburb-name";
+        shopSuburbLabel.htmlFor = "shop-suburb-name-id";
         shopSuburbLabel.classList.add('fieldset-input-title');
         shopSuburbLabel.appendChild(document.createTextNode('Shop Suburb:'));
         createShrinkInputs.appendChild(shopSuburbLabel);
 
         const shopSuburbInput = document.createElement('input');
+        shopSuburbInput.setAttribute('id', 'shop-suburb-name-id')
         shopSuburbInput.type = 'text';
         shopSuburbInput.name = "shop-suburb-name";
         shopSuburbInput.classList.add('fieldset-input');
@@ -452,6 +454,7 @@ function settingBS(){
             console.log(e.target)
         }
     })
+
  
 //Fetching Data From JSON File
     let storeArray = [];
@@ -885,7 +888,7 @@ function openPopup(e){
             const markerLat = popup.marker._latlng.lat
             const markerLng = popup.marker._latlng.lng
 
-            map.setView([markerLat, markerLng - (0.049562514)], 12)
+            map.setView([markerLat + (0.029), markerLng - (0.049562514)], 12)
         }
     })
 }
@@ -1002,6 +1005,11 @@ function mobileHideCards(e){
         }
 })
 }
+
+const leafletMarker = document.querySelectorAll('leaflet-marker-icon');
+
+
+
 
 //Event Listeners
 document.addEventListener('click', hideInfo);
