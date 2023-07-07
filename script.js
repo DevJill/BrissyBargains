@@ -239,7 +239,7 @@ function showFieldsetInputs(e){
 
         const fieldsetNvmBtn = document.createElement('button');
         fieldsetNvmBtn.classList.add('nevermind-btn');
-        fieldsetNvmBtn.appendChild(document.createTextNode('Nvm'))
+        fieldsetNvmBtn.appendChild(document.createTextNode('Nevermind'))
 
         const fieldsetBtnGrid = document.createElement('div');
         fieldsetBtnGrid.classList.add('hidden-want-to-help-buttons');
