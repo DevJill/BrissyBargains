@@ -589,7 +589,7 @@ body h1{
 @media only screen and (max-width: 420px){
 
 .site-container{
-     height: 90vh;
+     height: 88vh;
      margin-bottom: .5em;;
 }
 
@@ -615,7 +615,7 @@ body{
 
 .map-box-overlay{
     width: 100%;
-    height: 40%;
+    height: 43%;
     top: auto;
     bottom: 0;
     filter: drop-shadow(0 0 4px rgb(105, 105, 105));
