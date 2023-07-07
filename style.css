@@ -780,18 +780,33 @@ body{
 
 .intro{
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 30% 70%;
+    height: 3em;
+}
+
+.intro button{
+    margin: auto;
 }
 
 .intro-legend{
     overflow-y: scroll;
     overflow-x: hidden;
+    padding: 10px;
 }
 
 .intro-legend h1{
     font-weight: 600;
     height: .9em;
     padding-top: 0;
+}
+
+.intro-p{
+    text-align: left;
+    grid-template-columns: 10% 90%;
+}
+
+.intro-p img{
+    margin: auto 0 auto auto
 }
 
 /* Legend Tings */
