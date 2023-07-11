@@ -221,7 +221,7 @@ html, body {
     background-color: #ffacac;
 }
 .fish-card p:first-of-type{
-    background-color: #ffacac;
+    background-color: #9be7db;
 }
 .markets-card p:first-of-type{
     background-color: #fff9ac;
@@ -509,20 +509,21 @@ fieldset{
 .style-icon p:nth-child(2){
     padding-bottom: 5px;
     border-style: none none solid none;
-    border-color: #93B4AE;
-    border-width: 3px;
+    border-color: #a7ccc5;
+    border-width: 2px;
     margin: 0;
 }
 
 
 
 .veg-hours, .grocery-hours, .meats-hours, .fish-hours, .markets-hours{
-    height:135px;
-    max-width: 150px;
+    height:140px;
+    max-width: 160px;
     padding: 12px;
     text-align: center;
     border-radius: 5px;
     margin: 0 auto 15px auto;
+    line-height: 1.5em;
 }
 
 .veg-hours{
@@ -535,6 +536,10 @@ fieldset{
 
 .meats-hours{
     background-color: #ffacac
+}
+
+.fish-hours{
+    background-color: #9be7db;
 }
 
 .markets-hours{
