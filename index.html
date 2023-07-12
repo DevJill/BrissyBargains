@@ -42,14 +42,14 @@
             <div class="legend">
                 <ul class="legend-grid-container">
                     <div class="legend-grid-1">
-                        <li><input type="checkbox" checked="true" id="you-checkbox" class="checkbox" name="You"><label for="you-checkbox"><img src="./images/you-are-here-drop-pin.png"><h4>You</h4></label></li>
-                        <li><input type="checkbox" checked="true" id="grocery-checkbox" class="checkbox grocery-checkbox" name="Grocery"><label for="grocery-checkbox"><img src="./images/grocery-drop-pin.png"><h4>Grocery</h4></label></li>
-                        <li><input type="checkbox" checked="true" id="veg-checkbox" class="checkbox veg-checkbox" name="Veg"><label for="veg-checkbox"><img src="./images/veg-drop-pin.png"><h4>Produce</h4></label></li>
+                        <li><input type="checkbox" checked="" id="you-checkbox" class="checkbox" name="You"><label for="you-checkbox"><img src="./images/you-are-here-drop-pin.png"><h4>You</h4></label></li>
+                        <li><input type="checkbox" checked="" id="grocery-checkbox" class="checkbox grocery-checkbox" name="Grocery"><label for="grocery-checkbox"><img src="./images/grocery-drop-pin.png"><h4>Grocery</h4></label></li>
+                        <li><input type="checkbox" checked="" id="veg-checkbox" class="checkbox veg-checkbox" name="Veg"><label for="veg-checkbox"><img src="./images/veg-drop-pin.png"><h4>Produce</h4></label></li>
                     </div>
                     <div class="legend-grid-2">
-                        <li><input type="checkbox" checked="true" id="meats-checkbox" class="checkbox meats-checkbox" name="Meats"><label for="meats-checkbox"><img src="./images/meat-drop-pin.png"><h4>Meats</h4></label></li>
-                        <li><input type="checkbox" checked="true" id="fish-checkbox" class="checkbox fish-checkbox" name="Fish"><label for="fish-checkbox"><img src="./images/fish-drop-pin.png"><h4>Seafood</h4></label></li>
-                        <li><input type="checkbox" checked="true" id="markets-checkbox" class="checkbox markets-checkbox" name="Markets"><label for="markets-checkbox"><img src="./images/markets-drop-pin.png"><h4>Markets</h4></label></li>
+                        <li><input type="checkbox" checked="" id="meats-checkbox" class="checkbox meats-checkbox" name="Meats"><label for="meats-checkbox"><img src="./images/meat-drop-pin.png"><h4>Meats</h4></label></li>
+                        <li><input type="checkbox" checked="" id="fish-checkbox" class="checkbox fish-checkbox" name="Fish"><label for="fish-checkbox"><img src="./images/fish-drop-pin.png"><h4>Seafood</h4></label></li>
+                        <li><input type="checkbox" checked="" id="markets-checkbox" class="checkbox markets-checkbox" name="Markets"><label for="markets-checkbox"><img src="./images/markets-drop-pin.png"><h4>Markets</h4></label></li>
                     </div>
                 </ul>
             </div>
@@ -87,6 +87,40 @@
             </button>
          </div>
          <div id="map-container" class="map-box"></div>
+    </div>
+    <div class="footer">
+        <footer>
+            <div class="footer-feedback">
+                <div><p>Have feedback, or want to get in contact?</p></div>
+                <div class="suggestion-main-grid">
+                <div class="suggestion-grid-left">
+                    <div class="suggestion-name">
+                        <div>
+                        <label for="suggestion-name-id" class="suggestion-name-title">First Name:</label>
+                        <input type="text" id="suggestion-name-id" name="first-name" class="suggestion-name-input">
+                        </div>
+                        <div>
+                        <label for="last-name-id" class="suggestion-name-title">Last Name:</label>
+                        <input type="text" id="last-name-id" name="last-name" class="suggestion-name-input">
+                    </div>
+                    </div>
+                    <div class="suggestion-email">
+                        <label for="suggestion-email-id" class="suggestion-name-title">Email Address:</label>
+                        <input type="email" id="suggestion-email-id" name="suggestion-email" class="suggestion-email-input">
+                    </div>
+                </div>
+                <div class="suggestion-grid-right">
+                    <div class="suggestion-input">
+                        <label for="input-field-id" class="suggestion-input-field">Feedback/Message:</label>
+                        <textarea id="input-field-id" name="input-field"  class="suggestion-input-field" cols="40" rows="5"></textarea>
+                        <div class="suggestion-submit-btn">
+                            <input type="submit" name="Submit" value="Send">
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </footer>
     </div>
     <div class="mobile-footer">
     <div class="about-the-creator">
