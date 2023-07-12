@@ -556,7 +556,7 @@ fieldset{
     padding-left: 5px;
 }
 
-                                                 /* Footer Tings */
+                                                 /* Footer Suggestion Tings */
 footer{
     padding: 15px;
     margin-top: 10px;
@@ -565,13 +565,15 @@ footer{
     border-radius: 10px;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: medium;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 footer .footer-feedback{
     max-width: 450px
 }
 
-footer p{
+footer .footer-p-1{
     margin: auto;
     width: 95%;
     text-align: center;
@@ -608,13 +610,8 @@ footer .suggestion-main-grid input:focus, footer .suggestion-grid-right textarea
     outline-color: #93B4AE;
 } 
 
-footer .suggestion-name{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-
 footer .suggestion-name input{
-    width: 70%;
+    width: 80%;
 }
 
 footer .suggestion-email input{
@@ -644,6 +641,42 @@ footer .suggestion-submit-btn input{
 
 footer .suggestion-submit-btn input:hover{
     background-color: #ABC4C0;
+}
+
+                                                 /* Footer Follow Me Tings */
+footer .footer-follow-me{
+    margin: auto;
+    width: 6em;
+    text-align: center;
+    border-radius: 5px;
+}
+                                                 
+footer .footer-follow-me p:first-child{
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    background-color: #93B4AE;
+}
+
+footer .footer-follow-me button{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #93B4AE;
+    height: 4em;
+    width: 6.2em;
+    padding: 0;
+    border-radius: 20px;
+    background-color: #B7CDC9;
+    transition: ease-in .3s;
+}
+
+footer .footer-follow-me button:hover{
+    background-color: #ABC4C0;
+}
+
+footer .footer-follow-me img{
+    height: 3.5em;
 }
 
                                                  /* Body Tings */
