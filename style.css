@@ -7,40 +7,43 @@ html, body {
     height: 100%;
 }
 
-.hidden-want-to-help{
-    display: none;
+.invisible{
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s;
 }
 
-.show-want-to-help{
-    display: none;
+.visible{
+    opacity: 1;
+    transition: opacity .3s;
 }
 
-.hidden-want-to-help-buttons{
-    display: none;
+.blur-background{
+    transition: all .3s;
+    filter: blur(none) brightness(100%);
 }
 
-.hidden-suggest-more-btn{
-    display: none;
+.blur{
+    transition: all .3s;
+    filter: blur(5px) brightness(90%);
 }
 
-.mobile-footer{
+.hidden-search, .mobile-footer, .hidden-suggest-more-btn, .hidden-want-to-help-buttons, .show-want-to-help, .hidden-want-to-help{
     display: none;
 }
-
-.hidden-search{
-    display: none;
-}
-
 
 .unhide{
     display: block;
 }
 
+
+
+
                                                                   /* Site Container Tings */
 
 .site-container{
     width: 100%;
-    height: 780px;
+    height: 840px;
     position: relative;
 }
                                                                         /* Info Tings */
@@ -291,7 +294,7 @@ html, body {
 .legend ul{
     padding: 5px 0;
     list-style: none;
-    background-color: #ABC4C0;
+    background-color: #a3c2bc;
     border-radius: 5px;
 }
 
@@ -304,11 +307,11 @@ html, body {
     margin: 5px 0;
     max-height: 3em;
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 15% 85%;
 }
 
-.legend h4{
-    margin: auto 0;
+.legend p{
+    margin: auto 0 auto 15px;
 }
 
 .legend label{
@@ -317,10 +320,12 @@ html, body {
 }
 
 .legend img{
-    filter: drop-shadow(3px 0 3px rgb(107, 107, 107));
+    margin: auto 0 auto 10px;
+    filter: drop-shadow(2px 0 3px rgba(107, 107, 107, 70%));
 }
 
 .checkbox{
+    
     width: 1em;
     height: 1em;
     margin: auto 0 auto auto;
@@ -368,6 +373,7 @@ fieldset{
     border-color: #93B4AE;
     border-radius: 5px;
     transition: ease-in .3s;
+    cursor: pointer;
 }
 
 .fieldset-submit-suggestion:hover, .fieldset-submit-more-suggestion:hover{
@@ -566,16 +572,16 @@ footer{
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: medium;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 footer .footer-feedback{
-    max-width: 450px
+    max-width: 450px;
+    margin: 0 auto;
 }
 
 footer .footer-p-1{
     margin: auto;
-    width: 95%;
     text-align: center;
     padding: 5px 0;
     border-radius: 5px;
@@ -641,43 +647,100 @@ footer .suggestion-submit-btn input{
 
 footer .suggestion-submit-btn input:hover{
     background-color: #ABC4C0;
+    cursor: pointer;
 }
 
-                                                 /* Footer Follow Me Tings */
-footer .footer-follow-me{
-    margin: auto;
-    width: 6em;
-    text-align: center;
-    border-radius: 5px;
-}
+                                                 /* Footer Disclaimer Tings */
                                                  
-footer .footer-follow-me p:first-child{
-    margin-bottom: 10px;
+footer .footer-discaimer p:first-child{
     text-align: center;
     padding: 5px 0;
     border-radius: 5px;
     background-color: #93B4AE;
 }
 
-footer .footer-follow-me button{
+footer .footer-discaimer{
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+footer .footer-discaimer p{
+    margin-bottom: 10px;
+}
+
+footer .footer-discaimer p:nth-child(3){
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-style: none none solid none;
+    border-color: #ABC4C0;
+    border-width: 2px;
+}
+
+footer .footer-discaimer a button{
     border-style: solid;
     border-width: 1px;
-    border-color: #93B4AE;
-    height: 4em;
-    width: 6.2em;
-    padding: 0;
+    border-color: #809c98;
+    height: 2.5em;
+    width: 2.5em;
+    padding: 2px 1px 0 0;
     border-radius: 20px;
     background-color: #B7CDC9;
     transition: ease-in .3s;
+    margin-right: 5px;
 }
 
-footer .footer-follow-me button:hover{
+footer .footer-discaimer button:hover{
     background-color: #ABC4C0;
 }
 
-footer .footer-follow-me img{
-    height: 3.5em;
+footer .footer-discaimer img{
+    height: 1.7em;
+    padding-left: 1px;
 }
+
+footer .footer-discaimer a{
+    text-decoration: none;
+}
+
+footer .footer-discaimer button{
+    color: #809c98; 
+    transition: ease-in .3s;
+}
+
+footer .footer-discaimer button:last-of-type{
+    margin-left: 5px;
+}
+
+footer .footer-discaimer button:hover{
+    color: #738f8b;
+    cursor: pointer;
+}
+
+
+footer .footer-discaimer button:nth-child(5), footer .footer-discaimer button:nth-child(6){
+    text-decoration: underline;
+    border-style: none;
+    background-color: #B7CDC9;
+    padding: 0;
+}
+
+                                                 /* Footer a Tings */
+.about-creator-popup{
+    filter: drop-shadow(0 0 8px rgb(160, 160, 160));
+    top: 200px; 
+    left: 35%; 
+    z-index: 49;
+    position: fixed;
+    width: 550px;
+    height: 550px;
+    background-color: #B7CDC9;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+
+
 
                                                  /* Body Tings */
 
@@ -686,6 +749,10 @@ body{
     background-color: #789284;
     color: #212529;
     margin: 10px 15px;
+}
+
+body button{
+    cursor: pointer;
 }
 
 body h1{

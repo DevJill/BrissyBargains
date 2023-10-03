@@ -125,7 +125,7 @@ const infoContainer = document.querySelector('.info-container');
 function hideInfo(e){
     if(e.target === hideBtn && !infoContainer.classList.contains('hide') 
     || e.target === hideBtnImg && !infoContainer.classList.contains('hide')){
-        infoContainer.classList.add('hide')
+        infoContainer.classList.toggle('hide')
     } else if (e.target === showBtn && infoContainer.classList.contains('hide') 
     || e.target === showBtnImg && infoContainer.classList.contains('hide')) {
         infoContainer.classList.remove('hide')
@@ -992,6 +992,22 @@ function mobileHideCards(e){
 })
 }
 
+const creatorPopup = document.querySelector('.about-creator-popup');
+const creatorPopupNodes = document.querySelector('.about-creator-popup').childNodes;
+const blurredBackground = document.querySelector('.blur-background')
+
+function showAboutCreator(e){
+    if(e.target.classList.contains('about-creator-btn') && creatorPopup.classList.contains('invisible')){
+        blurredBackground.classList.toggle('blur')
+        creatorPopup.classList.toggle('invisible')
+        creatorPopup.classList.toggle('visible')
+    } else if(!e.target.classList.contains('about-creator-btn') && e.target !== creatorPopup && creatorPopup.classList.contains('visible')){
+        blurredBackground.classList.toggle('blur')
+        creatorPopup.classList.toggle('invisible')
+        creatorPopup.classList.toggle('visible')
+    }
+}
+
 
 //Event Listeners
 document.addEventListener('click', hideInfo);
@@ -1007,6 +1023,8 @@ document.addEventListener('click', showSiteLegend);
 document.addEventListener('click', openPopup);
 document.addEventListener('click', mobileOpenPopup);
 document.addEventListener('click', hideCards);
+document.addEventListener('click', showAboutCreator);
+// document.addEventListener('click', showPrivPolicy);
 document.addEventListener('click', mobileHideCards);
 document.addEventListener('keypress', enterSearch);
 document.addEventListener('keypress', mobileEnterSearch);
