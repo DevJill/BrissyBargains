@@ -97,20 +97,30 @@ currPos = (pos) => {
     const lng = pos.coords.longitude;
     const youCheckbox = document.getElementById('you-checkbox');
     const youMarker = L.marker([lat, lng], {riseOnHover: true, icon:youIcon}).addTo(map);
+    youMarker._icon.classList.add('visible');
+    youMarker._shadow.classList.add('visible');
     const youPopup = youMarker.bindPopup(`<strong>Your Location :)</strong>`);
     youPopup.addTo(map);
 
 
     function youCheckBoxes(e){
         if(e.target === youCheckbox && youCheckbox.checked == true){
-            youMarker.addTo(map);
+            youMarker._icon.classList.toggle('invisible');
+            youMarker._shadow.classList.toggle('invisible');
+            youMarker._icon.classList.toggle('visible');
+            youMarker._shadow.classList.toggle('visible');
         } else if (e.target === youCheckbox && youCheckbox.checked == false){
-            youMarker.remove()
+            youMarker._icon.classList.toggle('invisible');
+            youMarker._shadow.classList.toggle('invisible');
+            youMarker._icon.classList.toggle('visible');
+            youMarker._shadow.classList.toggle('visible');
         }
     }
 
     document.addEventListener('click', youCheckBoxes);
 }
+
+
 
 navigator.geolocation.getCurrentPosition(currPos);
 // openPopup()
@@ -262,14 +272,18 @@ function groceryCheckBoxes(e){
     if(e.target.classList.contains('grocery-checkbox') && e.target.checked === false){
         for(i = 0; i < iconImg.length; i++){
             if(iconImg[i].classList.contains('grocery-icon') && iconImgShadow[i].classList.contains('grocery-icon')){
-                 iconImg[i].classList.add('hide');
-                 iconImgShadow[i].classList.add('hide');
+                iconImg[i].classList.toggle('visible');
+                iconImg[i].classList.toggle('invisible');
+                iconImgShadow[i].classList.toggle('visible');
+                iconImgShadow[i].classList.toggle('invisible');
             }}} 
             else if (e.target.classList.contains ('grocery-checkbox') && e.target.checked === true){
             for(i = 0; i < iconImg.length; i++){
                 if(iconImg[i].classList.contains('grocery-icon') && iconImgShadow[i].classList.contains('grocery-icon')){
-                    iconImg[i].classList.remove('hide');
-                    iconImgShadow[i].classList.remove('hide');
+                    iconImg[i].classList.toggle('invisible');
+                    iconImg[i].classList.toggle('visible');
+                    iconImgShadow[i].classList.toggle('invisible');
+                    iconImgShadow[i].classList.toggle('visible');
             }}
 }};
 
@@ -282,14 +296,18 @@ function vegCheckBoxes(e){
     && e.target.checked === false){
         for(i = 0; i < iconImg.length; i++){
             if(iconImg[i].classList.contains('veg-icon') && iconImgShadow[i].classList.contains('veg-icon')){
-                iconImg[i].classList.add('hide');
-                iconImgShadow[i].classList.add('hide');
+                iconImg[i].classList.toggle('visible');
+                iconImg[i].classList.toggle('invisible');
+                iconImgShadow[i].classList.toggle('visible');
+                iconImgShadow[i].classList.toggle('invisible');
             }}} 
             else if (e.target.classList.contains ('veg-checkbox') && e.target.checked === true){
             for(i = 0; i < iconImg.length; i++){
                 if(iconImg[i].classList.contains('veg-icon') && iconImgShadow[i].classList.contains('veg-icon')){
-                    iconImg[i].classList.remove('hide');
-                    iconImgShadow[i].classList.remove('hide');
+                    iconImg[i].classList.toggle('invisible');
+                    iconImg[i].classList.toggle('visible');
+                    iconImgShadow[i].classList.toggle('invisible');
+                    iconImgShadow[i].classList.toggle('visible');
             }}
 }};
 
@@ -301,14 +319,18 @@ function meatsCheckBoxes(e){
     if(e.target.classList.contains('meats-checkbox') && e.target.checked === false){
         for(i = 0; i < iconImg.length; i++){
             if(iconImg[i].classList.contains('meats-icon') && iconImgShadow[i].classList.contains('meats-icon')){
-                iconImg[i].classList.add('hide');
-                iconImgShadow[i].classList.add('hide');
+                iconImg[i].classList.toggle('visible');
+                iconImg[i].classList.toggle('invisible');
+                iconImgShadow[i].classList.toggle('visible');
+                iconImgShadow[i].classList.toggle('invisible');
             }}} 
             else if (e.target.classList.contains ('meats-checkbox') && e.target.checked === true){
             for(i = 0; i < iconImg.length; i++){
                 if(iconImg[i].classList.contains('meats-icon') && iconImgShadow[i].classList.contains('meats-icon')){
-                    iconImg[i].classList.remove('hide');
-                    iconImgShadow[i].classList.remove('hide');
+                    iconImg[i].classList.toggle('invisible');
+                    iconImg[i].classList.toggle('visible');
+                    iconImgShadow[i].classList.toggle('invisible');
+                    iconImgShadow[i].classList.toggle('visible');
             }}
 }};
 
@@ -320,14 +342,18 @@ function fishCheckBoxes(e){
     if(e.target.classList.contains('fish-checkbox') && e.target.checked === false){
         for(i = 0; i < iconImg.length; i++){
             if(iconImg[i].classList.contains('fish-icon') && iconImgShadow[i].classList.contains('fish-icon')){
-                iconImg[i].classList.add('hide');
-                iconImgShadow[i].classList.add('hide');
+                iconImg[i].classList.toggle('visible');
+                iconImg[i].classList.toggle('invisible');
+                iconImgShadow[i].classList.toggle('visible');
+                iconImgShadow[i].classList.toggle('invisible');
             }}} 
             else if (e.target.classList.contains ('fish-checkbox') && e.target.checked === true){
             for(i = 0; i < iconImg.length; i++){
                 if(iconImg[i].classList.contains('fish-icon') && iconImgShadow[i].classList.contains('fish-icon')){
-                    iconImg[i].classList.remove('hide');
-                    iconImgShadow[i].classList.remove('hide');
+                    iconImg[i].classList.toggle('invisible');
+                    iconImg[i].classList.toggle('visible');
+                    iconImgShadow[i].classList.toggle('invisible');
+                    iconImgShadow[i].classList.toggle('visible');
             }}
 }};
 
@@ -339,14 +365,18 @@ function marketsCheckBoxes(e){
     if(e.target.classList.contains('markets-checkbox') && e.target.checked === false){
         for(i = 0; i < iconImg.length; i++){
             if(iconImg[i].classList.contains('markets-icon') && iconImgShadow[i].classList.contains('markets-icon')){
-                iconImg[i].classList.add('hide');
-                iconImgShadow[i].classList.add('hide');
+                iconImg[i].classList.toggle('visible');
+                iconImg[i].classList.toggle('invisible');
+                iconImgShadow[i].classList.toggle('visible');
+                iconImgShadow[i].classList.toggle('invisible');
             }}} 
             else if (e.target.classList.contains ('markets-checkbox') && e.target.checked === true){
             for(i = 0; i < iconImg.length; i++){
                 if(iconImg[i].classList.contains('markets-icon') && iconImgShadow[i].classList.contains('markets-icon')){
-                    iconImg[i].classList.remove('hide');
-                    iconImgShadow[i].classList.remove('hide');
+                    iconImg[i].classList.toggle('invisible');
+                    iconImg[i].classList.toggle('visible');
+                    iconImgShadow[i].classList.toggle('invisible');
+                    iconImgShadow[i].classList.toggle('visible');
             }}
 }};
 
@@ -381,27 +411,37 @@ function settingBS(){
     for(i = 0; i < iconImg.length; i++){
          if(iconImg[i].src.indexOf('grocery') != -1){
              iconImg[i].classList.add('grocery-icon');
+             iconImg[i].classList.add('visible');
          } else if(iconImg[i].src.indexOf('veg') != -1){
             iconImg[i].classList.add('veg-icon');
+            iconImg[i].classList.add('visible');
          } else if(iconImg[i].src.indexOf('meat') != -1){
              iconImg[i].classList.add('meats-icon');
+             iconImg[i].classList.add('visible');
          } else if(iconImg[i].src.indexOf('fish') != -1){
              iconImg[i].classList.add('fish-icon');
+             iconImg[i].classList.add('visible');
          } else if(iconImg[i].src.indexOf('markets') != -1){
              iconImg[i].classList.add('markets-icon');
+             iconImg[i].classList.add('visible');
          }}
     
     for(i = 0; i < iconImgShadow.length; i++){
          if(iconImgShadow[i].src.indexOf('grocery') != -1){
              iconImgShadow[i].classList.add('grocery-icon');
+             iconImgShadow[i].classList.add('visible');
          } else if(iconImgShadow[i].src.indexOf('veg') != -1){
              iconImgShadow[i].classList.add('veg-icon');
+             iconImgShadow[i].classList.add('visible');
          } else if(iconImgShadow[i].src.indexOf('meat') != -1){
              iconImgShadow[i].classList.add('meats-icon');
+             iconImgShadow[i].classList.add('visible');
          } else if(iconImgShadow[i].src.indexOf('fish') != -1){
              iconImgShadow[i].classList.add('fish-icon');
+             iconImgShadow[i].classList.add('visible');
          } else if(iconImgShadow[i].src.indexOf('markets') != -1){
              iconImgShadow[i].classList.add('markets-icon');
+             iconImgShadow[i].classList.add('visible');
          }
     }
 
@@ -606,6 +646,7 @@ function settingBS(){
             div.classList.add('meats-card');
             div.classList.add('butcher');
             div.classList.add('butchers');
+            div.classList.add('meat');
             div.classList.add('meat');
         } else if(data[j].type === 'Fish'){
             div.classList.add('fish-card')
@@ -993,8 +1034,9 @@ function mobileHideCards(e){
 }
 
 const creatorPopup = document.querySelector('.about-creator-popup');
+const privacyPopup = document.querySelector('.privacy-policy-popup');
+const blurredBackground = document.querySelector('.blur-background');
 const creatorPopupNodes = document.querySelector('.about-creator-popup').childNodes;
-const blurredBackground = document.querySelector('.blur-background')
 
 function showAboutCreator(e){
     if(e.target.classList.contains('about-creator-btn') && creatorPopup.classList.contains('invisible')){
@@ -1007,6 +1049,20 @@ function showAboutCreator(e){
         creatorPopup.classList.toggle('visible')
     }
 }
+
+function showPrivPolicy(e){
+    if(e.target.classList.contains('privacy-policy-btn') && privacyPopup.classList.contains('invisible')){
+        blurredBackground.classList.toggle('blur')
+        privacyPopup.classList.toggle('invisible')
+        privacyPopup.classList.toggle('visible')
+    } else if(!e.target.classList.contains('privacy-policy-btn') && e.target !== privacyPopup && privacyPopup.classList.contains('visible')){
+        blurredBackground.classList.toggle('blur')
+        privacyPopup.classList.toggle('invisible')
+        privacyPopup.classList.toggle('visible')
+    }
+}
+
+
 
 
 //Event Listeners
@@ -1024,7 +1080,7 @@ document.addEventListener('click', openPopup);
 document.addEventListener('click', mobileOpenPopup);
 document.addEventListener('click', hideCards);
 document.addEventListener('click', showAboutCreator);
-// document.addEventListener('click', showPrivPolicy);
+document.addEventListener('click', showPrivPolicy);
 document.addEventListener('click', mobileHideCards);
 document.addEventListener('keypress', enterSearch);
 document.addEventListener('keypress', mobileEnterSearch);
