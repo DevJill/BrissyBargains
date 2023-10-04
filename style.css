@@ -795,8 +795,9 @@ body h1{
 }
 
 body{
-    margin: 5px;
+    margin: 5px ;
     height: 100%;
+    overflow: hidden;
 }
 
 /* Map Tings  */
