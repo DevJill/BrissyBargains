@@ -1062,7 +1062,16 @@ function showPrivPolicy(e){
     }
 }
 
+const mapBox = document.getElementById('map');
+console.log(mapBox)
 
+function mobileHideMapBoxOverlay(e){
+    console.log(e.target)
+    if(e.target ==  mapBox && !infoContainer.classList.contains('hide') 
+    || e.target.classList.contains('leaflet-marker-icon') && !infoContainer.classList.contains('hide')){
+        infoContainer.classList.toggle('hide')
+    }
+}
 
 
 //Event Listeners
@@ -1082,6 +1091,7 @@ document.addEventListener('click', hideCards);
 document.addEventListener('click', showAboutCreator);
 document.addEventListener('click', showPrivPolicy);
 document.addEventListener('click', mobileHideCards);
+document.addEventListener('click', mobileHideMapBoxOverlay)
 document.addEventListener('keypress', enterSearch);
 document.addEventListener('keypress', mobileEnterSearch);
 document.addEventListener('DOMContentLoaded', settingBS);
