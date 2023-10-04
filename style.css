@@ -797,7 +797,6 @@ body h1{
 body{
     margin: 5px ;
     height: 100%;
-    overflow: hidden;
 }
 
 /* Map Tings  */
@@ -975,7 +974,7 @@ body{
 .intro{
     display: grid;
     grid-template-columns: 30% 70%;
-    height: 3.3em;
+    height: 3.5em;
 }
 
 .intro button{
@@ -1011,14 +1010,23 @@ body{
     margin-top: 1em;
 }
 
+.legend li{
+    grid-template-columns: 20% 80%;
+}
+
 .legend img{
+    margin:0 auto;
     height: 2em
+}
+
+.legend p{
+    margin-left: 5px;
 }
 
 
 .legend label{
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 35% 65%;
 }
 
 
@@ -1029,9 +1037,7 @@ body{
 }
 
 .legend-grid-container li{
-    padding-left: 25px;
     height: 2em;
-    
 }
 
 .legend-grid-1{
@@ -1205,6 +1211,11 @@ transition: ease-in .3s;
     margin: auto;
 }
 
+.fieldset-ty-div button{
+    background-color: #a3c2bc;
+}
+
+
 .fieldset-ty-div p:first-of-type{
     padding-top: 27px;
 }
@@ -1231,13 +1242,53 @@ transition: ease-in .3s;
 
 /* Footer Tings */
 
-footer .footer-p-1{
-    background-color: #a3c2bc;
+.footer-feedback{
+    /* border-style: none none solid none;
+    border-color: #ABC4C0;
+    border-width: 2px; */
+    padding: .5em 0 1em 0;
 }
 
-footer .footer-discaimer p:first-child{
-    background-color: #a3c2bc;
+.about-creator-popup, .privacy-policy-popup{
+    width: 100px;
+    height: 100px;
 }
+
+footer{
+    height: 480px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .mobile-footer{
     border-radius: 10px;
