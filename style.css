@@ -1246,8 +1246,13 @@ transition: ease-in .3s;
     /* border-style: none none solid none;
     border-color: #ABC4C0;
     border-width: 2px; */
-    padding: .5em 0 1em 0;
+    padding: .5em 0 2.5em 0;
 }
+
+footer .suggestion-submit-btn input{
+    background-color: #a3c2bc
+}
+
 
 .about-creator-popup, .privacy-policy-popup{
     width: 100px;
@@ -1275,7 +1280,7 @@ footer{
 
 
 
-
+/* 
 
 
 
@@ -1357,7 +1362,7 @@ footer{
     font-weight: 200;
 }
 
-
+ */
 
 
 }
