@@ -1093,6 +1093,9 @@ function handleWindowWidthChange(e){
                 infoContainer.classList.toggle('hide')
             }
     }
+
+    map.setView([-27.52, 153.025], 12);
+
 }
 }
 
