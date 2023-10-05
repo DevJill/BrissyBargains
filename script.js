@@ -1094,7 +1094,7 @@ function handleWindowWidthChange(e){
             }
     }
 
-    map.setView([-27.52, 153.025], 12);
+    map.setView([-27.51, 153.025], 12);
 
 }
 }
