@@ -725,6 +725,19 @@ footer .footer-discaimer button:nth-child(5), footer .footer-discaimer button:nt
     padding: 0;
 }
 
+.footer-form-thank-you{
+    background-color: #93B4AE;
+    text-align: center;
+    width: 150px;
+    height: 100px;
+    margin: 45px auto;
+    border-radius: 10px;;
+}
+
+.footer-form-thank-you p:first-of-type{
+    padding-top: 23px;
+}
+
                                                  /* Footer a Tings */
 .about-creator-popup, .privacy-policy-popup{
     filter: drop-shadow(0 0 8px rgb(160, 160, 160));
@@ -1247,6 +1260,7 @@ transition: ease-in .3s;
     border-color: #ABC4C0;
     border-width: 2px; */
     padding: .5em 0 2.5em 0;
+    height: 265px;
 }
 
 footer .suggestion-submit-btn input{
@@ -1260,10 +1274,22 @@ footer .suggestion-submit-btn input{
 }
 
 footer{
-    height: 480px;
+    height: 500px;
     display: block;
 }
 
+.footer-form-thank-you{
+    background-color: #93B4AE;
+    text-align: center;
+    width: 150px;
+    height: 100px;
+    margin: 70px auto;
+    border-radius: 10px;;
+}
+
+.footer-form-thank-you p:first-of-type{
+    padding-top: 23px;
+}
 
 
 

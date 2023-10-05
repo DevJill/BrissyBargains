@@ -60,14 +60,18 @@
                 </div>
             </div>
             <div class="want-to-help">
+                <form action="" id="fieldset-form">
                 <fieldset class="help-fieldset">
                     <legend>Know of other cheap places?</legend>
                     <div class="fieldset-inputs">
-                        <div class="shrink-inputs">
+                        <div class="shrink-inputs">          
+
                             <label for="shop-name-id" class="fieldset-input-title">Shop Name:</label>
-                            <input type="text" id="shop-name-id" name="shop-name" class="fieldset-input">
+                            <input type="text" id="shop-name-id" name="shop-name" class="fieldset-input" required>
+
                             <label for="shop-suburb-name-id" class="fieldset-input-title">Shop Suburb:</label>
-                            <input type="text" id="shop-suburb-name-id" name="shop-suburb-name" class="fieldset-input">
+                            <input type="text" id="shop-suburb-name-id" name="shop-suburb-name" class="fieldset-input" required>
+
                         </div>
                         <input type="submit" value="Send Suggestion" class="fieldset-submit-suggestion">
                         <div class="hidden-want-to-help-buttons">
@@ -75,7 +79,8 @@
                             <input type="submit" value="Send Suggestion" class="hidden-fieldset-submit-suggestion">
                         </div>
                     </div>                    
-                </fieldset>                
+                </fieldset>  
+            </form>              
             </div>
             <div class="donate">
                 <p>Help expand the site</p>
@@ -96,13 +101,14 @@
     <div class="footer">
         <footer>
             <div class="footer-feedback">
+                <form action="" id="footer-form">
                 <div><p class="footer-p-1">Have feedback, or want to get in contact?</p></div>
                 <div class="suggestion-main-grid">
                 <div class="suggestion-grid-left">
                     <div class="suggestion-name">
 
                         <label for="suggestion-name-id" class="suggestion-name-title">First Name:</label>
-                        <input type="text" id="suggestion-name-id" name="first-name" class="suggestion-name-input">
+                        <input type="text" id="suggestion-name-id" name="first-name" class="suggestion-name-input" required>
 
                         <label for="last-name-id" class="suggestion-name-title">Last Name:</label>
                         <input type="text" id="last-name-id" name="last-name" class="suggestion-name-input">
@@ -110,19 +116,20 @@
                     </div>
                     <div class="suggestion-email">
                         <label for="suggestion-email-id" class="suggestion-name-title">Email Address:</label>
-                        <input type="email" id="suggestion-email-id" name="suggestion-email" class="suggestion-email-input">
+                        <input type="email" id="suggestion-email-id" name="suggestion-email" class="suggestion-email-input" required>
                     </div>
                 </div>
                 <div class="suggestion-grid-right">
                     <div class="suggestion-input">
                         <label for="input-field-id" class="suggestion-input-field">Feedback/Message:</label>
-                        <textarea id="input-field-id" name="input-field"  class="suggestion-input-field" cols="40" rows="5"></textarea>
+                        <textarea id="input-field-id" name="input-field"  class="suggestion-input-field" cols="40" rows="5" required></textarea>
                         <div class="suggestion-submit-btn">
                             <input type="submit" name="Submit" value="Send">
                         </div>
                     </div>
                 </div>
                 </div>
+            </form>
             </div>
             <div class="footer-discaimer">
                 <p>Disclaimer</p>
