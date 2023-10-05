@@ -150,24 +150,26 @@ const shopNameInput = document.querySelector('#shop-name-id');
 const shopSuburbInput = document.querySelector('#shop-suburb-name-id');
 const fieldsetForm = document.querySelector('#fieldset-form')
 
-// function submitSuggestionForm(e){
-//     console.log('peepee')
-//       e.preventDefault();
-// }
-
-// document.addEventListener('submit', submitSuggestionForm);
-
-
 function suggestionSubmitInputCheck(e){
 
     if(e.target.classList.contains('fieldset-submit-suggestion') 
     || e.target.classList.contains('hidden-fieldset-submit-suggestion')){
         if(fieldsetForm.checkValidity()){
-
-
-            const fieldsetDiv = fieldset.querySelector('div');
-            if(fieldsetDiv.classList.contains('fieldset-inputs')){
+            
+            console.log('peepee')
+            e.preventDefault();
+            let fieldsetDiv = fieldset.querySelector('div');
+            
+            if(fieldsetDiv.classList.contains('invisible')){
                 fieldsetDiv.remove();
+            } 
+            
+            fieldsetDiv = fieldset.querySelector('div');
+
+            if (fieldsetDiv.classList.contains('fieldset-inputs')){
+                fieldsetDiv.classList.remove('visible');
+                fieldsetDiv.classList.add('invisible');
+                fieldsetDiv.style.height = '1px';
             }
            
             const fieldsetNewDiv = document.createElement('div');
@@ -180,6 +182,7 @@ function suggestionSubmitInputCheck(e){
            
             fieldsetNewDiv.appendChild(fieldsetP1);
             fieldsetNewDiv.appendChild(fieldsetP2);
+            fieldsetNewDiv.classList.add('invisible')
     
             const fieldsetBtnDiv = document.createElement('div');
             fieldsetBtnDiv.classList.add('suggest-more-btn');
@@ -206,8 +209,14 @@ function suggestionSubmitInputCheck(e){
             fieldsetBtnDiv.appendChild(suggestMoreBtn);
             fieldsetNewDiv.appendChild(fieldsetBtnDiv);
             fieldsetNewDiv.appendChild(hiddenfieldsetBtnDiv);
+            
             fieldset.appendChild(fieldsetNewDiv);
-        
+            
+            setTimeout(function() {
+                fieldsetNewDiv.classList.remove('invisible')
+                fieldsetNewDiv.classList.add('visible')
+              }, 100);
+              
     }
     }
 }
@@ -215,13 +224,22 @@ function suggestionSubmitInputCheck(e){
 function showFieldsetInputs(e){  
     if(e.target.classList.contains('fieldset-submit-more-suggestion') 
     || e.target.classList.contains('hidden-fieldset-submit-more-suggestion')){
-        const fieldsetDiv = fieldset.querySelector('div');
+
+        let fieldsetDiv = fieldset.querySelector('div');
+        fieldsetDiv.remove();
+
+        fieldsetDiv = fieldset.querySelector('div');
+        console.log(fieldsetDiv)
+
         if(fieldsetDiv.classList.contains('fieldset-ty-div')){
-            fieldsetDiv.remove();
+            fieldsetDiv.classList.remove('visible');
+            fieldsetDiv.classList.add('invisible');
+            fieldsetDiv.style.height = '1px';
         }
 
         const createFieldsetInputs = document.createElement('div');
         createFieldsetInputs.classList.add('fieldset-inputs');
+        createFieldsetInputs.classList.add('invisible');
         const createShrinkInputs = document.createElement('div');
         createShrinkInputs.classList.add('shrink-inputs')
 
@@ -277,6 +295,11 @@ function showFieldsetInputs(e){
         createFieldsetInputs.appendChild(fieldsetBtnGrid)
 
         fieldset.appendChild(createFieldsetInputs);
+
+        setTimeout(function() {
+            createFieldsetInputs.classList.remove('invisible')
+            createFieldsetInputs.classList.add('visible')
+          }, 200);
     }
 }
 
@@ -1122,7 +1145,7 @@ function submitFooterFeedback(e){
                 const footerP2 = document.createElement('p');
     
                 footerP1.appendChild(document.createTextNode(`Thank You!`));
-                footerP2.appendChild(document.createTextNode(`We will try to get back to you asap.`));
+                footerP2.appendChild(document.createTextNode(`We'll try to get back to you asap.`));
     
                 footerDiv.appendChild(footerP1);
                 footerDiv.appendChild(footerP2);
