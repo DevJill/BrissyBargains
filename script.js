@@ -156,9 +156,10 @@ function suggestionSubmitInputCheck(e){
     || e.target.classList.contains('hidden-fieldset-submit-suggestion')){
         if(fieldsetForm.checkValidity()){
             
-            console.log('peepee')
+
             e.preventDefault();
             let fieldsetDiv = fieldset.querySelector('div');
+            console.log(fieldsetDiv)
             
             if(fieldsetDiv.classList.contains('invisible')){
                 fieldsetDiv.remove();
@@ -169,11 +170,14 @@ function suggestionSubmitInputCheck(e){
             if (fieldsetDiv.classList.contains('fieldset-inputs')){
                 fieldsetDiv.classList.remove('visible');
                 fieldsetDiv.classList.add('invisible');
-                fieldsetDiv.style.height = '1px';
+                setTimeout(function() {
+                    fieldsetDiv.style.display = 'none';
+                  },200);
             }
            
             const fieldsetNewDiv = document.createElement('div');
             fieldsetNewDiv.classList.add('fieldset-ty-div');
+            fieldsetNewDiv.classList.add('invisible');
     
             const fieldsetP1 = document.createElement('p');
             const fieldsetP2 = document.createElement('p');
@@ -182,7 +186,6 @@ function suggestionSubmitInputCheck(e){
            
             fieldsetNewDiv.appendChild(fieldsetP1);
             fieldsetNewDiv.appendChild(fieldsetP2);
-            fieldsetNewDiv.classList.add('invisible')
     
             const fieldsetBtnDiv = document.createElement('div');
             fieldsetBtnDiv.classList.add('suggest-more-btn');
@@ -215,7 +218,7 @@ function suggestionSubmitInputCheck(e){
             setTimeout(function() {
                 fieldsetNewDiv.classList.remove('invisible')
                 fieldsetNewDiv.classList.add('visible')
-              }, 100);
+              },300);
               
     }
     }
@@ -227,14 +230,16 @@ function showFieldsetInputs(e){
 
         let fieldsetDiv = fieldset.querySelector('div');
         fieldsetDiv.remove();
-
+        
         fieldsetDiv = fieldset.querySelector('div');
         console.log(fieldsetDiv)
 
         if(fieldsetDiv.classList.contains('fieldset-ty-div')){
             fieldsetDiv.classList.remove('visible');
             fieldsetDiv.classList.add('invisible');
-            fieldsetDiv.style.height = '1px';
+            setTimeout(function() {
+                fieldsetDiv.style.display = 'none';
+              },100);
         }
 
         const createFieldsetInputs = document.createElement('div');
@@ -300,6 +305,28 @@ function showFieldsetInputs(e){
             createFieldsetInputs.classList.remove('invisible')
             createFieldsetInputs.classList.add('visible')
           }, 200);
+    }
+}
+
+//Hiding Site Legend For Mobile
+const wantToHelpBtn = document.querySelector('.show-want-to-help')
+const showFieldset = document.querySelector('.want-to-help')
+const siteLegend = document.querySelector('.legend');
+
+
+function hideSiteLegend(e){
+    if(e.target.classList.contains('show-want-to-help-btn')){
+        wantToHelpBtn.style.display = 'none';
+        showFieldset.style.display = 'block';
+        siteLegend.style.display = 'none';
+    }
+}
+
+function showSiteLegend(e){
+    if(e.target.classList.contains('nevermind-btn') || e.target.classList.contains('nope-btn')){
+        wantToHelpBtn.style.display = 'block';
+        showFieldset.style.display = 'none';
+        siteLegend.style.display = 'block';
     }
 }
 
@@ -421,27 +448,6 @@ function marketsCheckBoxes(e){
             }}
 }};
 
-//Hiding Site Legend For Mobile
-const wantToHelpBtn = document.querySelector('.show-want-to-help')
-const showFieldset = document.querySelector('.want-to-help')
-const siteLegend = document.querySelector('.legend');
-
-
-function hideSiteLegend(e){
-    if(e.target.classList.contains('show-want-to-help-btn')){
-        wantToHelpBtn.style.display = 'none';
-        showFieldset.style.display = 'block';
-        siteLegend.style.display = 'none';
-    }
-}
-
-function showSiteLegend(e){
-    if(e.target.classList.contains('nevermind-btn') || e.target.classList.contains('nope-btn')){
-        wantToHelpBtn.style.display = 'block';
-        showFieldset.style.display = 'none';
-        siteLegend.style.display = 'block';
-    }
-}
 
 //Adding Classes to Icons
 function settingBS(){
@@ -486,6 +492,7 @@ function settingBS(){
          }
     }
 
+    
 }
 
 
@@ -1103,10 +1110,12 @@ function showPrivPolicy(e){
     }
 }
 
-const mobileMediaQuery = window.matchMedia('(max-width: 420px)');
+// Mobile Width //
+
+const mobileMediaQuery = window.matchMedia('(max-width: 550px)');
 const mapBox = document.getElementById('map');
 
-function handleWindowWidthChange(e){
+function handleWindowMobileWidth(e){
 
     if(e.matches){
         document.addEventListener('click', mobileHideMapBoxOverlay);
@@ -1122,8 +1131,11 @@ function handleWindowWidthChange(e){
 }
 }
 
-handleWindowWidthChange(mobileMediaQuery);
+handleWindowMobileWidth(mobileMediaQuery);
 
+
+
+// Footer Feedback Submit //
 const footerSubmitBtn = document.querySelector('.suggestion-submit-btn');
 const footerForm = document.querySelector('#footer-form');
 const footerFeedback = document.querySelector('.footer-feedback');
@@ -1180,6 +1192,6 @@ document.addEventListener('click', showFieldsetInputs);
 document.addEventListener('click', submitFooterFeedback);
 document.addEventListener('keypress', enterSearch);
 document.addEventListener('keypress', mobileEnterSearch);
-mobileMediaQuery.addEventListener('DOMContentLoaded', handleWindowWidthChange);
+mobileMediaQuery.addEventListener('DOMContentLoaded', handleWindowMobileWidth);
 document.addEventListener('DOMContentLoaded', settingBS);
 

@@ -112,7 +112,7 @@ html, body {
 .intro-p{
     padding-top: 5px;
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 10% 100%;
     margin: auto 0;
 }
 
@@ -741,8 +741,11 @@ footer .footer-discaimer button:nth-child(5), footer .footer-discaimer button:nt
                                                  /* Footer a Tings */
 .about-creator-popup, .privacy-policy-popup{
     filter: drop-shadow(0 0 8px rgb(160, 160, 160));
-    top: 200px; 
-    left: 35%; 
+    top:0;
+    bottom:0;
+    left: 0; 
+    right: 0; 
+    margin: auto;
     z-index: 49;
     position: fixed;
     width: 550px;
@@ -788,7 +791,7 @@ body h1{
 
 
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 550px){
 
 .site-container{
      height: 89vh;
@@ -986,7 +989,7 @@ body{
 
 .intro{
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 23% 77%;
     height: 3.5em;
 }
 
@@ -1014,7 +1017,7 @@ body{
 }
 
 .intro-p img{
-    margin: auto 0 auto auto
+    margin: 0 auto 0 0;
 }
 
 /* Legend Tings */
@@ -1221,7 +1224,7 @@ transition: ease-in .3s;
 }
 
 .fieldset-ty-div{
-    margin: auto;
+    margin: 20px 0;
 }
 
 .fieldset-ty-div button{
@@ -1270,8 +1273,8 @@ footer .suggestion-submit-btn input{
 
 
 .about-creator-popup, .privacy-policy-popup{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 300px;
 }
 
 footer{
@@ -1291,9 +1294,6 @@ footer{
 .footer-form-thank-you p:first-of-type{
     padding-top: 23px;
 }
-
-
-
 
 
 
