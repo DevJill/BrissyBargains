@@ -157,7 +157,7 @@ function suggestionSubmitInputCheck(e){
         if(fieldsetForm.checkValidity()){
             
 
-            e.preventDefault();
+            // e.preventDefault();
             let fieldsetDiv = fieldset.querySelector('div');
             console.log(fieldsetDiv)
             
