@@ -28,7 +28,7 @@ html, body {
     filter: blur(5px) brightness(90%);
 }
 
-.hidden-search, .mobile-footer, .hidden-suggest-more-btn, .hidden-want-to-help-buttons, .show-want-to-help, .hidden-want-to-help{
+.hidden, .hidden-search, .mobile-footer, .hidden-suggest-more-btn, .hidden-want-to-help-buttons, .show-want-to-help, .hidden-want-to-help{
     display: none;
 }
 
@@ -247,7 +247,7 @@ html, body {
   ::-webkit-scrollbar-thumb {
     border-style: solid; 
     border-color: #ececec;
-    border-width: 3px 0 3px 0;
+    border-width: 5px 0 5px 0;
     height: 30px;
     background: #888;
   }
@@ -696,7 +696,7 @@ footer .footer-discaimer button:hover{
 
 footer .footer-discaimer img{
     height: 1.7em;
-    padding-left: 1px;
+    padding-left: 2px;
 }
 
 footer .footer-discaimer a{
@@ -749,12 +749,67 @@ footer .footer-discaimer button:nth-child(5), footer .footer-discaimer button:nt
     z-index: 49;
     position: fixed;
     width: 550px;
-    height: 550px;
     background-color: #B7CDC9;
     border-radius: 10px;
     padding: 15px;
 }
 
+.about-creator-popup{
+    height: 350px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    text-align: center;
+}
+
+.creator-p{
+    padding: 10px;
+    width: 95%;
+    background-color: #a3c2bc;
+    border-radius: 10px;
+}
+
+.creator-p p{
+    padding: 10px 0;
+}
+
+.creator-p p:first-of-type{
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-color: #93B4AE;
+}
+
+.creator-img{
+    margin: auto;
+}
+
+.creator-img img{
+    max-width: 180px;
+    border-radius: 50%;
+}
+
+.privacy-policy-popup{
+    height:600px;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.privacy-policy-popup div{
+    padding: 10px 0;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: #93B4AE;
+}
+
+.privacy-policy-popup div:last-of-type{
+
+    border-style: none;
+
+}
+
+.privacy-policy-popup p{
+    line-height: 1.3;
+}
 
 
 
@@ -1295,13 +1350,32 @@ footer{
     padding-top: 23px;
 }
 
+/* About Creator and Priv Policy Tings */
 
+.about-creator-popup, .privacy-policy-popup{
+    width: 90vw;
 
+}
 
+.about-creator-popup{
+    height: 550px;
+    display: block;
+    text-align: center;
+}
 
+.creator-p{
+margin: auto;
+margin-top: 10px;
+}
 
-
-
+.creator-img img{
+    margin-top: 25px;
+}
+    
+.privacy-policy-popup{
+    padding: 25px;
+    height: 120vw;
+}
 
 
 

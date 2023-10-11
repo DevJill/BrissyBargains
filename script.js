@@ -150,163 +150,163 @@ const shopNameInput = document.querySelector('#shop-name-id');
 const shopSuburbInput = document.querySelector('#shop-suburb-name-id');
 const fieldsetForm = document.querySelector('#fieldset-form')
 
-function suggestionSubmitInputCheck(e){
+// function suggestionSubmitInputCheck(e){
 
-    if(e.target.classList.contains('fieldset-submit-suggestion') 
-    || e.target.classList.contains('hidden-fieldset-submit-suggestion')){
-        if(fieldsetForm.checkValidity()){
+//     if(e.target.classList.contains('fieldset-submit-suggestion') 
+//     || e.target.classList.contains('hidden-fieldset-submit-suggestion')){
+//         if(fieldsetForm.checkValidity()){
             
 
-            // e.preventDefault();
-            let fieldsetDiv = fieldset.querySelector('div');
-            console.log(fieldsetDiv)
+//             // e.preventDefault();
+//             let fieldsetDiv = fieldset.querySelector('div');
+//             console.log(fieldsetDiv)
             
-            if(fieldsetDiv.classList.contains('invisible')){
-                fieldsetDiv.remove();
-            } 
+//             if(fieldsetDiv.classList.contains('invisible')){
+//                 fieldsetDiv.remove();
+//             } 
             
-            fieldsetDiv = fieldset.querySelector('div');
+//             fieldsetDiv = fieldset.querySelector('div');
 
-            if (fieldsetDiv.classList.contains('fieldset-inputs')){
-                fieldsetDiv.classList.remove('visible');
-                fieldsetDiv.classList.add('invisible');
-                setTimeout(function() {
-                    fieldsetDiv.style.display = 'none';
-                  },200);
-            }
+//             if (fieldsetDiv.classList.contains('fieldset-inputs')){
+//                 fieldsetDiv.classList.remove('visible');
+//                 fieldsetDiv.classList.add('invisible');
+//                 setTimeout(function() {
+//                     fieldsetDiv.style.display = 'none';
+//                   },200);
+//             }
            
-            const fieldsetNewDiv = document.createElement('div');
-            fieldsetNewDiv.classList.add('fieldset-ty-div');
-            fieldsetNewDiv.classList.add('invisible');
+//             const fieldsetNewDiv = document.createElement('div');
+//             fieldsetNewDiv.classList.add('fieldset-ty-div');
+//             fieldsetNewDiv.classList.add('invisible');
     
-            const fieldsetP1 = document.createElement('p');
-            const fieldsetP2 = document.createElement('p');
-            fieldsetP1.appendChild(document.createTextNode('Thank you!'));
-            fieldsetP2.appendChild(document.createTextNode('Got another suggestion?'));
+//             const fieldsetP1 = document.createElement('p');
+//             const fieldsetP2 = document.createElement('p');
+//             fieldsetP1.appendChild(document.createTextNode('Thank you!'));
+//             fieldsetP2.appendChild(document.createTextNode('Got another suggestion?'));
            
-            fieldsetNewDiv.appendChild(fieldsetP1);
-            fieldsetNewDiv.appendChild(fieldsetP2);
+//             fieldsetNewDiv.appendChild(fieldsetP1);
+//             fieldsetNewDiv.appendChild(fieldsetP2);
     
-            const fieldsetBtnDiv = document.createElement('div');
-            fieldsetBtnDiv.classList.add('suggest-more-btn');
-            const suggestMoreBtn = document.createElement('button');
-            suggestMoreBtn.type = 'submit';
-            suggestMoreBtn.classList.add('fieldset-submit-more-suggestion');
-            suggestMoreBtn.appendChild(document.createTextNode('Suggest More'));
+//             const fieldsetBtnDiv = document.createElement('div');
+//             fieldsetBtnDiv.classList.add('suggest-more-btn');
+//             const suggestMoreBtn = document.createElement('button');
+//             suggestMoreBtn.type = 'submit';
+//             suggestMoreBtn.classList.add('fieldset-submit-more-suggestion');
+//             suggestMoreBtn.appendChild(document.createTextNode('Suggest More'));
     
-            const hiddenfieldsetBtnDiv = document.createElement('div');
+//             const hiddenfieldsetBtnDiv = document.createElement('div');
     
-            hiddenfieldsetBtnDiv.classList.add('hidden-suggest-more-btn');
-            const hiddenSuggestMoreBtn = document.createElement('button');
-            hiddenSuggestMoreBtn.type = 'submit';
-            hiddenSuggestMoreBtn.classList.add('hidden-fieldset-submit-more-suggestion');
-            hiddenSuggestMoreBtn.appendChild(document.createTextNode('Suggest More'));
+//             hiddenfieldsetBtnDiv.classList.add('hidden-suggest-more-btn');
+//             const hiddenSuggestMoreBtn = document.createElement('button');
+//             hiddenSuggestMoreBtn.type = 'submit';
+//             hiddenSuggestMoreBtn.classList.add('hidden-fieldset-submit-more-suggestion');
+//             hiddenSuggestMoreBtn.appendChild(document.createTextNode('Suggest More'));
     
-            const hiddenNopeBtn = document.createElement('button');
-            hiddenNopeBtn.classList.add('nope-btn')
-            hiddenNopeBtn.classList.add('hidden-fieldset-submit-more-suggestion');
-            hiddenNopeBtn.appendChild(document.createTextNode('Nope'));
+//             const hiddenNopeBtn = document.createElement('button');
+//             hiddenNopeBtn.classList.add('nope-btn')
+//             hiddenNopeBtn.classList.add('hidden-fieldset-submit-more-suggestion');
+//             hiddenNopeBtn.appendChild(document.createTextNode('Nope'));
     
-            hiddenfieldsetBtnDiv.appendChild(hiddenSuggestMoreBtn);
-            hiddenfieldsetBtnDiv.appendChild(hiddenNopeBtn);
-            fieldsetBtnDiv.appendChild(suggestMoreBtn);
-            fieldsetNewDiv.appendChild(fieldsetBtnDiv);
-            fieldsetNewDiv.appendChild(hiddenfieldsetBtnDiv);
+//             hiddenfieldsetBtnDiv.appendChild(hiddenSuggestMoreBtn);
+//             hiddenfieldsetBtnDiv.appendChild(hiddenNopeBtn);
+//             fieldsetBtnDiv.appendChild(suggestMoreBtn);
+//             fieldsetNewDiv.appendChild(fieldsetBtnDiv);
+//             fieldsetNewDiv.appendChild(hiddenfieldsetBtnDiv);
             
-            fieldset.appendChild(fieldsetNewDiv);
+//             fieldset.appendChild(fieldsetNewDiv);
             
-            setTimeout(function() {
-                fieldsetNewDiv.classList.remove('invisible')
-                fieldsetNewDiv.classList.add('visible')
-              },300);
+//             setTimeout(function() {
+//                 fieldsetNewDiv.classList.remove('invisible')
+//                 fieldsetNewDiv.classList.add('visible')
+//               },300);
               
-    }
-    }
-}
+//     }
+//     }
+// }
 
-function showFieldsetInputs(e){  
-    if(e.target.classList.contains('fieldset-submit-more-suggestion') 
-    || e.target.classList.contains('hidden-fieldset-submit-more-suggestion')){
+// function showFieldsetInputs(e){  
+//     if(e.target.classList.contains('fieldset-submit-more-suggestion') 
+//     || e.target.classList.contains('hidden-fieldset-submit-more-suggestion')){
 
-        let fieldsetDiv = fieldset.querySelector('div');
-        fieldsetDiv.remove();
+//         let fieldsetDiv = fieldset.querySelector('div');
+//         fieldsetDiv.remove();
         
-        fieldsetDiv = fieldset.querySelector('div');
-        console.log(fieldsetDiv)
+//         fieldsetDiv = fieldset.querySelector('div');
+//         console.log(fieldsetDiv)
 
-        if(fieldsetDiv.classList.contains('fieldset-ty-div')){
-            fieldsetDiv.classList.remove('visible');
-            fieldsetDiv.classList.add('invisible');
-            setTimeout(function() {
-                fieldsetDiv.style.display = 'none';
-              },100);
-        }
+//         if(fieldsetDiv.classList.contains('fieldset-ty-div')){
+//             fieldsetDiv.classList.remove('visible');
+//             fieldsetDiv.classList.add('invisible');
+//             setTimeout(function() {
+//                 fieldsetDiv.style.display = 'none';
+//               },100);
+//         }
 
-        const createFieldsetInputs = document.createElement('div');
-        createFieldsetInputs.classList.add('fieldset-inputs');
-        createFieldsetInputs.classList.add('invisible');
-        const createShrinkInputs = document.createElement('div');
-        createShrinkInputs.classList.add('shrink-inputs')
+//         const createFieldsetInputs = document.createElement('div');
+//         createFieldsetInputs.classList.add('fieldset-inputs');
+//         createFieldsetInputs.classList.add('invisible');
+//         const createShrinkInputs = document.createElement('div');
+//         createShrinkInputs.classList.add('shrink-inputs')
 
-        const shopLabel = document.createElement('label');
-        shopLabel.htmlFor = "shop-name-id";
-        shopLabel.classList.add('fieldset-input-title');
-        shopLabel.appendChild(document.createTextNode('Shop Name:'));
-        createShrinkInputs.appendChild(shopLabel);
+//         const shopLabel = document.createElement('label');
+//         shopLabel.htmlFor = "shop-name-id";
+//         shopLabel.classList.add('fieldset-input-title');
+//         shopLabel.appendChild(document.createTextNode('Shop Name:'));
+//         createShrinkInputs.appendChild(shopLabel);
 
-        const shopLabelInput = document.createElement('input');
-        shopLabelInput.setAttribute('id', 'shop-name-id'); 
-        shopLabelInput.type = 'text';
-        shopLabelInput.name = "shop-name";
-        shopLabelInput.classList.add('fieldset-input');
-        shopLabelInput.required = true;
-        createShrinkInputs.appendChild(shopLabelInput)
+//         const shopLabelInput = document.createElement('input');
+//         shopLabelInput.setAttribute('id', 'shop-name-id'); 
+//         shopLabelInput.type = 'text';
+//         shopLabelInput.name = "shop-name";
+//         shopLabelInput.classList.add('fieldset-input');
+//         shopLabelInput.required = true;
+//         createShrinkInputs.appendChild(shopLabelInput)
 
-        const shopSuburbLabel = document.createElement('label');
-        shopSuburbLabel.htmlFor = "shop-suburb-name-id";
-        shopSuburbLabel.classList.add('fieldset-input-title');
-        shopSuburbLabel.appendChild(document.createTextNode('Shop Suburb:'));
-        createShrinkInputs.appendChild(shopSuburbLabel);
+//         const shopSuburbLabel = document.createElement('label');
+//         shopSuburbLabel.htmlFor = "shop-suburb-name-id";
+//         shopSuburbLabel.classList.add('fieldset-input-title');
+//         shopSuburbLabel.appendChild(document.createTextNode('Shop Suburb:'));
+//         createShrinkInputs.appendChild(shopSuburbLabel);
 
-        const shopSuburbInput = document.createElement('input');
-        shopSuburbInput.setAttribute('id', 'shop-suburb-name-id');
-        shopSuburbInput.type = 'text';
-        shopSuburbInput.name = "shop-suburb-name";
-        shopSuburbInput.classList.add('fieldset-input');
-        shopSuburbInput.required = true;
-        createShrinkInputs.appendChild(shopSuburbInput);
+//         const shopSuburbInput = document.createElement('input');
+//         shopSuburbInput.setAttribute('id', 'shop-suburb-name-id');
+//         shopSuburbInput.type = 'text';
+//         shopSuburbInput.name = "shop-suburb-name";
+//         shopSuburbInput.classList.add('fieldset-input');
+//         shopSuburbInput.required = true;
+//         createShrinkInputs.appendChild(shopSuburbInput);
 
-        const fieldsetSubmit = document.createElement('input');
-        fieldsetSubmit.type = 'submit';
-        fieldsetSubmit.value = "Send Suggestion";
-        fieldsetSubmit.classList.add('fieldset-submit-suggestion');
-        createShrinkInputs.appendChild(fieldsetSubmit);
+//         const fieldsetSubmit = document.createElement('input');
+//         fieldsetSubmit.type = 'submit';
+//         fieldsetSubmit.value = "Send Suggestion";
+//         fieldsetSubmit.classList.add('fieldset-submit-suggestion');
+//         createShrinkInputs.appendChild(fieldsetSubmit);
 
-        const hiddenFieldsetSubmit = document.createElement('input');
-        hiddenFieldsetSubmit.type = 'submit';
-        hiddenFieldsetSubmit.value = "Send Suggestion";
-        hiddenFieldsetSubmit.classList.add('hidden-fieldset-submit-suggestion');
+//         const hiddenFieldsetSubmit = document.createElement('input');
+//         hiddenFieldsetSubmit.type = 'submit';
+//         hiddenFieldsetSubmit.value = "Send Suggestion";
+//         hiddenFieldsetSubmit.classList.add('hidden-fieldset-submit-suggestion');
 
-        const fieldsetNvmBtn = document.createElement('button');
-        fieldsetNvmBtn.classList.add('nevermind-btn');
-        fieldsetNvmBtn.appendChild(document.createTextNode('Nevermind'))
+//         const fieldsetNvmBtn = document.createElement('button');
+//         fieldsetNvmBtn.classList.add('nevermind-btn');
+//         fieldsetNvmBtn.appendChild(document.createTextNode('Nevermind'))
 
-        const fieldsetBtnGrid = document.createElement('div');
-        fieldsetBtnGrid.classList.add('hidden-want-to-help-buttons');
-        fieldsetBtnGrid.appendChild(fieldsetNvmBtn);
-        fieldsetBtnGrid.appendChild(hiddenFieldsetSubmit);
+//         const fieldsetBtnGrid = document.createElement('div');
+//         fieldsetBtnGrid.classList.add('hidden-want-to-help-buttons');
+//         fieldsetBtnGrid.appendChild(fieldsetNvmBtn);
+//         fieldsetBtnGrid.appendChild(hiddenFieldsetSubmit);
 
-        createFieldsetInputs.appendChild(createShrinkInputs)
-        createFieldsetInputs.appendChild(fieldsetBtnGrid)
+//         createFieldsetInputs.appendChild(createShrinkInputs)
+//         createFieldsetInputs.appendChild(fieldsetBtnGrid)
 
-        fieldset.appendChild(createFieldsetInputs);
+//         fieldset.appendChild(createFieldsetInputs);
 
-        setTimeout(function() {
-            createFieldsetInputs.classList.remove('invisible')
-            createFieldsetInputs.classList.add('visible')
-          }, 200);
-    }
-}
+//         setTimeout(function() {
+//             createFieldsetInputs.classList.remove('invisible')
+//             createFieldsetInputs.classList.add('visible')
+//           }, 200);
+//     }
+// }
 
 //Hiding Site Legend For Mobile
 const wantToHelpBtn = document.querySelector('.show-want-to-help')
@@ -1187,8 +1187,8 @@ document.addEventListener('click', hideCards);
 document.addEventListener('click', showAboutCreator);
 document.addEventListener('click', showPrivPolicy);
 document.addEventListener('click', mobileHideCards);
-document.addEventListener('click', suggestionSubmitInputCheck);
-document.addEventListener('click', showFieldsetInputs);
+// document.addEventListener('click', suggestionSubmitInputCheck);
+// document.addEventListener('click', showFieldsetInputs);
 document.addEventListener('click', submitFooterFeedback);
 document.addEventListener('keypress', enterSearch);
 document.addEventListener('keypress', mobileEnterSearch);
