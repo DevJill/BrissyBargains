@@ -677,6 +677,25 @@ footer .footer-discaimer p:nth-child(3){
     border-width: 2px;
 }
 
+footer .footer-discaimer p:last-of-type{
+    display: inline;
+    padding-left: 5px;
+    color: #809c98; 
+    font-size: smaller
+}
+
+footer .footer-discaimer p:last-of-type a{
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: #809c98;
+    color: #809c98; 
+    transition: ease-in .3s;
+} 
+
+footer .footer-discaimer p:last-of-type a:hover{
+    color: #738f8b;
+} 
+
 footer .footer-discaimer a button{
     border-style: solid;
     border-width: 1px;
