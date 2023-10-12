@@ -14,7 +14,7 @@
         "google-reviews": 4.5,
         "website": "https://www.gcfo.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.516813491490236, 153.1991478976023]
+        "latNLong": [-27.519937029744035, 153.1991742711965]
     },
     {
         "type": "Grocery",
@@ -31,7 +31,7 @@
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.10070853275601, 152.94587786790046]
+        "latNLong": [-27.100689454461694, 152.94586714259557]
     },
     {
         "type": "Grocery",
@@ -48,7 +48,7 @@
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.330376273805786, 153.05726049589373]
+        "latNLong": [-27.329782600038072, 153.05712777118532]
     },
     {
         "type": "Grocery",
@@ -65,7 +65,7 @@
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.58941967785702, 152.95153871589764]
+        "latNLong": [-27.5946921916127, 152.94973750003567]
     },
     {
         "type": "Grocery",
@@ -82,7 +82,7 @@
         "google-reviews": 4,
         "website": "https://www.freshandsave.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.693242754620822, 153.21423331159446]
+        "latNLong": [-27.701636042882058, 153.21213613416342]
     },
     {
         "type": "Grocery",
@@ -99,7 +99,7 @@
         "google-reviews": 4.5,
         "website": "https://m.facebook.com/tribecare/",
         "keywords": ["grocery"],
-        "latNLong": [-27.626874814245603, 153.12760843616334]
+        "latNLong": [-27.627031741621032, 153.12758163558252]
     },
     {
         "type": "Grocery",
@@ -116,7 +116,7 @@
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.596777126981348, 153.12490739675158]
+        "latNLong": [-27.59684370821775, 153.12489667101843]
     },
     {
         "type": "Grocery",
@@ -133,7 +133,7 @@
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.379938930258227, 152.9901134346201]
+        "latNLong": [-27.38030103852814, 152.99013442726053]
     },
     {
         "type": "Grocery",
@@ -150,7 +150,7 @@
         "google-reviews": 4,
         "website": "https://drakes.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.665499833710754, 153.0345826390836]
+        "latNLong": [-27.665670897815193, 153.03459337100313]
     },
     {
         "type": "Grocery",
@@ -167,7 +167,7 @@
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.22141530857835, 153.00146265440983]
+        "latNLong": [-27.221539359465876, 153.00143047115068]
     },
     {
         "type": "Grocery",
@@ -184,7 +184,7 @@
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.628592743530778, 153.02766525442306]
+        "latNLong": [-27.628640294568207, 153.0276330713329]
     },
     {
         "type": "Grocery",
@@ -201,7 +201,7 @@
         "google-reviews": 4,
         "website": "https://drakes.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.977614427626374, 153.38070109676406]
+        "latNLong": [-27.977936600007464, 153.38070109996642]
     },
     {
         "type": "Grocery",
@@ -218,7 +218,7 @@
         "google-reviews": 4.5,
         "website": "https://drakes.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.652402154108593, 152.76467872267395]
+        "latNLong": [-27.652582803403305, 152.76461437119445]
     },
     {
         "type": "Grocery",
@@ -235,7 +235,7 @@
         "google-reviews": 4.5,
         "website": "https://lighthousecare.org.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.68454990435829, 153.19317243617508]
+        "latNLong": [-27.68471082425181, 153.193125433146]
     },
     {
         "type": "Grocery",
@@ -252,7 +252,7 @@
         "google-reviews": 4.5,
         "website": "https://lighthousecare.org.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.661594604183854, 153.03600588325943]
+        "latNLong": [-27.661785844066333, 153.03602990052997]
     },
     {
         "type": "Grocery",
@@ -269,7 +269,7 @@
         "google-reviews": 4,
         "website": "https://www.tbonesfresh.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.36404745163986, 153.02409379674413]
+        "latNLong": [-27.364190400011868, 153.0240938000504]
     },    {
         "type": "Grocery",
         "name": "Golden Circle Factory Outlet, Morayfield",
@@ -285,7 +285,7 @@
         "google-reviews": 4.5,
         "website": "https://www.gcfo.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.117677322771932, 152.95574649373154]
+        "latNLong": [-27.117778006888532, 152.95570012614752]
 
     },
     {
@@ -303,7 +303,7 @@
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.10070853275601, 152.94587786790046]
+        "latNLong": [-27.10069933619628, 152.94587763685186]
     },
     {
         "type": "Grocery",
@@ -320,7 +320,7 @@
         "google-reviews": 4.5,
         "website": "https://www.freshandsave.com.au/",
         "keywords": ["grocery"],
-        "latNLong": [-27.330376273805786, 153.05726049589373]
+        "latNLong": [-27.329782600053225, 153.05713849988192]
     },
     {
         "type": "Produce",
@@ -337,7 +337,7 @@
         "google-reviews": 4,
         "website": "https://www.samcocotrading.com.au/",
         "keywords": ["fruit", "vegetables"],
-        "latNLong": [-27.50185519547979, 153.03500336058482]
+        "latNLong": [-27.502111052327677, 153.034932128832]
     },
     {
         "type": "Produce",
@@ -354,7 +354,7 @@
         "google-reviews": 4,
         "website": "http://pinelands-world.edan.io/",
         "keywords": ["fruit", "vegetables"],
-        "latNLong": [-27.588547524620886, 153.06132876998524]
+        "latNLong": [-27.588706822776775, 153.0612617177724]
     },
     {
         "type": "Produce",
@@ -371,7 +371,7 @@
         "google-reviews": 4.5,
         "website": "https://www.facebook.com/ClintsFarmFreshProduce/",
         "keywords": ["fruit", "vegetables"],
-        "latNLong": [-27.59511274263985, 152.76134276976273]
+        "latNLong": [-27.5953314583962, 152.76125157791697]
     },
     {
         "type": "Produce",
@@ -388,7 +388,7 @@
         "google-reviews": 4,
         "website": "https://yuensfarmersmarket.com.au/",
         "keywords": ["fruit", "vegetables"],
-        "latNLong": [-27.608899433187002, 153.11017169675213]
+        "latNLong": [-27.609094353557715, 153.1101716998183]
     },
     {
         "type": "Produce",
@@ -405,7 +405,7 @@
         "google-reviews": 4,
         "website": "https://yuensfarmersmarket.com.au/",
         "keywords": ["fruit", "vegetables"],
-        "latNLong": [-27.69220327736614, 153.13523385442525]
+        "latNLong": [-27.69234104995985, 153.13525531538394]
     },
     {
         "type": "Produce",
@@ -422,7 +422,7 @@
         "google-reviews": 3,
         "website": "https://www.facebook.com/Wynnumfruitbasket/",
         "keywords": ["fruit", "vegetables"],
-        "latNLong": [-27.457778093118296, 153.15429368465738]
+        "latNLong": [-27.45806846010033, 153.15433123550767]
     },
     {
         "type": "Produce",
@@ -439,7 +439,7 @@
         "google-reviews": 4,
         "website": "https://www.facebook.com/bellasfruitmarket/",
         "keywords": ["fruit", "vegetables"],
-        "latNLong": [-27.57393541019538, 153.08758677671307]
+        "latNLong": [-27.574496510145, 153.0873721999817]
     },
     {
         "type": "Produce",
@@ -456,7 +456,7 @@
         "google-reviews": 4.5,
         "website": "https://www.instagram.com/rocknrollmarketplace/",
         "keywords": ["fruit", "vegetables"],
-        "latNLong": [-27.50430267297861, 153.04800745397543]
+        "latNLong": [-27.504488239145935, 153.04812547115682]
     },
     {
         "type": "Produce",
@@ -473,7 +473,7 @@
         "google-reviews": 4.5,
         "website": "https://www.abetterchoice.com.au/stores/gabba-fruit-market/",
         "keywords": ["fruit", "vegetables"],
-        "latNLong": [-27.49010855896749, 153.02754856137048]
+        "latNLong": [-27.49062725870884, 153.02737153558354]
     },
     {
         "type": "Produce",
@@ -490,7 +490,7 @@
         "google-reviews": 4,
         "website": "https://www.facebook.com/sunnybankdiscountfruit/",
         "keywords": ["fruit", "vegetables"],
-        "latNLong": [-27.572917201592915, 153.06528189697107]
+        "latNLong": [-27.573078899995043, 153.06527653553263]
     },
     {
         "type": "Produce",
@@ -507,8 +507,9 @@
         "google-reviews": 4,
         "website": "https://www.calamvalecentral.com.au/store/mega-discount-fruit-market/?location=_x32_",
         "keywords": ["fruit", "vegetables"],
-        "latNLong": [-27.612450966699587, 153.05319049697235]
-    },    {
+        "latNLong": [-27.612593593157367, 153.0531904999939]
+    },
+    {
         "type": "Produce",
         "name": "Cabbage Patch Market, Deagon",
         "address": "1/165 Braun St, Deagon QLD 4017",
@@ -523,7 +524,41 @@
         "google-reviews": 4,
         "website": "https://www.facebook.com/CabbagePatchMarketDeagon/",
         "keywords": ["fruit", "vegetables"],
-        "latNLong": [-27.334038196788228, 153.05948169204098]
+        "latNLong": [-27.334276469126845, 153.0594602342976]
+    },
+    {
+        "type": "Produce",
+        "name": "Mega Fresh, Brown Plains",
+        "address": "5-7 Enterprise Way, Browns Plains QLD 4118",
+        "saturdayOpenHrs": "6 am-5 pm",
+        "sundayOpenHrs": "6 am-4 pm",
+        "mondayOpenHrs": "6 am-6 pm",
+        "tuesdayOpenHrs": "6 am-6 pm",
+        "wednesdaydayOpenHrs": "6 am-6 pm",
+        "thrusdayOpenHrs": "9 am-6 pm",
+        "fridayOpenHrs": "6 am-6 pm",
+        "phone": "0736035104",
+        "google-reviews": 4.5,
+        "website": "https://www.abetterchoice.com.au/stores/mega-fresh-browns-plains/",
+        "keywords": ["fruit", "vegetables"],
+        "latNLong": [-27.334276469126845, 153.0594602342976]
+    },
+    {
+        "type": "Produce",
+        "name": "Dinmore Fruit Barn",
+        "address": "25 Brisbane Rd, Dinmore QLD 4303",
+        "saturdayOpenHrs": "7:30 am-5 pm",
+        "sundayOpenHrs": "7:30 am-5 pm",
+        "mondayOpenHrs": "7:30 am-6 pm",
+        "tuesdayOpenHrs": "7:30 am-6 pm",
+        "wednesdaydayOpenHrs": "7:30 am-6 pm",
+        "thrusdayOpenHrs": "7:30 am-6 pm",
+        "fridayOpenHrs": "7:30 am-6 pm",
+        "phone": "(07) 3282 4221",
+        "google-reviews": 4.5,
+        "website": "https://www.facebook.com/pages/Dinmore-Fruit-Barn/190399727707208?rf=197026650668955",
+        "keywords": ["fruit", "vegetables"],
+        "latNLong": [-27.598391664471485, 152.831420542322]
     },
     {
         "type": "Markets",
@@ -540,7 +575,7 @@
         "google-reviews": 4.5,
         "website": "https://saturdayfreshmarket.com.au/",
         "keywords": ["markets", "market"],
-        "latNLong": [-27.536524261441887, 153.00216446791453]
+        "latNLong": [-27.53667650001377, 153.00217520004887]
     },
     {
         "type": "Markets",
@@ -557,7 +592,7 @@
         "google-reviews": 4.5,
         "website": "https://globalfoodmarkets.com.au/",
         "keywords": ["markets", "market"],
-        "latNLong": [-27.63729570588213, 153.1043430967529]
+        "latNLong": [-27.637343253130844, 153.1043431]
     },
     {
         "type": "Markets",
@@ -574,7 +609,7 @@
         "google-reviews": 4.5,
         "website": "https://www.janpowersfarmersmarkets.com.au/",
         "keywords": ["markets", "market"],
-        "latNLong": [-27.46854408323546, 153.05397318140663]
+        "latNLong": [-27.468629780704024, 153.0540053713136]
     },
     {
         "type": "Markets",
@@ -591,7 +626,7 @@
         "google-reviews": 4.5,
         "website": "https://mtgravattmarkets.com/",
         "keywords": ["markets", "market"],
-        "latNLong": [-27.544178221015905, 153.0842187679148]
+        "latNLong": [-27.544349474494805, 153.0842187711568]
     },
     {
         "type": "Meats",
@@ -608,7 +643,7 @@
         "google-reviews": 4.5,
         "website": "https://superbutcher.com.au/",
         "keywords": ["butcher", "butchers", "meat"],
-        "latNLong": [-27.43610034367169, 153.08554481208714]
+        "latNLong": [-27.43608492641483, 153.08550886193686]
     },
     {
         "type": "Meats",
@@ -625,7 +660,7 @@
         "google-reviews": 4.5,
         "website": "https://superbutcher.com.au/",
         "keywords": ["butcher", "butchers", "meat"],
-        "latNLong": [-27.663913079200412, 153.04379405151153]
+        "latNLong": [-27.66402719290108, 153.04371897124742]
     },
     {
         "type": "Meats",
@@ -642,7 +677,7 @@
         "google-reviews": 4.5,
         "website": "https://superbutcher.com.au/",
         "keywords": ["butcher", "butchers", "meat"],
-        "latNLong": [-27.49190198611973, 153.21733682558352]
+        "latNLong": [-27.491968630854693, 153.21732610000004]
     },
     {
         "type": "Meats",
@@ -659,7 +694,7 @@
         "google-reviews": 4.5,
         "website": "https://www.deagonbulkmeats.com.au/",
         "keywords": ["butcher", "butchers", "meat"],
-        "latNLong": [-27.32682340363385, 153.0619930544134]
+        "latNLong": [-27.3269473369754, 153.0619669752659]
     },
     {
         "type": "Meats",
@@ -676,7 +711,7 @@
         "google-reviews": 4.5,
         "website": "https://www.facebook.com/InghamsLyttonFactoryOutlet",
         "keywords": ["butcher", "butchers", "meat"],
-        "latNLong": [-27.426777607591514, 153.1504541102406]
+        "latNLong": [-27.426806199999795, 153.15048629998984]
     },
     {
         "type": "Meats",
@@ -693,7 +728,7 @@
         "google-reviews": 4.5,
         "website": "https://www.rocknrollbutcher.com.au/",
         "keywords": ["butcher", "butchers", "meat"],
-        "latNLong": [-27.503478708272485, 153.04825942259365]
+        "latNLong": [-27.504634841649597, 153.04824008587303]
     },
     {
         "type": "Meats",
@@ -710,7 +745,7 @@
         "google-reviews": 3.5,
         "website": "https://www.biggun.com.au/",
         "keywords": ["butcher", "butchers", "meat"],
-        "latNLong": [-27.60767267457671, 153.11191816628678]
+        "latNLong": [-27.607829568139103, 153.1119718135112]
     },
     {
         "type": "Meats",
@@ -727,7 +762,7 @@
         "google-reviews": 3.5,
         "website": "https://australianhalalbutcheries.com.au/",
         "keywords": ["butcher", "butchers", "meat"],
-        "latNLong": [-27.457205670662578, 153.03477499696737]
+        "latNLong": [-27.457396100002764, 153.03475354233805]
     },
     {
         "type": "Meats",
@@ -744,7 +779,24 @@
         "google-reviews": 4.5,
         "website": "https://jackpurcellmeats.com.au/",
         "keywords": ["butcher", "butchers", "meat"],
-        "latNLong": [-27.374282709995516, 153.05943491045778]
+        "latNLong": [-27.374473282283606, 153.0594563711131]
+    },
+    {
+        "type": "Meats",
+        "name": "Mega Meats, Brown Plains",
+        "address": "5-7 Enterprise Way, Browns Plains QLD 4118",
+        "saturdayOpenHrs": "6 am - 4 pm",
+        "sundayOpenHrs": "6 am - 3 pm",
+        "mondayOpenHrs": "6 am-6 pm",
+        "tuesdayOpenHrs": "6 am-6 pm",
+        "wednesdaydayOpenHrs": "6 am-6 pm",
+        "thrusdayOpenHrs": "6 am-6 pm",
+        "fridayOpenHrs": "6 am-6 pm",
+        "phone": "(07) 3800 6342",
+        "google-reviews": 4.5,
+        "website": "https://www.facebook.com/people/Mega-Meats-Browns-Plains/100064706167974/",
+        "keywords": ["butcher", "butchers", "meat"],
+        "latNLong": [-27.663059631600838, 153.04795316535743]
     },
     {
         "type": "Fish",
@@ -761,7 +813,7 @@
         "google-reviews": 4.5,
         "website": "https://aussieseafoodhouse.com.au/",
         "keywords": ["fish"],
-        "latNLong": [-27.595616016910913, 152.9880113693148]
+        "latNLong": [-27.5957116899575, 152.9880963735845]
     },
     {
         "type": "Fish",
@@ -778,7 +830,7 @@
         "google-reviews": 4.5,
         "website": "https://aussieseafoodhouse.com.au/",
         "keywords": ["fish"],
-        "latNLong": [-27.51561625793109, 153.18413151644666]
+        "latNLong": [-27.51711478488228, 153.18410049997865]
     },
     {
         "type": "Fish",
@@ -795,7 +847,7 @@
         "google-reviews": 4.5,
         "website": "https://aussieseafoodhouse.com.au/",
         "keywords": ["fish"],
-        "latNLong": [-27.288814746450026, 152.98438267830497]
+        "latNLong": [-27.290974001906694, 152.98487894227927]
     },
     {
         "type": "Fish",
@@ -812,7 +864,7 @@
         "google-reviews": 4.5,
         "website": "https://www.facebook.com/SunnybankFishMarket/",
         "keywords": ["fish"],
-        "latNLong": [-27.57017934284743, 153.06043161164646]
+        "latNLong": [-27.570466392303494, 153.06054448880028]
     },
     {
         "type": "Fish",
@@ -829,7 +881,7 @@
         "google-reviews": 5,
         "website": "https://sumnerseafood.com.au/",
         "keywords": ["fish"],
-        "latNLong": [-27.56201979807324, 152.99870109205568]
+        "latNLong": [-27.56220051121484, 152.99852943070374]
     },
     {
         "type": "Fish",
@@ -846,7 +898,7 @@
         "google-reviews": 4.5,
         "website": "https://www.facebook.com/Inala-Fish-Market-167104750302964/",
         "keywords": ["fish"],
-        "latNLong": [-27.59968866488319, 152.97393794115015]
+        "latNLong": [-27.599828860987955, 152.97388461584578]
     }
 ]
 
