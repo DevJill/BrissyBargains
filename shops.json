@@ -508,6 +508,22 @@
         "website": "https://www.calamvalecentral.com.au/store/mega-discount-fruit-market/?location=_x32_",
         "keywords": ["fruit", "vegetables"],
         "latNLong": [-27.612450966699587, 153.05319049697235]
+    },    {
+        "type": "Produce",
+        "name": "Cabbage Patch Market, Deagon",
+        "address": "1/165 Braun St, Deagon QLD 4017",
+        "saturdayOpenHrs": "24 hours",
+        "sundayOpenHrs": "24 hours",
+        "mondayOpenHrs": "24 hours",
+        "tuesdayOpenHrs": "24 hours",
+        "wednesdaydayOpenHrs": "24 hours",
+        "thrusdayOpenHrs": "24 hours",
+        "fridayOpenHrs": "24 hours",
+        "phone": "0736035104",
+        "google-reviews": 4,
+        "website": "https://www.facebook.com/CabbagePatchMarketDeagon/",
+        "keywords": ["fruit", "vegetables"],
+        "latNLong": [-27.334038196788228, 153.05948169204098]
     },
     {
         "type": "Markets",
@@ -677,7 +693,7 @@
         "google-reviews": 4.5,
         "website": "https://www.rocknrollbutcher.com.au/",
         "keywords": ["butcher", "butchers", "meat"],
-        "latNLong": [-27.500859001631007, 153.0479239030272]
+        "latNLong": [-27.503478708272485, 153.04825942259365]
     },
     {
         "type": "Meats",
