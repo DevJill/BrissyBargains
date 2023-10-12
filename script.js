@@ -688,7 +688,7 @@ function settingBS(){
                 markersArray[i].on("click", function(e){
                     const markerLng = e.latlng.lng;
                     const markerLat = e.latlng.lat;
-                    map.panTo([markerLat + (0.049562514),markerLng - (0.003)]);
+                    map.flyTo([markerLat + (0.049562514),markerLng - (0.003)], 12);
     
                 });}
         }
@@ -987,7 +987,7 @@ function openPopup(e){
             const markerLat = popup.marker._latlng.lat
             const markerLng = popup.marker._latlng.lng
 
-            map.setView([markerLat + (0.029), markerLng - (0.049562514)], 12)
+            map.flyTo([markerLat + (0.029), markerLng - (0.049562514)], 12)
         }
     })
 }
@@ -1008,7 +1008,7 @@ function mobileOpenPopup(e){
             popup.marker.openPopup();
             const markerLat = popup.marker._latlng.lat
             const markerLng = popup.marker._latlng.lng
-            map.setView([markerLat + (0.049562514), markerLng - (0.003)], 12)
+            map.flyTo([markerLat + (0.049562514), markerLng - (0.003)], 12)
         }
     })
 }
