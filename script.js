@@ -547,6 +547,7 @@ function settingBS(){
     let card2ArrayMobile = [];
     let popupArray = [];
     let popupArrayMobile = [];
+    const markersArray = [];
     
     fetch('./shops.json')
     .then((response) => {
@@ -561,7 +562,7 @@ function settingBS(){
             .setContent
             (`<div class="style-icon"><p><strong><a href="${data[i].website}">${data[i].name}</a></strong></p>
             <p>${data[i].address}</p><br>
-                    <div class="grocery-hours"
+                    <div class="grocery-hours">
                         Mon: ${data[i].mondayOpenHrs}<br>
                         Tue: ${data[i].tuesdayOpenHrs}<br>
                         Wed: ${data[i].wednesdaydayOpenHrs}<br>
@@ -577,13 +578,14 @@ function settingBS(){
             groceryMarker.addTo(map);
             popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: groceryMarker});
             popupArrayMobile.push({name: data[i].name, latNLong: data[i].latNLong, marker: groceryMarker});
+            markersArray.push(groceryMarker);
         } else if(data[i].type == 'Produce'){
             const vegPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
             .setContent
             (`<div class="style-icon"><p><strong><a href="${data[i].website}">${data[i].name}</a></strong></p>
                     <p>${data[i].address}</p><br>
-                    <div class="veg-hours"
+                    <div class="veg-hours">
                         Mon: ${data[i].mondayOpenHrs}<br>
                         Tue: ${data[i].tuesdayOpenHrs}<br>
                         Wed: ${data[i].wednesdaydayOpenHrs}<br>
@@ -599,13 +601,14 @@ function settingBS(){
             vegMarker.addTo(map);
             popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: vegMarker});
             popupArrayMobile.push({name: data[i].name, latNLong: data[i].latNLong, marker: vegMarker});
+            markersArray.push(vegMarker)
         } else if(data[i].type == 'Meats'){
             const meatsPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
             .setContent
             (`<div class="style-icon"><p><strong><a href="${data[i].website}">${data[i].name}</a></strong></p>
                     <p>${data[i].address}</p><br>
-                    <div class="meats-hours"
+                    <div class="meats-hours">
                         Mon: ${data[i].mondayOpenHrs}<br>
                         Tue: ${data[i].tuesdayOpenHrs}<br>
                         Wed: ${data[i].wednesdaydayOpenHrs}<br>
@@ -621,13 +624,14 @@ function settingBS(){
             meatsMarker.addTo(map);
             popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: meatsMarker});
             popupArrayMobile.push({name: data[i].name, latNLong: data[i].latNLong, marker: meatsMarker});
+            markersArray.push(meatsMarker)
         } else if(data[i].type == 'Fish'){
             const fishPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
             .setContent
             (`<div class="style-icon"><p><strong><a href="${data[i].website}">${data[i].name}</a></strong></p>
                     <p>${data[i].address}</p><br>
-                    <div class="fish-hours"
+                    <div class="fish-hours">
                         Mon: ${data[i].mondayOpenHrs}<br>
                         Tue: ${data[i].tuesdayOpenHrs}<br>
                         Wed: ${data[i].wednesdaydayOpenHrs}<br>
@@ -643,13 +647,14 @@ function settingBS(){
             fishMarker.addTo(map);
             popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: fishMarker});
             popupArrayMobile.push({name: data[i].name, latNLong: data[i].latNLong, marker: fishMarker});
+            markersArray.push(fishMarker)
         } else if(data[i].type == 'Markets'){
             const marketsPopup = L.popup()
             .setLatLng([data[i].latNLong[0], data[i].latNLong[1]])
             .setContent
             (`<div class="style-icon"><p><strong><a href="${data[i].website}">${data[i].name}</a></strong></p>
                     <p>${data[i].address}</p><br>
-                    <div class="markets-hours"
+                    <div class="markets-hours">
                         Mon: ${data[i].mondayOpenHrs}<br>
                         Tue: ${data[i].tuesdayOpenHrs}<br>
                         Wed: ${data[i].wednesdaydayOpenHrs}<br>
@@ -665,13 +670,26 @@ function settingBS(){
             marketsMarker.addTo(map);
             popupArray.push({name: data[i].name, latNLong: data[i].latNLong, marker: marketsMarker});
             popupArrayMobile.push({name: data[i].name, latNLong: data[i].latNLong, marker: marketsMarker});
+            markersArray.push(marketsMarker)
         }
+
 
         settingBS();
 
     };
 
+    // Setting Map On Marker Click
 
+    if(window.matchMedia('(max-width: 550px)')){
+        for(let i = 0; i < markersArray.length; i++) {
+            markersArray[i].on("click", function(e){
+                const markerLng = e.latlng.lng;
+                const markerLat = e.latlng.lat;
+                map.panTo([markerLat + (0.049562514),markerLng - (0.003)]);
+
+            });}
+    }
+    
 
     for(j = 0; j < data.length; j++){
 
@@ -1127,11 +1145,11 @@ function handleWindowMobileWidth(e){
     }
 
     map.setView([-27.51, 153.025], 12);
-
 }
 }
 
 handleWindowMobileWidth(mobileMediaQuery);
+
 
 
 

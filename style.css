@@ -520,7 +520,7 @@ fieldset{
 
 
 .veg-hours, .grocery-hours, .meats-hours, .fish-hours, .markets-hours{
-    height:140px;
+    height:160px;
     max-width: 160px;
     padding: 12px;
     text-align: center;
@@ -1377,19 +1377,16 @@ footer{
 }
 
 .about-creator-popup{
-    height: 550px;
+    height: fit-content;
     display: block;
     text-align: center;
 }
 
 .creator-p{
 margin: auto;
-margin-top: 10px;
+margin: 10px auto;
 }
 
-.creator-img img{
-    margin-top: 25px;
-}
     
 .privacy-policy-popup{
     padding: 25px;
