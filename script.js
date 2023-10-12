@@ -680,16 +680,22 @@ function settingBS(){
 
     // Setting Map On Marker Click
 
-    if(window.matchMedia('(max-width: 550px)')){
-        for(let i = 0; i < markersArray.length; i++) {
-            markersArray[i].on("click", function(e){
-                const markerLng = e.latlng.lng;
-                const markerLat = e.latlng.lat;
-                map.panTo([markerLat + (0.049562514),markerLng - (0.003)]);
+    const mobileMediaQuery = window.matchMedia('(max-width: 550px)');
 
-            });}
-    }
+    function handleMobileMarkerCenter(e){
+        if(e.matches){
+            for(let i = 0; i < markersArray.length; i++) {
+                markersArray[i].on("click", function(e){
+                    const markerLng = e.latlng.lng;
+                    const markerLat = e.latlng.lat;
+                    map.panTo([markerLat + (0.049562514),markerLng - (0.003)]);
     
+                });}
+        }
+    }
+
+    handleMobileMarkerCenter(mobileMediaQuery);
+    mobileMediaQuery.addEventListener('DOMContentLoaded', handleMobileMarkerCenter);
 
     for(j = 0; j < data.length; j++){
 
