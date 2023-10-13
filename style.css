@@ -8,7 +8,7 @@ html, body {
 }
 
 .invisible{
-    pointer-events: none;
+    pointer-events: none !important;
     opacity: 0;
     transition: opacity .3s;
 }
